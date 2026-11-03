@@ -3,7 +3,7 @@ PYTHON ?= python
 SUBSET ?=
 SUBSET_ARG := $(if $(SUBSET),--subset $(SUBSET),)
 
-.PHONY: env data audit features train evaluate experiments export benchmark stream demo-data demo report test clean-interim
+.PHONY: env data audit features train evaluate experiments export benchmark stream demo-data demo report reproduce test clean-interim
 
 env:            ## cria o ambiente conda fixado
 	conda create -y -n afib-onboard python=3.12
@@ -22,8 +22,9 @@ features:       ## janelas pré-processadas, atributos, SQI e validação do det
 train:          ## experimento A, fase dev: CV no treino, escolha na validação (não abre o teste)
 	$(PYTHON) scripts/exp_a.py dev
 
-evaluate:       ## experimento A, fase test: exige escolha commitada; abre o teste uma vez
-	$(PYTHON) scripts/exp_a.py test
+EVAL_FLAGS ?=
+evaluate:       ## experimento A, fase test: exige escolha commitada; abre o teste uma vez (num clone: EVAL_FLAGS=--reproduce)
+	$(PYTHON) scripts/exp_a.py test $(EVAL_FLAGS)
 
 experiments:    ## experimentos B a I (regras fixadas no config; usam os artefatos do experimento A)
 	$(PYTHON) scripts/experiments.py all
@@ -44,8 +45,14 @@ demo:           ## painel local (sem internet) em http://localhost:8501
 	@test -f data/demo/demo_pack.npz || $(PYTHON) scripts/build_demo_pack.py || echo "sem dados: o painel usará ECG sintético"
 	$(PYTHON) -m streamlit run app/dashboard.py
 
-report:
-	@echo "alvo '$@' ainda não implementado (ver ordem de trabalho em CLAUDE.md, seção 13)"; exit 1
+report:         ## figuras + README.md + MODEL_CARD.md gerados a partir de results/
+	$(PYTHON) scripts/make_figures.py
+	$(PYTHON) scripts/make_report.py
+
+reproduce:      ## tudo do zero (SUBSET=N para um subconjunto rápido); num clone o teste A roda em modo reprodução
+	$(MAKE) data audit features train
+	$(MAKE) evaluate EVAL_FLAGS=--reproduce
+	$(MAKE) experiments export benchmark demo-data report test
 
 test:
 	$(PYTHON) -m pytest -q tests

@@ -42,7 +42,8 @@ def main(n: int):
     import wfdb
 
     nz = {k: resample_poly(wfdb.rdrecord(str(cfg["paths"]["raw"] / "nstdb" / k)).p_signal[:, 0], 25, 36) for k in ["em", "ma"]}
-    base = f[f["group"] == "SINUS_NORMAL"].sample(n, random_state=cfg["seed"] + 1)
+    base = f[f["group"] == "SINUS_NORMAL"]
+    base = base.sample(min(n, len(base)), random_state=cfg["seed"] + 1)
     bad, ids = [], []
     for i, (row, rid) in enumerate(zip(base["row"], base["record_id"])):
         clean = resample_poly(np.asarray(X[row], float), 1, 2)[:REC]

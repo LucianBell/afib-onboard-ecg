@@ -11,6 +11,8 @@ copies used are written to `results/audit/data_manifest.json`.
 
 | MIT-BIH Noise Stress Test Database (noise records `bw`, `em`, `ma` only; used for robustness experiment F) | 1.0.0 | Open Data Commons Attribution License v1.0 | [10.13026/C2HS3T](https://doi.org/10.13026/C2HS3T) | 6 files, checked against the published SHA256SUMS |
 
+| PhysioNet/CinC Challenge 2021 SNOMED mapping tables (`dx_mapping_scored.csv`, `dx_mapping_unscored.csv`; used only to resolve codes missing from the Chapman dictionary) | GitHub `physionetchallenges/evaluation-2021`, commit `e2a75fc` | BSD-2-Clause | – | 2 small CSV files, SHA-256 in `data_manifest.json` |
+
 Licences and citations were checked (citation metadata via Crossref) on the PhysioNet project pages on 2026-11-03.
 CC BY 4.0 allows reuse and derived works with attribution, which is compatible with
 the MIT licence of the code (data are not redistributed).
@@ -41,8 +43,17 @@ the MIT licence of the code (data are not redistributed).
 
 - Maggioni, A. F., & Rebonatto, M. T. (2023). *Inteligência Artificial aplicada a análise de Eletrocardiograma*. Trabalho de Conclusão de Curso, Ciência da Computação, Universidade de Passo Fundo (UPF). File: `docs/PF2023AugustoFelipeMaggioni_cópia.pdf`.
 
+## Derived local files (never committed)
+
+- `data/interim/`: lead-I cache (mV, 500 Hz) and per-record index with labels and quality statistics.
+- `data/processed/`: preprocessed windows (250 Hz, 2,400 samples), features, SQI and trained candidate models.
+- `data/demo/demo_pack.npz`: replay pack for the dashboard and the stream simulation. It holds 40 test-split
+  Shaoxing records per scenario, converted to the device format, plus noisy versions built with the NSTDB
+  records. It is created locally by `make demo-data` and never redistributed.
+
 ## Important caveats
 
 - Both databases are terrestrial, clinical, resting 10-second 12-lead ECGs. **They are not NASA data and not astronaut data.**
-- Label dictionaries are read from the files shipped with each database (`ConditionNames_SNOMED-CT.csv`, `scp_statements.csv`); no SNOMED code is hard-coded.
+- Label dictionaries are read from the files shipped with each database (`ConditionNames_SNOMED-CT.csv`, `scp_statements.csv`), complemented by the CinC 2021 mapping tables for codes missing from the Chapman dictionary; no SNOMED code is hard-coded.
+- The *ecg-arrhythmia* release combines two sources (Shaoxing, Ningbo) without saying so in the headers; the boundary was inferred and verified (`docs/data_audit.md` §2.1). Ningbo's "atrial flutter" and "paroxysmal VT" labels are unreliable (see audit).
 - Units are read from each WFDB header with `wfdb`; the TCC's Annex A interpretation of the `.hea` fields is not used.

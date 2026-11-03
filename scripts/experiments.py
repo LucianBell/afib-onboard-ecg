@@ -490,6 +490,8 @@ def exp_f2(c: Ctx):
     grid = pd.DataFrame(grid)
     grid.to_csv(out / "sqi_calibration_grid.csv", index=False)
     elig = grid[(grid["rejeicao_limpo_afib"] <= K["max_clean_rejection"]) & (grid["rejeicao_limpo_sinusal"] <= K["max_clean_rejection"])]
+    if elig.empty:
+        elig = grid[grid["min_kurtosis"] == grid["min_kurtosis"].min()]
     best = elig.sort_values(["especificidade_media_ruido", "min_kurtosis"], ascending=[False, True]).iloc[0]
     S_cal = {**SQ.S, "min_kurtosis": float(best["min_kurtosis"]), "min_qrs_agreement": float(best["min_qrs_agreement"])}
     log(f"F2: SQI calibrado na validação: curtose >= {S_cal['min_kurtosis']}, concordância >= {S_cal['min_qrs_agreement']}")
@@ -633,6 +635,8 @@ def exp_h(c: Ctx):
     grid.to_csv(out / "validation_grid.csv", index=False)
     L = V["selection_episode_windows"]
     ok = grid[grid[f"sens_episodio_{L}j"] >= V["min_episode_sensitivity"]]
+    if ok.empty:  # (subconjunto pequeno) nenhuma configuração atinge a meta: fica a de maior sensibilidade
+        ok = grid[grid[f"sens_episodio_{L}j"] == grid[f"sens_episodio_{L}j"].max()]
     best = ok.sort_values(["falsos_alertas_dia", f"tempo_alerta_mediana_s_{L}j", "M"]).iloc[0]
     n, m = int(best["N"]), int(best["M"])
     log(f"H: escolhido na validação N={n} de M={m}")
@@ -743,7 +747,7 @@ def exp_i(c: Ctx):
                        ("PTB-XL externo (balanceado, 356 por classe como o TCC)", c.pt[c.pt["sqi_ok"]], CFG["experiment_i"]["tcc_test_per_class"])]:
         g = d["group"].map({"AFIB": "AFIB", "SINUS_BRADY": "SB", "SINUS_NORMAL": "NORMAL"})
         d = d[g.notna()].assign(cls=g[g.notna()])
-        kk = k or d["cls"].value_counts().min()
+        kk = int(min(k or 10**9, d["cls"].value_counts().reindex(labels).fillna(0).min()))
         bal = pd.concat([x.iloc[rng.permutation(len(x))[:kk]] for _, x in d.groupby("cls")])
         pred = three(bal)
         cm = confusion_matrix(bal["cls"], pred, labels=labels)

@@ -1,0 +1,27 @@
+{
+  "nota": "Transcrito e conferido na fonte primária (PubMed Central) em 2026-11-03. Apenas referência: outros conjuntos de teste, sem comparação direta.",
+  "smartwatch_meta_analise": {
+    "citacao": "Iqhrammullah M, Abdullah A, Hermansyah, Ichwansyah F, Rani HA, Alina M, et al. Accuracy and interpretability of smartwatch electrocardiogram for early detection of atrial fibrillation: A systematic review and meta-analysis. J Arrhythm. 2025;41(3):e70087. doi:10.1002/joa3.70087",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096014/",
+    "algoritmo_sensibilidade": 0.86,
+    "algoritmo_sensibilidade_ic95": [
+      0.8,
+      0.91
+    ],
+    "algoritmo_especificidade": 0.94,
+    "algoritmo_especificidade_ic95": [
+      0.89,
+      0.97
+    ],
+    "trecho": "The sensitivity and specificity of smartwatch ECG in algorithmic readings were 86% and 94%, respectively."
+  },
+  "holter_dnn": {
+    "citacao": "Fiorina L, Maupain C, Gardella C, et al. Evaluation of an Ambulatory ECG Analysis Platform Using Deep Neural Networks in Routine Clinical Practice. J Am Heart Assoc. 2022;11(18):e026196. doi:10.1161/JAHA.122.026196",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9683671",
+    "afib_sensibilidade_dnn": 0.98,
+    "afib_sensibilidade_convencional": 0.91,
+    "p_valor": 0.01,
+    "trecho": "98% [96–100] versus 91% [85–96]; P=0.01",
+    "especificidade": "a plataforma convencional teve especificidade para AFIB ligeiramente maior (0,98 vs. 1,00 no resumo; P=0,001)"
+  }
+}

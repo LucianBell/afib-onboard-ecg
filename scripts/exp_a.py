@@ -64,10 +64,11 @@ def get_split(f: pd.DataFrame) -> pd.DataFrame:
     p = RES / "split.csv"
     if p.exists():
         s = pd.read_csv(p)
-        f = f.merge(s[["record_id", "split"]], on="record_id", how="left")
-        if f["split"].isna().any():
-            raise RuntimeError("split.csv não cobre todos os registros; apague-o para refazer a divisão")
-        return f
+        g = f.merge(s[["record_id", "split"]], on="record_id", how="left")
+        if not g["split"].isna().any():
+            return g
+        # subconjunto (make ... SUBSET=N) ou dados diferentes: a divisão é refeita com a mesma semente
+        log("split.csv não cobre estes registros (subconjunto?): refazendo a divisão com a semente global")
     f["split"] = split_records(f, tuple(A["split"]), SEED).values
     assert_disjoint(f)
     f[["record_id", "group", "split", "sqi_ok"]].to_csv(p, index=False)
@@ -197,12 +198,13 @@ def _committed(p: Path) -> bool:
     return tracked and clean
 
 
-def test(force: bool = False):
+def test(force: bool = False, reproduce: bool = False):
     lock = RES / "TEST_OPENED.json"
-    if lock.exists() and not force:
-        sys.exit(f"o teste do experimento A já foi aberto ({lock}); use --force apenas para reprodução idêntica")
+    if lock.exists() and not (force or reproduce):
+        sys.exit(f"o teste do experimento A já foi aberto ({lock}). Para verificar a reprodução num clone, use "
+                 "`make evaluate EVAL_FLAGS=--reproduce` (registrado como reprodução, não como nova abertura)")
     sel_p = RES / "selection.json"
-    if not (sel_p.exists() and _committed(sel_p) and _committed(RES / "split.csv")):
+    if not reproduce and not (sel_p.exists() and _committed(sel_p) and _committed(RES / "split.csv")):
         sys.exit("selection.json e split.csv precisam estar commitados antes de abrir o teste (pré-registro)")
     sel = json.loads(sel_p.read_text())
     f = get_split(load_data())
@@ -210,7 +212,7 @@ def test(force: bool = False):
     te = te_all[te_all["sqi_ok"]]
     entry = {"aberto_em": dt.datetime.now().isoformat(timespec="seconds"), "commit": git_head(),
              "selection_sha": subprocess.run(["git", "hash-object", str(sel_p)], capture_output=True,
-                                             text=True).stdout.strip(), "force": force}
+                                             text=True).stdout.strip(), "force": force, "reproducao": reproduce}
     hist = json.loads(lock.read_text()) if lock.exists() else []
     hist = hist if isinstance(hist, list) else [hist]
     lock.write_text(json.dumps(hist + [entry], indent=2))
@@ -276,5 +278,6 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("phase", choices=["dev", "test"])
     ap.add_argument("--force", action="store_true")
+    ap.add_argument("--reproduce", action="store_true", help="verificação de reprodução (ex.: clone com subconjunto)")
     a = ap.parse_args()
-    dev() if a.phase == "dev" else test(a.force)
+    dev() if a.phase == "dev" else test(a.force, a.reproduce)

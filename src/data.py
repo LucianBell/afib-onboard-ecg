@@ -70,6 +70,19 @@ def download(cfg: dict) -> dict:
         marker = "ConditionNames_SNOMED-CT.csv" if key == "chapman" else "ptbxl_database.csv"
         info[key]["file_check"] = verify_sha256sums(find_root(out, marker))
         print(f"[{key}] ok {info[key]['bytes']} bytes sha256={info[key]['sha256'][:12]}", flush=True)
+    nz = cfg.get("noise")
+    if nz and "chapman" in cfg["datasets"]:  # ruído real para o experimento F (MIT-BIH NSTDB)
+        nd = cfg["paths"]["raw"] / "nstdb"
+        nd.mkdir(parents=True, exist_ok=True)
+        files = [f"{r}.{e}" for r in nz["records"] for e in ("hea", "dat")] + ["SHA256SUMS.txt"]
+        for fn in files:
+            if not (nd / fn).exists():
+                subprocess.run(["curl", "-fsL", "--retry", "5", "-o", str(nd / fn), nz["url"] + fn], check=True)
+        sums = dict(reversed(ln.split(maxsplit=1)) for ln in (nd / "SHA256SUMS.txt").read_text().splitlines() if ln.strip())
+        bad = [fn for fn in files[:-1] if sha256(nd / fn) != sums.get(fn)]
+        if bad:
+            raise RuntimeError(f"NSTDB com checksum errado: {bad}")
+        info.setdefault("chapman", {})["nstdb"] = {fn: sums[fn] for fn in files[:-1]}
     sup = cfg["datasets"].get("chapman", {}).get("supplementary_dx_maps")
     if sup:
         sd = ROOT / sup["dir"]
