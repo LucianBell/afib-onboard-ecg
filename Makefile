@@ -50,9 +50,10 @@ report:         ## figuras + README.md + MODEL_CARD.md gerados a partir de resul
 	$(PYTHON) scripts/make_report.py
 
 reproduce:      ## tudo do zero (SUBSET=N para um subconjunto rápido); num clone o teste A roda em modo reprodução
-	$(MAKE) data audit features train
+	$(if $(SUBSET),@echo "subconjunto de $(SUBSET) registros por base: README marcará n/d onde faltar dado",)
+	AFIB_SUBSET=$(SUBSET) $(MAKE) data audit features train
 	$(MAKE) evaluate EVAL_FLAGS=--reproduce
-	$(MAKE) experiments export benchmark demo-data report test
+	AFIB_SUBSET=$(SUBSET) $(MAKE) experiments export benchmark demo-data report test
 
 test:
 	$(PYTHON) -m pytest -q tests
