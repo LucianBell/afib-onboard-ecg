@@ -162,3 +162,35 @@ experiment_a:
   selection_margin: 0.010      # AUPRC absoluta; registrado antes de abrir o teste
   threshold_rule: {min_specificity: 0.98}
   bootstrap: 2000
+
+# ---------------------------------------------------------------- etapa 6 (fixado antes de rodar B–I)
+decision:
+  p_confident: 0.50            # prob >= limiar e < 0,50 -> INCERTO (confiança baixa)
+  ood_quantile: 0.995          # Mahalanobis > quantil 99,5% da validação -> INCERTO (fora do padrão)
+
+experiment_b:
+  ptbxl_groups_positive: [AFIB]
+  ptbxl_groups_negative: [SINUS_NORMAL, SINUS_OUTRO, SINUS_BRADY, SINUS_TACHY]
+  inverse_train_folds: [1, 2, 3, 4, 5, 6, 7, 8]
+  inverse_val_fold: 9
+  inverse_test_fold: 10
+
+noise:
+  url: "https://physionet.org/files/nstdb/1.0.0/"
+  records: {bw: "oscilação de linha de base", ma: "ruído muscular", em: "movimento de eletrodo"}
+  fs: 360
+  snr_db: [24, 18, 12, 6, 0, -6]   # SNR = potência do ECG limpo filtrado / potência do ruído na janela
+
+voting:
+  m_values: [1, 2, 3, 4, 5, 6, 8, 10]
+  windows_per_day: 9000            # 24 h / 9,6 s
+  sim_days: 300
+  episode_windows: [6, 31, 188]    # ~1 min, ~5 min, ~30 min de AFIB
+  # regra de escolha (na validação): entre as configurações com sensibilidade por episódio
+  # >= 0,99 para episódios de ~5 min, a de menor taxa de falsos alertas/dia; empate -> menor tempo até alerta
+  selection_episode_windows: 31
+  min_episode_sensitivity: 0.99
+  refractory_windows: 0            # após um alerta, novo alerta só depois que a condição N-de-M deixar de valer
+
+experiment_i:
+  tcc_test_per_class: 356          # tamanho por classe do teste do TCC (Tabela 4)

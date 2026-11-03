@@ -9,6 +9,8 @@ copies used are written to `results/audit/data_manifest.json`.
 | A large scale 12-lead electrocardiogram database for arrhythmia study ("Chapman-Shaoxing/Ningbo") | 1.0.0 (24 Aug 2022) | Creative Commons Attribution 4.0 International | [10.13026/wgex-er52](https://doi.org/10.13026/wgex-er52) | zip, 2,498,709,074 bytes |
 | PTB-XL, a large publicly available electrocardiography dataset | 1.0.3 (9 Nov 2022, latest version on 2026-11-03) | Creative Commons Attribution 4.0 International | [10.13026/kfzx-aw45](https://doi.org/10.13026/kfzx-aw45) | zip, 1,839,504,686 bytes |
 
+| MIT-BIH Noise Stress Test Database (noise records `bw`, `em`, `ma` only; used for robustness experiment F) | 1.0.0 | Open Data Commons Attribution License v1.0 | [10.13026/C2HS3T](https://doi.org/10.13026/C2HS3T) | 6 files, checked against the published SHA256SUMS |
+
 Licences and citations were checked (citation metadata via Crossref) on the PhysioNet project pages on 2026-11-03.
 CC BY 4.0 allows reuse and derived works with attribution, which is compatible with
 the MIT licence of the code (data are not redistributed).
@@ -25,6 +27,10 @@ the MIT licence of the code (data are not redistributed).
 
 - Wagner, P., Strodthoff, N., Bousseljot, R., Samek, W., & Schaeffter, T. (2022). PTB-XL, a large publicly available electrocardiography dataset (version 1.0.3). *PhysioNet*. RRID:SCR_007345. https://doi.org/10.13026/kfzx-aw45
 - Original publication: Wagner, P., Strodthoff, N., Bousseljot, R.-D., Kreiseler, D., Lunze, F. I., Samek, W., & Schaeffter, T. (2020). PTB-XL, a large publicly available electrocardiography dataset. *Scientific Data*, 7, 154. https://doi.org/10.1038/s41597-020-0495-6
+
+**MIT-BIH Noise Stress Test Database (1.0.0)**
+
+- Moody, G. B., Muldrow, W. E., & Mark, R. G. (1984). A noise stress test for arrhythmia detectors. *Computers in Cardiology*, 11, 381–384.
 
 **PhysioNet standard citation** (as requested on both project pages)
 
