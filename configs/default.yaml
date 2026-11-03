@@ -1,0 +1,113 @@
+# Configuração central do projeto. Caminhos relativos à raiz do repositório.
+seed: 20261114
+
+paths:
+  raw: data/raw
+  zips: data/raw/_zips
+  interim: data/interim
+  processed: data/processed
+  results: results
+  models: models
+  docs: docs
+
+datasets:
+  chapman:
+    name: "A large scale 12-lead electrocardiogram database for arrhythmia study"
+    version: "1.0.0"
+    url: "https://physionet.org/static/published-projects/ecg-arrhythmia/a-large-scale-12-lead-electrocardiogram-database-for-arrhythmia-study-1.0.0.zip"
+    zip: chapman.zip
+    expected_bytes: 2498709074
+    extract_dir: chapman
+    # dicionário complementar para códigos presentes nos cabeçalhos mas ausentes de
+    # ConditionNames_SNOMED-CT.csv: tabelas do PhysioNet/CinC Challenge 2021 (BSD-2-Clause)
+    supplementary_dx_maps:
+      commit: e2a75fc01f729cb74cc4e853e054ce81e28381fc
+      dir: data/raw/snomed_maps
+      files:
+        dx_mapping_scored.csv: "https://raw.githubusercontent.com/physionetchallenges/evaluation-2021/e2a75fc01f729cb74cc4e853e054ce81e28381fc/dx_mapping_scored.csv"
+        dx_mapping_unscored.csv: "https://raw.githubusercontent.com/physionetchallenges/evaluation-2021/e2a75fc01f729cb74cc4e853e054ce81e28381fc/dx_mapping_unscored.csv"
+    # fronteira entre as duas fontes, inferida (ver docs/data_audit.md, seção 2.1)
+    shaoxing_last_record: 10646
+    fs: 500
+    n_samples: 5000
+  ptbxl:
+    name: "PTB-XL, a large publicly available electrocardiography dataset"
+    version: "1.0.3"
+    url: "https://physionet.org/static/published-projects/ptb-xl/ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.3.zip"
+    zip: ptbxl.zip
+    expected_bytes: 1839504686
+    extract_dir: ptbxl
+    fs: 500
+    n_samples: 5000
+
+# Sinal-alvo: aparelho MP-IoT descrito no TCC (Maggioni & Rebonatto, UPF)
+target_signal:
+  lead: "I"
+  fs: 250
+  window_samples: 2400        # 9,6 s
+  band_hz: [0.05, 30.0]
+  sensor: "AD8232"
+  adc_bits: 12
+  positive_only: true
+
+# Agrupamento de rótulos. Os acrônimos são resolvidos para códigos SNOMED CT
+# lendo ConditionNames_SNOMED-CT (Chapman) e scp_statements.csv (PTB-XL) —
+# nenhum código SNOMED é escrito à mão aqui.
+labels:
+  groups: [AFIB, SINUS_NORMAL, SINUS_BRADY, SINUS_TACHY, SINUS_OUTRO, SINUS_ARRITMIA,
+           FORA_DE_TREINO, CONFLITO, SEM_RITMO]
+  chapman:
+    # ritmos primários (acrônimos de ConditionNames_SNOMED-CT.csv). Códigos são lidos do arquivo.
+    primary:
+      AFIB: AFIB
+      SR: SINUS
+      SB: SINUS_BRADY
+      ST: SINUS_TACHY
+      SA: SINUS_ARRITMIA        # "Sinus Irregularity"
+      AF: FORA_DE_TREINO        # flutter atrial
+      SVT: FORA_DE_TREINO
+      AT: FORA_DE_TREINO
+      AVNRT: FORA_DE_TREINO
+      AVRT: FORA_DE_TREINO
+      SAAWR: FORA_DE_TREINO     # mesmo código SNOMED de WAVN no arquivo
+      WAVN: FORA_DE_TREINO
+      # acrônimos do dicionário complementar (CinC 2021), para códigos ausentes do oficial
+      PR: FORA_DE_TREINO        # ritmo de marcapasso
+      ARH: FORA_DE_TREINO       # ritmo atrial
+      AVJR: FORA_DE_TREINO      # ritmo juncional
+      JTach: FORA_DE_TREINO
+      AJR: FORA_DE_TREINO
+      AAR: FORA_DE_TREINO
+      AIVR: FORA_DE_TREINO
+      VEsR: FORA_DE_TREINO
+      PVT: FORA_DE_TREINO       # TV paroxística
+      VF: FORA_DE_TREINO
+      VFL: FORA_DE_TREINO
+      SARR: FORA_DE_TREINO      # parada sinusal
+      Brady: FORA_DE_TREINO     # "bradicardia" sem origem informada
+    # modificadores que tiram um ritmo sinusal do treino: ectopia, bloqueio AV, pré-excitação
+    ectopy: [APB, ABI, VPB, VB, VET, VEB, VFW, JEB, JPT, PVC, BPAC, SVPB, AED]
+    av_block: [1AVB, 2AVB, 2AVB1, 2AVB2, 3AVB, AVB, PRIE, IIAVBII, AVD, SAB]
+    preexcitation: [WPW, VPE]
+  ptbxl:
+    primary:
+      AFIB: AFIB
+      SR: SINUS
+      SBRAD: SINUS_BRADY
+      STACH: SINUS_TACHY
+      SARRH: SINUS_ARRITMIA
+      AFLT: FORA_DE_TREINO
+      SVTAC: FORA_DE_TREINO
+      PSVT: FORA_DE_TREINO
+      SVARR: FORA_DE_TREINO
+      PACE: FORA_DE_TREINO
+    ectopy: [PVC, PAC, PRC(S), BIGU, TRIGU]   # BIGU/TRIGU são enunciados de ritmo no PTB-XL, mas descrevem ectopia
+    av_block: [1AVB, 2AVB, 3AVB, LPR]
+    preexcitation: [WPW]
+    norm_statement: NORM
+    norm_min_likelihood: 100
+
+audit:
+  flat_std_mv: 0.005           # derivação com desvio-padrão < 5 µV é considerada plana
+  amplitude_highpass_hz: 0.5   # filtro só para medir amplitude do QRS na auditoria
+  n_jobs: 6

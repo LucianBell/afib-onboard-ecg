@@ -1,0 +1,18 @@
+# dependências diretas (versões exatas em requirements.lock)
+numpy
+scipy
+pandas
+pyarrow
+wfdb
+scikit-learn
+lightgbm
+matplotlib
+openpyxl
+pyyaml
+joblib
+psutil
+pytest
+streamlit
+onnx
+skl2onnx
+onnxruntime

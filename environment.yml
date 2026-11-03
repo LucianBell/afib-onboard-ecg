@@ -1,0 +1,7 @@
+name: afib-onboard
+channels: [defaults]
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - -r requirements.lock

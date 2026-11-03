@@ -1,0 +1,13 @@
+# dados brutos e intermediários nunca vão para o Git
+data/
+!data/.gitkeep
+# ambiente / cache
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+*.egg-info/
+# artefatos grandes temporários
+*.zip
+results/_tmp/
