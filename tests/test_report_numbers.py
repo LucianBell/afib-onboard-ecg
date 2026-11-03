@@ -13,7 +13,7 @@ make_report = pytest.importorskip("make_report")
 # números escritos à mão permitidos fora dos marcadores (não são resultados):
 ALLOWED = {
     "2026",  # ano da competição
-    "2025", "2022", "2023", "2021",  # anos de publicações citadas (artigos, TCC, CinC 2021)
+    "2025", "2023", "2022", "2021", "2018", "2017",  # anos de publicações citadas
     "1.0.0", "1.0.3",  # versões das bases na PhysioNet
     "1",  # "afib_logreg_v1" (nome do artefato)
 }

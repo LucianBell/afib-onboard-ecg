@@ -293,6 +293,16 @@ def collect() -> Values:
     V.put("bench_json_kb", Bm["artefatos_kb"]["afib_logreg_v1.json"], fb, "artefatos_kb.afib_logreg_v1.json", "{:.0f}")
     V.put("bench_onnx_kb", Bm["artefatos_kb"]["afib_logreg_v1.onnx"], fb, "artefatos_kb.afib_logreg_v1.onnx", "{:.1f}")
 
+    # ---------------- calibração externa
+    ce = j("results/expB/calibration_external.json")
+    fce = "results/expB/calibration_external.json"
+    V.put("cal_ext_ece", ce["ece"], fce, "ece")
+    mid = [r for r in ce["confiabilidade"] if 0.5 <= float(r["faixa_prob"].split("-")[0]) < 0.9 and r["n"]]
+    V.put("cal_lo", float(mid[0]["faixa_prob"].split("-")[0]), fce, "confiabilidade: início da faixa intermediária", "{:.1f}")
+    V.put("cal_hi", float(mid[-1]["faixa_prob"].split("-")[1]), fce, "confiabilidade: fim da faixa intermediária", "{:.1f}")
+    V.put("cal_obs_lo", min(r["fracao_afib_observada"] for r in mid), fce, "min(fracao_afib_observada) nas faixas 0,5–0,9", P0)
+    V.put("cal_obs_hi", max(r["fracao_afib_observada"] for r in mid), fce, "max(fracao_afib_observada) nas faixas 0,5–0,9", P0)
+
     # ---------------- literatura (conferida na fonte)
     L = j("results/reference/literature.json")
     fL = "results/reference/literature.json"
@@ -300,6 +310,8 @@ def collect() -> Values:
     V.put("lit_sw_spec", L["smartwatch_meta_analise"]["algoritmo_especificidade"], fL, "smartwatch_meta_analise.algoritmo_especificidade", P0)
     V.put("lit_h_dnn", L["holter_dnn"]["afib_sensibilidade_dnn"], fL, "holter_dnn.afib_sensibilidade_dnn", P0)
     V.put("lit_h_conv", L["holter_dnn"]["afib_sensibilidade_convencional"], fL, "holter_dnn.afib_sensibilidade_convencional", P0)
+    V.put("lit_khine_prev", L["khine_2018"]["prevalencia_afib_astronautas_ativos"], fL, "khine_2018.prevalencia_afib_astronautas_ativos", P0)
+    V.put("lit_khine_months", L["khine_2018"]["meses_em_orbita"], fL, "khine_2018.meses_em_orbita", "{:d}")
     return V
 
 

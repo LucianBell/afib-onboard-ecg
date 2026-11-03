@@ -1,5 +1,5 @@
 {
-  "nota": "Transcrito e conferido na fonte primária (PubMed Central) em 2026-11-03. Apenas referência: outros conjuntos de teste, sem comparação direta.",
+  "nota": "Transcrito e conferido na fonte primária (PubMed / PubMed Central / National Academies Press) em 2026-11-03.",
   "smartwatch_meta_analise": {
     "citacao": "Iqhrammullah M, Abdullah A, Hermansyah, Ichwansyah F, Rani HA, Alina M, et al. Accuracy and interpretability of smartwatch electrocardiogram for early detection of atrial fibrillation: A systematic review and meta-analysis. J Arrhythm. 2025;41(3):e70087. doi:10.1002/joa3.70087",
     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096014/",
@@ -23,5 +23,25 @@
     "p_valor": 0.01,
     "trecho": "98% [96–100] versus 91% [85–96]; P=0.01",
     "especificidade": "a plataforma convencional teve especificidade para AFIB ligeiramente maior (0,98 vs. 1,00 no resumo; P=0,001)"
+  },
+  "academias_nacionais_2017": {
+    "citacao": "National Academies of Sciences, Engineering, and Medicine. Review of NASA's Evidence Reports on Human Health Risks: 2017 Letter Report. Washington, DC: The National Academies Press; 2018. Capítulo 'Risk of Cardiac Rhythm Problems During Spaceflight'.",
+    "url": "https://www.nationalacademies.org/read/24953/chapter/7",
+    "trechos": [
+      "A greater emphasis in the evidence report on the risk of atrial fibrillation is supported by contemporary experience",
+      "medical management strategies for atrial fibrillation that occurs during long-duration spaceflight need to be explored."
+    ]
+  },
+  "khine_2018": {
+    "citacao": "Khine HW, Steding-Ehrenborg K, Hastings JL, et al. Effects of Prolonged Spaceflight on Atrial Size, Atrial Electrophysiology, and Risk of Atrial Fibrillation. Circ Arrhythm Electrophysiol. 2018;11(5):e005959. doi:10.1161/CIRCEP.117.005959. PMID 29752376",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29752376/",
+    "prevalencia_afib_astronautas_ativos": 0.05,
+    "meses_em_orbita": 6,
+    "trechos": [
+      "The prevalence of atrial fibrillation (AF) in active astronauts is ≈5%",
+      "similar to the general population but at a younger age",
+      "Six months of spaceflight may be sufficient to cause transient changes in left atrial structure",
+      "there was no definite evidence of increased supraventricular arrhythmias and no identified episodes of AF."
+    ]
   }
 }

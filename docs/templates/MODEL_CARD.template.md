@@ -50,7 +50,8 @@ any clinical deployment.
 | External (PTB-XL) | {{ext_auroc}} | {{ext_sens}} [{{ext_sens_ci}}] | {{ext_spec}} [{{ext_espe_ci}}] | {{ext_ppv}} | – |
 | RR baseline, internal | {{a_baseline_rr_auroc}} | {{a_baseline_rr_sens}} | {{a_baseline_rr_spec}} | {{a_baseline_rr_ppv}} | {{a_baseline_rr_ppv1}} |
 
-Calibration (internal test): ECE {{a_logreg_ece}}. Simulated false alerts per day with {{vote_n}}-of-{{vote_m}}
+Calibration: ECE {{a_logreg_ece}} internal and {{cal_ext_ece}} external, but externally the intermediate
+probabilities are overconfident ({{cal_lo}}–{{cal_hi}} predicted → {{cal_obs_lo}}–{{cal_obs_hi}} observed AFIB). Simulated false alerts per day with {{vote_n}}-of-{{vote_m}}
 voting on PTB-XL: {{h_ptb_v}} if windows were independent, {{h_corr_ptb}} with correlated errors, and
 {{h_ect_lo}}–{{h_ect_hi}} for a person with frequent ectopy.
 

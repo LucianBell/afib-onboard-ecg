@@ -17,8 +17,9 @@ A wearable single-lead ECG (Holter-like, lead I, 250 Hz) streams to a Raspberry 
 
 1. **Signal quality (SQI)** → `SINAL_RUIM` (bad signal), no clinical message.
 2. **ML model: AFIB vs. sinus rhythm** (logistic regression on 30 interpretable features: RR
-   irregularity, atrial activity, morphology, spectrum). Sinus bradycardia and tachycardia are on the
-   *non-AFIB* side, so altered rate is not mistaken for fibrillation. The lightweight QRS detector agrees
+   irregularity, atrial activity, morphology, spectrum). Sinus bradycardia and tachycardia are trained as
+   *non-AFIB*, to teach the model that an altered rate alone is not fibrillation. Out of the training source
+   it still confuses them more often (Exp. E). The lightweight QRS detector agrees
    with the `wfdb` XQRS reference on real records (sensitivity ≥ 0.992, PPV ≥ 0.982).
 3. **Heart-rate rule** → mild `AVISO_FC_BAIXA` / `AVISO_FC_ALTA` warnings (defaults 60 / 100 bpm,
    adapted to the person's own history).
@@ -35,6 +36,18 @@ ventricular arrhythmias, and no claim of being better than a Holter.
 Starting point: the undergraduate thesis by Maggioni & Rebonatto (UPF, 2023), in [`docs/`](docs/). We reuse
 its datasets and its limited-signal scenario (lead I, 250 Hz, 0.05–30 Hz, 12-bit
 positive-only A/D) and fix its evaluation problems (see [`docs/tcc_analysis.md`](docs/tcc_analysis.md)).
+
+## Why AFIB on board
+
+- A National Academies review of NASA's evidence reports concluded that "a greater emphasis in the evidence
+  report on the risk of atrial fibrillation is supported by contemporary experience", and that management of
+  AFIB arising in long-duration flight needs to be explored (2017 letter report).
+- Khine et al. (2018) report an AFIB prevalence of about 5% in active astronauts, similar to the
+  general population but at a younger age, and transient left-atrial enlargement after 6
+  months in space. They also found **no AFIB episodes** in the crew they studied. The case for AFIB is a risk
+  argument, not observed in-flight AFIB.
+- AFIB is often intermittent or silent, so automatic on-board detection adds value, and it is detectable on
+  a single lead. Sources: `results/reference/literature.json`.
 
 ## Data (audit: [`docs/data_audit.md`](docs/data_audit.md))
 
@@ -94,8 +107,12 @@ the choice were committed before the test set was opened (`results/expA/selectio
 
 **Drop from A to B:** sensitivity holds, but **specificity falls from 0.988 to 0.957**, i.e.
 about 3.4× more false-positive windows. PPV also falls, partly because PTB-XL prevalence is lower
-(8%). Among the ML candidates the logistic regression generalised best (external AUROC
-0.9968 vs. CNN 0.9914), so choosing the simplest model held up. Restricting PTB-XL to
+(8%). The logistic regression generalised at least as well as the more complex models (external
+AUROC 0.9968 vs. random forest 0.9958 and LightGBM 0.9957, with
+overlapping CIs) and better than the CNN (0.9914), so choosing the simplest model cost nothing.
+**Calibration does not transfer:** overall external ECE is 0.013, but PTB-XL windows with a predicted
+probability between 0.5 and 0.9 are AFIB only 3%–24% of the time. The displayed
+probability is overconfident outside the training source (`results/expB/calibration_external.json`). Restricting PTB-XL to
 human-validated reports gives specificity 0.956.
 
 ### Comparison with the RR baseline (Exp. D, paired, same windows)

@@ -301,11 +301,23 @@
    "campo": "cnn/PTB-XL todo/auroc",
    "bruto": 0.9914414496667219
   },
+  "b_lightgbm_auroc": {
+   "valor": "0.9957",
+   "fonte": "results/expB/all_models.csv",
+   "campo": "lightgbm/PTB-XL todo/auroc",
+   "bruto": 0.9956760117916286
+  },
   "b_logreg_auroc": {
    "valor": "0.9968",
    "fonte": "results/expB/all_models.csv",
    "campo": "logreg/PTB-XL todo/auroc",
    "bruto": 0.9967650913738298
+  },
+  "b_random_forest_auroc": {
+   "valor": "0.9958",
+   "fonte": "results/expB/all_models.csv",
+   "campo": "random_forest/PTB-XL todo/auroc",
+   "bruto": 0.9958287308120957
   },
   "band_hi": {
    "valor": "30",
@@ -438,6 +450,36 @@
    "fonte": "results/expC/source_classifier.csv",
    "campo": "Shaoxing vs PTB-XL | amplitude com a escala do TCC (÷10³ vs ÷10) — 1 variável, sem modelo",
    "bruto": 1.0
+  },
+  "cal_ext_ece": {
+   "valor": "0.013",
+   "fonte": "results/expB/calibration_external.json",
+   "campo": "ece",
+   "bruto": 0.01338873720899095
+  },
+  "cal_hi": {
+   "valor": "0.9",
+   "fonte": "results/expB/calibration_external.json",
+   "campo": "confiabilidade: fim da faixa intermediária",
+   "bruto": 0.9
+  },
+  "cal_lo": {
+   "valor": "0.5",
+   "fonte": "results/expB/calibration_external.json",
+   "campo": "confiabilidade: início da faixa intermediária",
+   "bruto": 0.5
+  },
+  "cal_obs_hi": {
+   "valor": "24%",
+   "fonte": "results/expB/calibration_external.json",
+   "campo": "max(fracao_afib_observada) nas faixas 0,5–0,9",
+   "bruto": 0.24324324324324326
+  },
+  "cal_obs_lo": {
+   "valor": "3%",
+   "fonte": "results/expB/calibration_external.json",
+   "campo": "min(fracao_afib_observada) nas faixas 0,5–0,9",
+   "bruto": 0.03225806451612903
   },
   "chosen": {
    "valor": "logreg",
@@ -960,6 +1002,18 @@
    "fonte": "results/reference/literature.json",
    "campo": "holter_dnn.afib_sensibilidade_dnn",
    "bruto": 0.98
+  },
+  "lit_khine_months": {
+   "valor": "6",
+   "fonte": "results/reference/literature.json",
+   "campo": "khine_2018.meses_em_orbita",
+   "bruto": 6
+  },
+  "lit_khine_prev": {
+   "valor": "5%",
+   "fonte": "results/reference/literature.json",
+   "campo": "khine_2018.prevalencia_afib_astronautas_ativos",
+   "bruto": 0.05
   },
   "lit_sw_sens": {
    "valor": "86%",

@@ -223,3 +223,16 @@ do SQI). Todos os resultados estão em `results/exp{B..I}/`, gerados por `make e
 - **D45. Benchmark.** `results/benchmark/benchmark_LucianDebian.json`, medido no i7-1165G7 desta máquina com
   1 thread. **Não há medição em Raspberry Pi**: o script está pronto para rodar lá (identifica a placa pelo
   campo `Model` do /proc/cpuinfo).
+
+## Revisão cética (2026-11-03)
+
+- **D46. Correções após revisão de "jurado cético"** (`docs/qa_jurados.md`):
+  - "frequência alterada não é confundida com AFIB" → reescrito, porque o experimento E mostra o contrário
+    fora da fonte;
+  - "a logística generalizou melhor" → "pelo menos tão bem quanto", porque os ICs de AUROC no PTB-XL se
+    sobrepõem com RF e LightGBM;
+  - acrescentada a calibração externa, medida **depois** da revisão (`scripts/calibration_external.py` →
+    `results/expB/calibration_external.json`): ECE global baixo, mas probabilidades intermediárias muito
+    confiantes demais no PTB-XL;
+  - motivação "AFIB em astronautas" conferida na fonte (Academias Nacionais, relatório de 2017; Khine et al.
+    2018) e acrescentada ao README, com a ressalva de que o estudo não observou AFIB em voo.

@@ -50,7 +50,8 @@ any clinical deployment.
 | External (PTB-XL) | 0.9968 | 0.990 [0.985–0.995] | 0.957 [0.954–0.960] | 0.677 | – |
 | RR baseline, internal | 0.9947 | 0.992 | 0.985 | 0.945 | 0.393 |
 
-Calibration (internal test): ECE 0.0030. Simulated false alerts per day with 3-of-3
+Calibration: ECE 0.0030 internal and 0.013 external, but externally the intermediate
+probabilities are overconfident (0.5–0.9 predicted → 3%–24% observed AFIB). Simulated false alerts per day with 3-of-3
 voting on PTB-XL: 0.01 if windows were independent, 4.0 with correlated errors, and
 53–179 for a person with frequent ectopy.
 
