@@ -1,0 +1,90 @@
+{
+  "tcc_relatado": {
+    "fonte": "Maggioni & Rebonatto (2023), TCC UPF, Tabelas 3 e 4 (RHCB5, 3 classes)",
+    "acuracia": 0.9691,
+    "precisao_macro": 0.9691,
+    "recall_macro": 0.969,
+    "f1_macro": 0.969,
+    "especificidade_macro": 0.9845,
+    "matriz": {
+      "AFIB": [
+        354,
+        1,
+        1
+      ],
+      "SB": [
+        5,
+        337,
+        14
+      ],
+      "NORMAL": [
+        4,
+        8,
+        344
+      ]
+    },
+    "n_por_classe": 356,
+    "nota": "normais do PTB-XL e arritmias da Chapman; protocolo diferente do nosso"
+  },
+  "Shaoxing teste A (balanceado, maior n possível)": {
+    "n_por_classe": 201,
+    "acuracia": 0.988391376451078,
+    "precisao_macro": 0.9885760517799352,
+    "recall_macro": 0.9883913764510779,
+    "f1_macro": 0.9883986361761773,
+    "especificidade_macro": 0.994195688225539,
+    "recall_por_classe": {
+      "AFIB": 1.0,
+      "SB": 0.9851,
+      "NORMAL": 0.9801
+    },
+    "matriz": {
+      "AFIB": [
+        201,
+        0,
+        0
+      ],
+      "SB": [
+        3,
+        198,
+        0
+      ],
+      "NORMAL": [
+        2,
+        2,
+        197
+      ]
+    }
+  },
+  "PTB-XL externo (balanceado, 356 por classe como o TCC)": {
+    "n_por_classe": 356,
+    "acuracia": 0.897003745318352,
+    "precisao_macro": 0.904643498345898,
+    "recall_macro": 0.8970037453183521,
+    "f1_macro": 0.896084418456596,
+    "especificidade_macro": 0.948501872659176,
+    "recall_por_classe": {
+      "AFIB": 0.9916,
+      "SB": 0.9045,
+      "NORMAL": 0.7949
+    },
+    "matriz": {
+      "AFIB": [
+        353,
+        2,
+        1
+      ],
+      "SB": [
+        31,
+        322,
+        3
+      ],
+      "NORMAL": [
+        11,
+        62,
+        283
+      ]
+    }
+  },
+  "ressalva": "Comparação apenas de referência: bases, divisão, classes e pré-processamento diferem do TCC. Saída de 3 classes = modelo AFIB (logreg) + regra de FC (< 60 bpm -> SB)."
+}

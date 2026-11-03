@@ -3,7 +3,7 @@ PYTHON ?= python
 SUBSET ?=
 SUBSET_ARG := $(if $(SUBSET),--subset $(SUBSET),)
 
-.PHONY: env data audit features train evaluate report demo test clean-interim
+.PHONY: env data audit features train evaluate experiments report demo test clean-interim
 
 env:            ## cria o ambiente conda fixado
 	conda create -y -n afib-onboard python=3.12
@@ -24,6 +24,9 @@ train:          ## experimento A, fase dev: CV no treino, escolha na validação
 
 evaluate:       ## experimento A, fase test: exige escolha commitada; abre o teste uma vez
 	$(PYTHON) scripts/exp_a.py test
+
+experiments:    ## experimentos B a I (regras fixadas no config; usam os artefatos do experimento A)
+	$(PYTHON) scripts/experiments.py all
 
 report demo:
 	@echo "alvo '$@' ainda não implementado (ver ordem de trabalho em CLAUDE.md, seção 13)"; exit 1

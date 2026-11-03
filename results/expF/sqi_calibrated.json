@@ -1,0 +1,40 @@
+{
+  "limiares": {
+    "min_kurtosis": 3.0,
+    "min_qrs_agreement": 0.95
+  },
+  "linha_escolhida_validacao": {
+    "min_kurtosis": 3.0,
+    "min_qrs_agreement": 0.95,
+    "rejeicao_limpo_afib": 0.047619047619047616,
+    "rejeicao_limpo_sinusal": 0.037578288100208766,
+    "especificidade_media_ruido": 0.8781044020025698
+  },
+  "regra": {
+    "grid": {
+      "min_kurtosis": [
+        3.0,
+        4.0,
+        5.0,
+        6.0,
+        7.0,
+        8.0,
+        10.0
+      ],
+      "min_qrs_agreement": [
+        0.8,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ]
+    },
+    "snr_db": [
+      12,
+      6,
+      0,
+      -6
+    ],
+    "max_clean_rejection": 0.05
+  }
+}

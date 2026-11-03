@@ -1,0 +1,188 @@
+{
+  "regra_escolha": {
+    "selection_episode_windows": 31,
+    "min_episode_sensitivity": 0.99
+  },
+  "escolhido": {
+    "N": 3.0,
+    "M": 3.0,
+    "falsos_alertas_dia": 0.0,
+    "falsos_alertas_dia_p95_dias": 0.0,
+    "sens_episodio_6j": 0.9635,
+    "tempo_alerta_mediana_s_6j": 28.799999999999997,
+    "tempo_alerta_p90_s_6j": 48.0,
+    "sens_episodio_31j": 1.0,
+    "tempo_alerta_mediana_s_31j": 28.799999999999997,
+    "tempo_alerta_p90_s_31j": 48.0,
+    "sens_episodio_188j": 1.0,
+    "tempo_alerta_mediana_s_188j": 28.799999999999997,
+    "tempo_alerta_p90_s_188j": 48.0
+  },
+  "ressalva": "Simulação: janelas são registros isolados de 10 s de pacientes diferentes, concatenados e tratados como independentes; transições artificiais. Erros reais de uma mesma pessoa são correlacionados, o que pode aumentar ou reduzir os falsos alertas.",
+  "linhas": [
+    {
+      "N": 1,
+      "M": 1,
+      "falsos_alertas_dia": 17.713333333333335,
+      "falsos_alertas_dia_p95_dias": 24.0,
+      "sens_episodio_6j": 1.0,
+      "tempo_alerta_mediana_s_6j": 9.6,
+      "tempo_alerta_p90_s_6j": 9.6,
+      "sens_episodio_31j": 1.0,
+      "tempo_alerta_mediana_s_31j": 9.6,
+      "tempo_alerta_p90_s_31j": 9.6,
+      "sens_episodio_188j": 1.0,
+      "tempo_alerta_mediana_s_188j": 9.6,
+      "tempo_alerta_p90_s_188j": 9.6,
+      "conjunto": "Shaoxing (teste A)",
+      "configuracao": "1 de 1 (sem votação)",
+      "fp_por_janela": 0.002,
+      "sens_por_janela": 0.9700374531835206
+    },
+    {
+      "N": 3,
+      "M": 3,
+      "falsos_alertas_dia": 0.0,
+      "falsos_alertas_dia_p95_dias": 0.0,
+      "sens_episodio_6j": 0.9955,
+      "tempo_alerta_mediana_s_6j": 28.799999999999997,
+      "tempo_alerta_p90_s_6j": 28.799999999999997,
+      "sens_episodio_31j": 1.0,
+      "tempo_alerta_mediana_s_31j": 28.799999999999997,
+      "tempo_alerta_p90_s_31j": 28.799999999999997,
+      "sens_episodio_188j": 1.0,
+      "tempo_alerta_mediana_s_188j": 28.799999999999997,
+      "tempo_alerta_p90_s_188j": 28.799999999999997,
+      "conjunto": "Shaoxing (teste A)",
+      "configuracao": "3 de 3 (escolhido)",
+      "fp_por_janela": 0.002,
+      "sens_por_janela": 0.9700374531835206
+    },
+    {
+      "N": 1,
+      "M": 1,
+      "falsos_alertas_dia": 115.21,
+      "falsos_alertas_dia_p95_dias": 131.05,
+      "sens_episodio_6j": 1.0,
+      "tempo_alerta_mediana_s_6j": 9.6,
+      "tempo_alerta_p90_s_6j": 9.6,
+      "sens_episodio_31j": 1.0,
+      "tempo_alerta_mediana_s_31j": 9.6,
+      "tempo_alerta_p90_s_31j": 9.6,
+      "sens_episodio_188j": 1.0,
+      "tempo_alerta_mediana_s_188j": 9.6,
+      "tempo_alerta_p90_s_188j": 9.6,
+      "conjunto": "PTB-XL (todo, externo)",
+      "configuracao": "1 de 1 (sem votação)",
+      "fp_por_janela": 0.013019713811951114,
+      "sens_por_janela": 0.9160460392687881
+    },
+    {
+      "N": 3,
+      "M": 3,
+      "falsos_alertas_dia": 0.013333333333333334,
+      "falsos_alertas_dia_p95_dias": 0.0,
+      "sens_episodio_6j": 0.96,
+      "tempo_alerta_mediana_s_6j": 28.799999999999997,
+      "tempo_alerta_p90_s_6j": 48.0,
+      "sens_episodio_31j": 1.0,
+      "tempo_alerta_mediana_s_31j": 28.799999999999997,
+      "tempo_alerta_p90_s_31j": 57.599999999999994,
+      "sens_episodio_188j": 1.0,
+      "tempo_alerta_mediana_s_188j": 28.799999999999997,
+      "tempo_alerta_p90_s_188j": 57.599999999999994,
+      "conjunto": "PTB-XL (todo, externo)",
+      "configuracao": "3 de 3 (escolhido)",
+      "fp_por_janela": 0.013019713811951114,
+      "sens_por_janela": 0.9160460392687881
+    },
+    {
+      "conjunto": "Ningbo (só negativos)",
+      "configuracao": "1 de 1 (sem votação)",
+      "N": 1,
+      "M": 1,
+      "falsos_alertas_dia": 40.78666666666667,
+      "falsos_alertas_dia_p95_dias": 52.0,
+      "fp_por_janela": 0.004528689481301648
+    },
+    {
+      "conjunto": "Ningbo (só negativos)",
+      "configuracao": "3 de 3 (escolhido)",
+      "N": 3,
+      "M": 3,
+      "falsos_alertas_dia": 0.0,
+      "falsos_alertas_dia_p95_dias": 0.0,
+      "fp_por_janela": 0.004528689481301648
+    }
+  ],
+  "analises_de_sensibilidade": [
+    {
+      "cenario": "negativos correlacionados (registro repetido por ~5 min)",
+      "conjunto": "Shaoxing (teste A)",
+      "configuracao": "3 de 3",
+      "falsos_alertas_dia": 0.57,
+      "falsos_alertas_dia_p95_dias": 2.0
+    },
+    {
+      "cenario": "negativos correlacionados (registro repetido por ~5 min)",
+      "conjunto": "PTB-XL (todo, externo)",
+      "configuracao": "3 de 3",
+      "falsos_alertas_dia": 3.953333333333333,
+      "falsos_alertas_dia_p95_dias": 7.0
+    },
+    {
+      "cenario": "pessoa com ectopia frequente, janelas independentes",
+      "conjunto": "PTB-XL",
+      "configuracao": "3 de 3",
+      "falsos_alertas_dia": 178.54666666666665,
+      "falsos_alertas_dia_p95_dias": 199.0,
+      "fp_por_janela": 0.3050047214353163,
+      "n_registros": 1059
+    },
+    {
+      "cenario": "pessoa com ectopia frequente, janelas correlacionados (~5 min)",
+      "conjunto": "PTB-XL",
+      "configuracao": "3 de 3",
+      "falsos_alertas_dia": 61.76,
+      "falsos_alertas_dia_p95_dias": 69.0,
+      "fp_por_janela": 0.3050047214353163,
+      "n_registros": 1059
+    },
+    {
+      "cenario": "pessoa com arritmia sinusal, janelas independentes",
+      "conjunto": "PTB-XL",
+      "configuracao": "3 de 3",
+      "falsos_alertas_dia": 56.96333333333333,
+      "falsos_alertas_dia_p95_dias": 69.0,
+      "fp_por_janela": 0.1993517017828201,
+      "n_registros": 617
+    },
+    {
+      "cenario": "pessoa com arritmia sinusal, janelas correlacionados (~5 min)",
+      "conjunto": "PTB-XL",
+      "configuracao": "3 de 3",
+      "falsos_alertas_dia": 46.443333333333335,
+      "falsos_alertas_dia_p95_dias": 54.0,
+      "fp_por_janela": 0.1993517017828201,
+      "n_registros": 617
+    },
+    {
+      "cenario": "pessoa com ectopia frequente, janelas independentes",
+      "conjunto": "Shaoxing",
+      "configuracao": "3 de 3",
+      "falsos_alertas_dia": 92.21666666666667,
+      "falsos_alertas_dia_p95_dias": 107.0,
+      "fp_por_janela": 0.23823529411764705,
+      "n_registros": 340
+    },
+    {
+      "cenario": "pessoa com ectopia frequente, janelas correlacionados (~5 min)",
+      "conjunto": "Shaoxing",
+      "configuracao": "3 de 3",
+      "falsos_alertas_dia": 52.95333333333333,
+      "falsos_alertas_dia_p95_dias": 61.0,
+      "fp_por_janela": 0.23823529411764705,
+      "n_registros": 340
+    }
+  ]
+}

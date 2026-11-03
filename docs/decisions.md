@@ -147,3 +147,46 @@ são marcadas como **pendente** até a etapa correspondente.
   mantém. Contra o baseline RR, o ganho aparece no ranking (AUPRC 0,999 vs. 0,965). No ponto de operação,
   o McNemar não mostra diferença significativa (9 vs. 4 discordâncias, p = 0,27). O experimento D faz a
   comparação formal com bootstrap pareado.
+
+## Etapa 6 — experimentos B a I (2026-11-03)
+
+Regras fixadas e commitadas antes de rodar: `d1047fe` (INCERTO, N de M, SNR, TCC) e `473513c` (calibração
+do SQI). Todos os resultados estão em `results/exp{B..I}/`, gerados por `make experiments`.
+
+- **D33. INCERTO e votos.** O estado `INCERTO` vale quando a entrada está fora do padrão (Mahalanobis nos
+  atributos imputados e padronizados, Ledoit-Wolf ajustado no treino de Shaoxing, limiar = quantil 99,5% da
+  validação) ou quando a confiança é baixa (limiar ≤ prob < 0,50). Só janelas no estado `AFIB` votam na
+  regra N de M. Ambas as regras foram definidas antes de rodar G e H.
+- **D34. B, validação externa.** O modelo de Shaoxing, sem retreino, foi aplicado ao PTB-XL inteiro. A
+  sensibilidade se mantém (1,000 → 0,990), mas a especificidade cai de 0,988 para 0,958 e o AUROC de 0,9998
+  para 0,9968. O PPV cai de 0,956 para 0,677, em parte porque a prevalência é menor. No sentido inverso, o
+  modelo treinado no PTB-XL generaliza bem para Shaoxing (AUROC 0,9995). Entre os candidatos de ML, a
+  logística é a melhor externamente e a CNN a pior em AUROC: a escolha do modelo mais simples se sustentou.
+- **D35. D, comparação com o baseline.** Em ranking, a logística é melhor nos dois testes (bootstrap pareado:
+  ΔAUROC +0,005 em A e +0,011 em B; ΔAUPRC +0,034 e +0,178; todos com IC acima de 0). No ponto de operação
+  transferido de Shaoxing, porém, **no PTB-XL o baseline erra menos** (621 contra 689 erros; McNemar
+  p = 0,003), porque a especificidade da logística cai mais. O limiar da logística (prob ≥ 0,0105) foi
+  escolhido em Shaoxing, onde a separação é quase perfeita, e não transfere bem.
+- **D36. C, confusão de fonte.** Com as unidades corretas e a mesma filtragem, a assinatura de base é
+  moderada: os normais de Shaoxing e PTB-XL se separam com AUROC 0,86 pelos atributos de ritmo e 0,77 pelos
+  descritores do sinal. Shaoxing contra Ningbo dá AUROC ≈ 0,50. Com a escala descrita no TCC (÷10³ contra
+  ÷10), **só a amplitude separa as bases com AUROC 1,000**. Hipótese não testada: parte da separação pelos
+  atributos de ritmo vem de convenções de rótulo de FC (18% dos "normais" do PTB-XL estão abaixo de 60 bpm,
+  experimento E). No desenho do TCC, nossa logística não explora a fonte (AUROC alto também nos testes de
+  mesma fonte). O modelo com descritores perde especificidade quando os negativos passam a ser de Shaoxing
+  (0,896 → 0,786). C não incluiu CNN.
+- **D37. F, calibração do SQI.** O SQI inicial quase não filtrava ruído muscular e movimento de eletrodo.
+  Calibrei na validação com regra fixada antes (`473513c`): rejeição limpa ≤ 5% por classe e máxima
+  especificidade sob ruído. Resultado: concordância entre detectores ≥ 0,95, curtose sem mudança. O ganho é
+  modesto (especificidade com ruído muscular a 0 dB: 0,84 → 0,89; a −6 dB: 0,41 → 0,55), e o custo é a
+  rejeição limpa passar de 3–4% para 6–8%. Adotado para o sistema a bordo (`sqi_onboard`). Os experimentos
+  A–I mantêm o SQI inicial para reprodução.
+- **D38. H, análises de sensibilidade acrescentadas depois do resultado principal.** A simulação principal
+  trata as janelas como independentes e dá cerca de 0,01 falso alerta por dia com 3 de 3. Isso é otimista.
+  Acrescentei, e declaro que foi depois: (a) erros correlacionados, com cada registro negativo repetido por
+  cerca de 5 min; (b) pessoas cujo ritmo de base é ectopia frequente ou arritmia sinusal. Esses cenários dão
+  de ~4 a 180 falsos alertas por dia (ver `monitoring_sensitivity.csv`).
+- **D39. I, referência ao TCC.** Saída de 3 classes = logística (AFIB) + regra de FC (< 60 bpm → SB). O teste
+  balanceado de Shaoxing tem 201 por classe, o máximo disponível no teste A. O do PTB-XL tem 356 por classe,
+  o mesmo tamanho do TCC. Os números do TCC estão em `results/reference/tcc_reported.json`, transcritos das
+  Tabelas 3 e 4.

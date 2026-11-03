@@ -1,0 +1,27 @@
+{
+  "fonte": "Maggioni & Rebonatto (2023), TCC UPF, Tabelas 3 e 4 (RHCB5, 3 classes)",
+  "acuracia": 0.9691,
+  "precisao_macro": 0.9691,
+  "recall_macro": 0.969,
+  "f1_macro": 0.969,
+  "especificidade_macro": 0.9845,
+  "matriz": {
+    "AFIB": [
+      354,
+      1,
+      1
+    ],
+    "SB": [
+      5,
+      337,
+      14
+    ],
+    "NORMAL": [
+      4,
+      8,
+      344
+    ]
+  },
+  "n_por_classe": 356,
+  "nota": "normais do PTB-XL e arritmias da Chapman; protocolo diferente do nosso"
+}

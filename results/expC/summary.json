@@ -1,0 +1,120 @@
+{
+  "C1_separar_normais_por_base": [
+    {
+      "par": "Shaoxing vs PTB-XL",
+      "atributos": "amplitude do QRS em mV (unidades corretas) — 1 variável, sem modelo",
+      "n": [
+        1308,
+        5935
+      ],
+      "auroc_cv5": 0.5914543126479779
+    },
+    {
+      "par": "Shaoxing vs PTB-XL",
+      "atributos": "amplitude com a escala do TCC (÷10³ vs ÷10) — 1 variável, sem modelo",
+      "n": [
+        1308,
+        5935
+      ],
+      "auroc_cv5": 1.0
+    },
+    {
+      "par": "Shaoxing vs PTB-XL",
+      "atributos": "atributos de ritmo (30, os do modelo)",
+      "n": [
+        1308,
+        5935
+      ],
+      "auroc_cv5": 0.8557780646092095
+    },
+    {
+      "par": "Shaoxing vs PTB-XL",
+      "atributos": "descritores do sinal (PSD 1–40 Hz + amplitude em mV)",
+      "n": [
+        1308,
+        5935
+      ],
+      "auroc_cv5": 0.7652346135118214
+    },
+    {
+      "par": "Shaoxing vs Ningbo",
+      "atributos": "atributos de ritmo (30, os do modelo)",
+      "n": [
+        1308,
+        4333
+      ],
+      "auroc_cv5": 0.5043223155486202
+    },
+    {
+      "par": "Shaoxing vs Ningbo",
+      "atributos": "descritores do sinal (PSD 1–40 Hz + amplitude em mV)",
+      "n": [
+        1308,
+        4333
+      ],
+      "auroc_cv5": 0.49164561705875753
+    }
+  ],
+  "C2_desenho_TCC": [
+    {
+      "modelo": "logreg + atributos de ritmo",
+      "teste": "misto (desenho do TCC): AFIB Shaoxing × normal PTB-XL",
+      "n_pos": 261,
+      "n_neg": 1125,
+      "auroc": 0.9999114516815666,
+      "sensibilidade@0.5": 1.0,
+      "especificidade@0.5": 0.9982222222222222,
+      "acuracia@0.5": 0.9985569985569985
+    },
+    {
+      "modelo": "logreg + atributos de ritmo",
+      "teste": "mesma fonte Shaoxing: AFIB × normal Shaoxing",
+      "n_pos": 261,
+      "n_neg": 201,
+      "auroc": 1.0,
+      "sensibilidade@0.5": 1.0,
+      "especificidade@0.5": 1.0,
+      "acuracia@0.5": 1.0
+    },
+    {
+      "modelo": "logreg + atributos de ritmo",
+      "teste": "mesma fonte PTB-XL: AFIB × normal PTB-XL (folds 9-10)",
+      "n_pos": 289,
+      "n_neg": 1125,
+      "auroc": 0.9957739331026527,
+      "sensibilidade@0.5": 0.972318339100346,
+      "especificidade@0.5": 0.9982222222222222,
+      "acuracia@0.5": 0.9929278642149929
+    },
+    {
+      "modelo": "LightGBM + descritores do sinal",
+      "teste": "misto (desenho do TCC): AFIB Shaoxing × normal PTB-XL",
+      "n_pos": 261,
+      "n_neg": 1125,
+      "auroc": 0.9557020008514261,
+      "sensibilidade@0.5": 0.8773946360153256,
+      "especificidade@0.5": 0.896,
+      "acuracia@0.5": 0.8924963924963925
+    },
+    {
+      "modelo": "LightGBM + descritores do sinal",
+      "teste": "mesma fonte Shaoxing: AFIB × normal Shaoxing",
+      "n_pos": 261,
+      "n_neg": 201,
+      "auroc": 0.9087893864013268,
+      "sensibilidade@0.5": 0.8773946360153256,
+      "especificidade@0.5": 0.7860696517412935,
+      "acuracia@0.5": 0.8376623376623377
+    },
+    {
+      "modelo": "LightGBM + descritores do sinal",
+      "teste": "mesma fonte PTB-XL: AFIB × normal PTB-XL (folds 9-10)",
+      "n_pos": 289,
+      "n_neg": 1125,
+      "auroc": 0.942640522875817,
+      "sensibilidade@0.5": 0.8408304498269896,
+      "especificidade@0.5": 0.896,
+      "acuracia@0.5": 0.8847241867043847
+    }
+  ]
+}

@@ -1,0 +1,322 @@
+{
+  "falso_afib": [
+    {
+      "conjunto": "Shaoxing (teste A)",
+      "grupo": "SINUS_NORMAL",
+      "n": 201,
+      "falso_afib_logreg_limiar": 0.009950248756218905,
+      "ic95": [
+        0.002732914581682854,
+        0.03554837203197374
+      ],
+      "falso_afib_estado_AFIB": 0.0,
+      "ic95_estado": [
+        0.0,
+        0.018754003093121707
+      ],
+      "falso_afib_baseline": 0.004975124378109453,
+      "ic95_baseline": [
+        0.0008787495223456909,
+        0.02763889533104346
+      ]
+    },
+    {
+      "conjunto": "Shaoxing (teste A)",
+      "grupo": "SINUS_OUTRO",
+      "n": 56,
+      "falso_afib_logreg_limiar": 0.017857142857142856,
+      "ic95": [
+        0.003159128964463985,
+        0.0944585817919329
+      ],
+      "falso_afib_estado_AFIB": 0.0,
+      "ic95_estado": [
+        0.0,
+        0.06419614448811528
+      ],
+      "falso_afib_baseline": 0.017857142857142856,
+      "ic95_baseline": [
+        0.003159128964463985,
+        0.0944585817919329
+      ]
+    },
+    {
+      "conjunto": "Shaoxing (teste A)",
+      "grupo": "SINUS_BRADY",
+      "n": 520,
+      "falso_afib_logreg_limiar": 0.011538461538461539,
+      "ic95": [
+        0.005298542201544338,
+        0.02494266048262584
+      ],
+      "falso_afib_estado_AFIB": 0.0019230769230769232,
+      "ic95_estado": [
+        0.00033954226057722817,
+        0.010811920318950629
+      ],
+      "falso_afib_baseline": 0.01730769230769231,
+      "ic95_baseline": [
+        0.00913172986047852,
+        0.032563316886477046
+      ]
+    },
+    {
+      "conjunto": "Shaoxing (teste A)",
+      "grupo": "SINUS_TACHY",
+      "n": 192,
+      "falso_afib_logreg_limiar": 0.015625,
+      "ic95": [
+        0.005327796907835389,
+        0.04492506050346026
+      ],
+      "falso_afib_estado_AFIB": 0.005208333333333333,
+      "ic95_estado": [
+        0.0009199674643243817,
+        0.02890822021388086
+      ],
+      "falso_afib_baseline": 0.020833333333333332,
+      "ic95_baseline": [
+        0.008130652411583922,
+        0.052334539866256934
+      ]
+    },
+    {
+      "conjunto": "PTB-XL (todo)",
+      "grupo": "SINUS_NORMAL",
+      "n": 5935,
+      "falso_afib_logreg_limiar": 0.03352990732940185,
+      "ic95": [
+        0.029243296354067656,
+        0.038420000137962027
+      ],
+      "falso_afib_estado_AFIB": 0.005560235888795282,
+      "ic95_estado": [
+        0.003961999937280682,
+        0.007798138605562422
+      ],
+      "falso_afib_baseline": 0.018534119629317607,
+      "ic95_baseline": [
+        0.015401177788416343,
+        0.022289943658567523
+      ]
+    },
+    {
+      "conjunto": "PTB-XL (todo)",
+      "grupo": "SINUS_OUTRO",
+      "n": 8753,
+      "falso_afib_logreg_limiar": 0.04375642636810236,
+      "ic95": [
+        0.039667530991427245,
+        0.048245627104295315
+      ],
+      "falso_afib_estado_AFIB": 0.017365474694390495,
+      "ic95_estado": [
+        0.014832989677474165,
+        0.020321420332637244
+      ],
+      "falso_afib_baseline": 0.04501313835256483,
+      "ic95_baseline": [
+        0.040865546537361117,
+        0.0495599328957715
+      ]
+    },
+    {
+      "conjunto": "PTB-XL (todo)",
+      "grupo": "SINUS_BRADY",
+      "n": 567,
+      "falso_afib_logreg_limiar": 0.09171075837742504,
+      "ic95": [
+        0.07062286489182855,
+        0.11829399050203203
+      ],
+      "falso_afib_estado_AFIB": 0.021164021164021163,
+      "ic95_estado": [
+        0.012147271490401623,
+        0.036625628031987774
+      ],
+      "falso_afib_baseline": 0.07583774250440917,
+      "ic95_baseline": [
+        0.05678768255622961,
+        0.10059678276654994
+      ]
+    },
+    {
+      "conjunto": "PTB-XL (todo)",
+      "grupo": "SINUS_TACHY",
+      "n": 622,
+      "falso_afib_logreg_limiar": 0.06591639871382636,
+      "ic95": [
+        0.04895841186622025,
+        0.08820345145510577
+      ],
+      "falso_afib_estado_AFIB": 0.024115755627009645,
+      "ic95_estado": [
+        0.01466785183013755,
+        0.039405894625834686
+      ],
+      "falso_afib_baseline": 0.0707395498392283,
+      "ic95_baseline": [
+        0.05311499799613939,
+        0.09363395573272745
+      ]
+    },
+    {
+      "conjunto": "Ningbo (todo, só negativos; fonte nunca vista)",
+      "grupo": "SINUS_NORMAL",
+      "n": 4333,
+      "falso_afib_logreg_limiar": 0.01661666282021694,
+      "ic95": [
+        0.013216283356026627,
+        0.020873409935976472
+      ],
+      "falso_afib_estado_AFIB": 0.0027694438033694898,
+      "ic95_estado": [
+        0.0015849653418257372,
+        0.004834821813877619
+      ],
+      "falso_afib_baseline": 0.010385414262635588,
+      "ic95_baseline": [
+        0.007770836276933657,
+        0.01386739925373456
+      ]
+    },
+    {
+      "conjunto": "Ningbo (todo, só negativos; fonte nunca vista)",
+      "grupo": "SINUS_OUTRO",
+      "n": 1216,
+      "falso_afib_logreg_limiar": 0.01644736842105263,
+      "ic95": [
+        0.01067197221474019,
+        0.02526843185083685
+      ],
+      "falso_afib_estado_AFIB": 0.0008223684210526315,
+      "ic95_estado": [
+        0.0001451792378818575,
+        0.0046436392447801525
+      ],
+      "falso_afib_baseline": 0.01069078947368421,
+      "ic95_baseline": [
+        0.006258250799286532,
+        0.01820525331469023
+      ]
+    },
+    {
+      "conjunto": "Ningbo (todo, só negativos; fonte nunca vista)",
+      "grupo": "SINUS_BRADY",
+      "n": 10497,
+      "falso_afib_logreg_limiar": 0.011527102981804324,
+      "ic95": [
+        0.009656324504054917,
+        0.013755284714010042
+      ],
+      "falso_afib_estado_AFIB": 0.001619510336286558,
+      "ic95_estado": [
+        0.001011418490910537,
+        0.0025922545708752915
+      ],
+      "falso_afib_baseline": 0.01352767457368772,
+      "ic95_baseline": [
+        0.011488967915277143,
+        0.015922320718959566
+      ]
+    },
+    {
+      "conjunto": "Ningbo (todo, só negativos; fonte nunca vista)",
+      "grupo": "SINUS_TACHY",
+      "n": 4535,
+      "falso_afib_logreg_limiar": 0.07541345093715546,
+      "ic95": [
+        0.06808228144130724,
+        0.08346334641228428
+      ],
+      "falso_afib_estado_AFIB": 0.014773980154355016,
+      "ic95_estado": [
+        0.011650777961891401,
+        0.01871855680405416
+      ],
+      "falso_afib_baseline": 0.03329658213891951,
+      "ic95_baseline": [
+        0.02845715305872331,
+        0.03892603123217594
+      ]
+    }
+  ],
+  "regra_fc": [
+    {
+      "conjunto": "Shaoxing (teste A)",
+      "rotulo": "SINUS_BRADY",
+      "n": 520,
+      "AVISO_FC_ALTA": 0,
+      "AVISO_FC_BAIXA": 519,
+      "OK": 1
+    },
+    {
+      "conjunto": "Shaoxing (teste A)",
+      "rotulo": "SINUS_NORMAL",
+      "n": 201,
+      "AVISO_FC_ALTA": 0,
+      "AVISO_FC_BAIXA": 2,
+      "OK": 199
+    },
+    {
+      "conjunto": "Shaoxing (teste A)",
+      "rotulo": "SINUS_TACHY",
+      "n": 192,
+      "AVISO_FC_ALTA": 190,
+      "AVISO_FC_BAIXA": 0,
+      "OK": 2
+    },
+    {
+      "conjunto": "PTB-XL (todo)",
+      "rotulo": "SINUS_BRADY",
+      "n": 567,
+      "AVISO_FC_ALTA": 0,
+      "AVISO_FC_BAIXA": 557,
+      "OK": 10
+    },
+    {
+      "conjunto": "PTB-XL (todo)",
+      "rotulo": "SINUS_NORMAL",
+      "n": 5935,
+      "AVISO_FC_ALTA": 15,
+      "AVISO_FC_BAIXA": 1080,
+      "OK": 4840
+    },
+    {
+      "conjunto": "PTB-XL (todo)",
+      "rotulo": "SINUS_TACHY",
+      "n": 622,
+      "AVISO_FC_ALTA": 611,
+      "AVISO_FC_BAIXA": 1,
+      "OK": 10
+    },
+    {
+      "conjunto": "Ningbo (todo, só negativos; fonte nunca vista)",
+      "rotulo": "SINUS_BRADY",
+      "n": 10497,
+      "AVISO_FC_ALTA": 4,
+      "AVISO_FC_BAIXA": 10441,
+      "OK": 52
+    },
+    {
+      "conjunto": "Ningbo (todo, só negativos; fonte nunca vista)",
+      "rotulo": "SINUS_NORMAL",
+      "n": 4333,
+      "AVISO_FC_ALTA": 121,
+      "AVISO_FC_BAIXA": 52,
+      "OK": 4160
+    },
+    {
+      "conjunto": "Ningbo (todo, só negativos; fonte nunca vista)",
+      "rotulo": "SINUS_TACHY",
+      "n": 4535,
+      "AVISO_FC_ALTA": 4501,
+      "AVISO_FC_BAIXA": 2,
+      "OK": 32
+    }
+  ],
+  "limiares_fc": {
+    "brady_bpm": 60,
+    "tachy_bpm": 100
+  }
+}

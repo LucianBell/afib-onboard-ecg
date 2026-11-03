@@ -204,3 +204,8 @@ sqi_calibration:
   snr_db: [12, 6, 0, -6]
   max_clean_rejection: 0.05        # na validação limpa, para cada classe
   # critério: maior especificidade média nas janelas aprovadas sob ruído (todas as condições ruidosas)
+
+# SQI do sistema a bordo (etapa 7 em diante): limiares calibrados no experimento F, fase 2
+# (results/expF/sqi_calibrated.json). Os experimentos A–I usaram a seção `sqi` acima, mantida para reprodução.
+sqi_onboard:
+  min_qrs_agreement: 0.95

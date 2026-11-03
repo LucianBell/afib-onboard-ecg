@@ -1,0 +1,7 @@
+par,atributos,n,auroc_cv5
+Shaoxing vs PTB-XL,"amplitude do QRS em mV (unidades corretas) — 1 variável, sem modelo","[1308, 5935]",0.5914543126479779
+Shaoxing vs PTB-XL,"amplitude com a escala do TCC (÷10³ vs ÷10) — 1 variável, sem modelo","[1308, 5935]",1.0
+Shaoxing vs PTB-XL,"atributos de ritmo (30, os do modelo)","[1308, 5935]",0.8557780646092095
+Shaoxing vs PTB-XL,descritores do sinal (PSD 1–40 Hz + amplitude em mV),"[1308, 5935]",0.7652346135118214
+Shaoxing vs Ningbo,"atributos de ritmo (30, os do modelo)","[1308, 4333]",0.5043223155486202
+Shaoxing vs Ningbo,descritores do sinal (PSD 1–40 Hz + amplitude em mV),"[1308, 4333]",0.49164561705875753

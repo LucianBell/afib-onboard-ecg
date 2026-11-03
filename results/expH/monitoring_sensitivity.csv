@@ -1,0 +1,9 @@
+cenario,conjunto,configuracao,falsos_alertas_dia,falsos_alertas_dia_p95_dias,fp_por_janela,n_registros
+negativos correlacionados (registro repetido por ~5 min),Shaoxing (teste A),3 de 3,0.57,2.0,,
+negativos correlacionados (registro repetido por ~5 min),"PTB-XL (todo, externo)",3 de 3,3.953333333333333,7.0,,
+"pessoa com ectopia frequente, janelas independentes",PTB-XL,3 de 3,178.54666666666665,199.0,0.3050047214353163,1059.0
+"pessoa com ectopia frequente, janelas correlacionados (~5 min)",PTB-XL,3 de 3,61.76,69.0,0.3050047214353163,1059.0
+"pessoa com arritmia sinusal, janelas independentes",PTB-XL,3 de 3,56.96333333333333,69.0,0.1993517017828201,617.0
+"pessoa com arritmia sinusal, janelas correlacionados (~5 min)",PTB-XL,3 de 3,46.443333333333335,54.0,0.1993517017828201,617.0
+"pessoa com ectopia frequente, janelas independentes",Shaoxing,3 de 3,92.21666666666667,107.0,0.23823529411764705,340.0
+"pessoa com ectopia frequente, janelas correlacionados (~5 min)",Shaoxing,3 de 3,52.95333333333333,61.0,0.23823529411764705,340.0

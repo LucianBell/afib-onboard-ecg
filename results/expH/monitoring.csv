@@ -1,0 +1,7 @@
+N,M,falsos_alertas_dia,falsos_alertas_dia_p95_dias,sens_episodio_6j,tempo_alerta_mediana_s_6j,tempo_alerta_p90_s_6j,sens_episodio_31j,tempo_alerta_mediana_s_31j,tempo_alerta_p90_s_31j,sens_episodio_188j,tempo_alerta_mediana_s_188j,tempo_alerta_p90_s_188j,conjunto,configuracao,fp_por_janela,sens_por_janela
+1,1,17.713333333333335,24.0,1.0,9.6,9.6,1.0,9.6,9.6,1.0,9.6,9.6,Shaoxing (teste A),1 de 1 (sem votação),0.002,0.9700374531835206
+3,3,0.0,0.0,0.9955,28.799999999999997,28.799999999999997,1.0,28.799999999999997,28.799999999999997,1.0,28.799999999999997,28.799999999999997,Shaoxing (teste A),3 de 3 (escolhido),0.002,0.9700374531835206
+1,1,115.21,131.05,1.0,9.6,9.6,1.0,9.6,9.6,1.0,9.6,9.6,"PTB-XL (todo, externo)",1 de 1 (sem votação),0.013019713811951114,0.9160460392687881
+3,3,0.013333333333333334,0.0,0.96,28.799999999999997,48.0,1.0,28.799999999999997,57.599999999999994,1.0,28.799999999999997,57.599999999999994,"PTB-XL (todo, externo)",3 de 3 (escolhido),0.013019713811951114,0.9160460392687881
+1,1,40.78666666666667,52.0,,,,,,,,,,Ningbo (só negativos),1 de 1 (sem votação),0.004528689481301648,
+3,3,0.0,0.0,,,,,,,,,,Ningbo (só negativos),3 de 3 (escolhido),0.004528689481301648,

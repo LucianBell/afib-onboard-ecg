@@ -1,0 +1,94 @@
+{
+  "A: teste Shaoxing": {
+    "mcnemar": {
+      "so_a_acerta": 9,
+      "so_b_acerta": 4,
+      "p_valor": 0.266845703125
+    },
+    "bootstrap_pareado_logreg_menos_baseline": {
+      "auroc": {
+        "diferenca_media": 0.00514344289843382,
+        "ic95": [
+          0.0019887588025733205,
+          0.009031608206904514
+        ],
+        "p_bilateral": 0.0
+      },
+      "auprc": {
+        "diferenca_media": 0.03421146315042545,
+        "ic95": [
+          0.010885924399507464,
+          0.06498547674551479
+        ],
+        "p_bilateral": 0.0
+      },
+      "sensibilidade": {
+        "diferenca_media": 0.007565134099616856,
+        "ic95": [
+          0.0,
+          0.019157088122605415
+        ],
+        "p_bilateral": 0.258
+      },
+      "especificidade": {
+        "diferenca_media": 0.0032115583075335427,
+        "ic95": [
+          -0.003095975232198178,
+          0.01031991744066052
+        ],
+        "p_bilateral": 0.429
+      }
+    },
+    "erros": {
+      "logreg": 12,
+      "baseline_rr": 17,
+      "n": 1230
+    }
+  },
+  "B: PTB-XL todo": {
+    "mcnemar": {
+      "so_a_acerta": 221,
+      "so_b_acerta": 289,
+      "p_valor": 0.0029720379601110613
+    },
+    "bootstrap_pareado_logreg_menos_baseline": {
+      "auroc": {
+        "diferenca_media": 0.010786316351507523,
+        "ic95": [
+          0.009228828600786021,
+          0.01237126613572949
+        ],
+        "p_bilateral": 0.0
+      },
+      "auprc": {
+        "diferenca_media": 0.17761466681174487,
+        "ic95": [
+          0.1548658950761919,
+          0.20119286063160594
+        ],
+        "p_bilateral": 0.0
+      },
+      "sensibilidade": {
+        "diferenca_media": 0.011227240896358603,
+        "ic95": [
+          0.004901960784313708,
+          0.018207282913165312
+        ],
+        "p_bilateral": 0.0
+      },
+      "especificidade": {
+        "diferenca_media": -0.005318983435157777,
+        "ic95": [
+          -0.007937582666750672,
+          -0.0027083202116269245
+        ],
+        "p_bilateral": 0.0
+      }
+    },
+    "erros": {
+      "logreg": 689,
+      "baseline_rr": 621,
+      "n": 17305
+    }
+  }
+}

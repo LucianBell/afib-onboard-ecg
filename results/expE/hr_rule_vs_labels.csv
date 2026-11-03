@@ -1,0 +1,10 @@
+conjunto,rotulo,n,AVISO_FC_ALTA,AVISO_FC_BAIXA,OK
+Shaoxing (teste A),SINUS_BRADY,520,0,519,1
+Shaoxing (teste A),SINUS_NORMAL,201,0,2,199
+Shaoxing (teste A),SINUS_TACHY,192,190,0,2
+PTB-XL (todo),SINUS_BRADY,567,0,557,10
+PTB-XL (todo),SINUS_NORMAL,5935,15,1080,4840
+PTB-XL (todo),SINUS_TACHY,622,611,1,10
+"Ningbo (todo, só negativos; fonte nunca vista)",SINUS_BRADY,10497,4,10441,52
+"Ningbo (todo, só negativos; fonte nunca vista)",SINUS_NORMAL,4333,121,52,4160
+"Ningbo (todo, só negativos; fonte nunca vista)",SINUS_TACHY,4535,4501,2,32

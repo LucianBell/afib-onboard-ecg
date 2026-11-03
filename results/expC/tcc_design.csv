@@ -1,0 +1,7 @@
+modelo,teste,n_pos,n_neg,auroc,sensibilidade@0.5,especificidade@0.5,acuracia@0.5
+logreg + atributos de ritmo,misto (desenho do TCC): AFIB Shaoxing × normal PTB-XL,261,1125,0.9999114516815666,1.0,0.9982222222222222,0.9985569985569985
+logreg + atributos de ritmo,mesma fonte Shaoxing: AFIB × normal Shaoxing,261,201,1.0,1.0,1.0,1.0
+logreg + atributos de ritmo,mesma fonte PTB-XL: AFIB × normal PTB-XL (folds 9-10),289,1125,0.9957739331026527,0.972318339100346,0.9982222222222222,0.9929278642149929
+LightGBM + descritores do sinal,misto (desenho do TCC): AFIB Shaoxing × normal PTB-XL,261,1125,0.9557020008514261,0.8773946360153256,0.896,0.8924963924963925
+LightGBM + descritores do sinal,mesma fonte Shaoxing: AFIB × normal Shaoxing,261,201,0.9087893864013268,0.8773946360153256,0.7860696517412935,0.8376623376623377
+LightGBM + descritores do sinal,mesma fonte PTB-XL: AFIB × normal PTB-XL (folds 9-10),289,1125,0.942640522875817,0.8408304498269896,0.896,0.8847241867043847
