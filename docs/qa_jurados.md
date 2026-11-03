@@ -198,8 +198,11 @@ projeto. A origem de cada valor está em `results/readme_numbers.json`, e um tes
 digitados à mão (`tests/test_report_numbers.py`).
 
 **P20. "Dá para reproduzir?"**
-Sim, com `make reproduce` (ou `SUBSET=N` para um teste rápido). Rodamos isso num clone novo com subconjunto
-(ver `docs/decisions.md`). Os resultados completos exigem ~4,3 GB de download e, somando os passos cronometrados nesta máquina, da ordem de meia hora de CPU.
+Sim, com `make reproduce` (ou `SUBSET=N` para um teste rápido). Num clone novo, `make reproduce SUBSET=4000`
+terminou sem erro, com todos os testes passando, em cerca de 6 minutos (D47 em `docs/decisions.md`).
+Ressalvas: não recriamos o ambiente conda do zero, e a execução completa com todos os dados foi feita passo a
+passo, não num único comando. Os resultados completos exigem ~4,3 GB de download e, somando os passos
+cronometrados nesta máquina, da ordem de meia hora de CPU.
 
 **P21. "Qual é a crítica justa ao TCC?"**
 O desenho dele confunde fonte com rótulo:

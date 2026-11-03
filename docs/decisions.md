@@ -236,3 +236,25 @@ do SQI). Todos os resultados estão em `results/exp{B..I}/`, gerados por `make e
     confiantes demais no PTB-XL;
   - motivação "AFIB em astronautas" conferida na fonte (Academias Nacionais, relatório de 2017; Khine et al.
     2018) e acrescentada ao README, com a ressalva de que o estudo não observou AFIB em voo.
+
+## Etapa 10 — reprodução do zero em subconjunto (2026-11-03)
+
+- **D47. `make reproduce SUBSET=4000` num clone novo** (commit `d6a0a31`), no ambiente conda fixado. Para
+  não baixar de novo, os dois zips da PhysioNet entraram por hardlink: o passo de download foi conferido pelo
+  tamanho e não executou o curl. Todo o resto rodou do zero:
+  - extração e SHA256SUMS de todos os arquivos;
+  - download e checksum da NSTDB e das tabelas do CinC 2021;
+  - índices, auditoria, atributos, treino, teste A em modo reprodução (registrado em `TEST_OPENED.json`
+    com `"reproducao": true`);
+  - experimentos B–I, export, benchmark, pacote do painel, figuras, README e testes.
+
+  Resultado: **código de saída 0, 59 testes passando, 6 min 23 s de relógio.** Duas falhas apareceram nas
+  tentativas anteriores e foram corrigidas antes da execução final:
+  - `make report` supunha dados que só existem na base completa → agora marca "n/d" em modo subconjunto
+    (`720403d`);
+  - o teste de vazamento exigia que o split completo existisse localmente → agora checa os registros
+    presentes (`d6a0a31`).
+
+  Não verificados: `make env` num ambiente novo (foi usado o ambiente já criado) e o download real num
+  clone novo (só nesta sessão, na etapa 2). O `make reproduce` com os dados completos nunca rodou de ponta a
+  ponta: os resultados completos foram gerados passo a passo pelos mesmos scripts.
