@@ -113,3 +113,25 @@ são marcadas como **pendente** até a etapa correspondente.
 - **D26. Janelas reprovadas pelo SQI ficam fora do treino e da avaliação principal**, porque no sistema elas
   viram `SINAL_RUIM` antes do modelo. A taxa de reprovação por classe é relatada, e as métricas sem o filtro
   de SQI são relatadas como análise secundária.
+
+## Etapa 5 — experimento A (2026-11-03)
+
+- **D27. Protocolo pré-registrado** (`configs/default.yaml`, seção `experiment_a`, commitado em `a03d09a`
+  antes de qualquer treino):
+  - dados: só Shaoxing (D13), positivos AFIB, negativos SINUS_NORMAL/OUTRO/BRADY/TACHY;
+  - divisão 70/15/15 estratificada por grupo, com a semente global, depois da deduplicação (D16);
+  - candidatos em ordem de simplicidade definida a priori: logreg < random_forest < lightgbm < cnn;
+  - escolha pelo modelo mais simples com AUPRC de validação a no máximo **0,010** do melhor;
+  - limiar: menor valor com especificidade ≥ 0,98 na validação, também para o baseline;
+  - calibração Platt ajustada na validação.
+- **D28. Ajuste de hiperparâmetros** por validação cruzada estratificada de 5 dobras no treino (AUPRC), em
+  grades pequenas (`src/models.py::GRIDS`). A CNN (24.097 parâmetros) não passou por CV, pelo custo: usa
+  parada antecipada em 10% do treino, sem tocar a validação, com recorte aleatório e ruído leve.
+- **D29. Escolha (fase dev, antes do teste):** regressão logística. AUPRC de validação: logreg 0,9997,
+  LightGBM 0,9997, RF 0,9980, CNN 0,9966. Na CV do treino a logística também ficou dentro da margem
+  (0,9955 contra 0,9996 do LightGBM). `results/expA/selection.json` e `split.csv` são commitados antes de
+  `exp_a.py test`, que se recusa a rodar sem isso e grava a trava `TEST_OPENED.json`.
+- **D30. Limitação do desenho A (importante para interpretar números altos):** os negativos excluem por
+  construção os confundidores mais difíceis (ectopia frequente, arritmia sinusal, flutter, bloqueios),
+  que vão para os experimentos E e G. O teste A mede AFIB contra sinusal "limpo" de mesma fonte. Não é o
+  desempenho em uso real.

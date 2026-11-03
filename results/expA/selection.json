@@ -1,0 +1,18 @@
+{
+  "regra": "modelo mais simples, na ordem ['logreg', 'random_forest', 'lightgbm', 'cnn'], cujo AUPRC de validação esteja a no máximo 0.01 do melhor",
+  "margem": 0.01,
+  "auprc_validacao": {
+    "logreg": 0.9997197970910724,
+    "random_forest": 0.99799658942793,
+    "lightgbm": 0.9997011470416602,
+    "cnn": 0.9966410340629397
+  },
+  "melhor_auprc": 0.9997197970910724,
+  "escolhido": "logreg",
+  "limiar_regra": {
+    "min_specificity": 0.98
+  },
+  "data": "2026-11-03T02:31:03",
+  "commit_do_codigo": "a03d09a0da5d88a0045d7bd3264bffcdb2c3c263",
+  "nota": "gerado antes de qualquer acesso ao conjunto de teste; ver TEST_OPENED.json"
+}

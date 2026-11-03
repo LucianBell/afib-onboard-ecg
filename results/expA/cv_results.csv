@@ -1,0 +1,5 @@
+modelo,melhores_params,cv_auprc_media,cv_auprc_dp,segundos
+logreg,"{""clf__C"": 1.0}",0.9955489702445981,0.004349853860937999,1.4494426250457764
+random_forest,"{""clf__max_depth"": null, ""clf__max_features"": ""sqrt"", ""clf__min_samples_leaf"": 1}",0.9992890685804647,0.0002979152733631391,32.289142370224
+lightgbm,"{""clf__min_child_samples"": 50, ""clf__n_estimators"": 400, ""clf__num_leaves"": 15}",0.9996240072285104,0.00021750887675738774,7.104497909545898
+cnn,"{""epocas"": 26, ""auprc_parada"": 0.9976033753607088, ""n_parametros"": 24097}",,,147.007253408432
