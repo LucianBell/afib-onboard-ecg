@@ -1,0 +1,1737 @@
+{
+  "bases": {
+    "chapman": {
+      "afib_with_other_top": [
+        [
+          "TWC",
+          617
+        ],
+        [
+          "STTC",
+          434
+        ],
+        [
+          "LVHV",
+          367
+        ],
+        [
+          "STDD",
+          187
+        ],
+        [
+          "IVB",
+          152
+        ],
+        [
+          "IDC",
+          152
+        ],
+        [
+          "VPB",
+          147
+        ],
+        [
+          "RBBB",
+          143
+        ],
+        [
+          "ALS",
+          107
+        ],
+        [
+          "LVQRSAL",
+          73
+        ]
+      ],
+      "unknown_codes": [],
+      "read_errors": {
+        "ValueError: time data '/' does not match format '%d/%m/%Y'": 1,
+        "IndexError: list index out of range": 1
+      },
+      "n_samples_values": {
+        "5000.0": 45150
+      },
+      "fs_values": {
+        "500.0": 45150
+      },
+      "units": {
+        "mV": 45150
+      },
+      "adc_gain": {
+        "1000": 45150
+      },
+      "adc_res": {
+        "16": 45150
+      },
+      "hea_keys": {
+        "Age,Dx,Hx,Rx,Sex,Sx": 45151,
+        "": 1
+      },
+      "invalid_by_group": {
+        "FORA_DE_TREINO": 2,
+        "SEM_RITMO": 1
+      },
+      "age_max": 89.0,
+      "age_ge_90": 0
+    },
+    "ptbxl": {
+      "afib_with_other_top": [
+        [
+          "ASMI",
+          368
+        ],
+        [
+          "ABQRS",
+          312
+        ],
+        [
+          "LVH",
+          275
+        ],
+        [
+          "ISC_",
+          257
+        ],
+        [
+          "IMI",
+          251
+        ],
+        [
+          "NST_",
+          217
+        ],
+        [
+          "STD_",
+          210
+        ],
+        [
+          "PVC",
+          205
+        ],
+        [
+          "NDT",
+          198
+        ],
+        [
+          "ISCAL",
+          145
+        ]
+      ],
+      "unknown_codes": [],
+      "read_errors": {},
+      "n_samples_values": {
+        "5000": 21799
+      },
+      "fs_values": {
+        "500": 21799
+      },
+      "units": {
+        "mV": 21799
+      },
+      "adc_gain": {
+        "1000": 21799
+      },
+      "adc_res": {
+        "16": 21799
+      },
+      "hea_keys": {},
+      "invalid_by_group": {},
+      "validated_by_human": {
+        "true": 16056,
+        "false": 5743
+      },
+      "age_max": 90.0,
+      "age_ge_90": 293
+    }
+  },
+  "ptbxl_age_300": 293,
+  "ningbo_age_0": 247,
+  "ningbo_age_1_3": 0,
+  "boundary": {
+    "ultimo_registro_shaoxing": 10646,
+    "n_registros_shaoxing": 10247,
+    "n_registros_ningbo": 34905,
+    "codigos_comparados": 94,
+    "codigos_com_contagem_identica_nas_duas_fontes": 93,
+    "soma_abs_dif_shaoxing": 1,
+    "soma_abs_dif_ningbo": 0
+  },
+  "boundary_table": [
+    {
+      "codigo": "426177001",
+      "abrev": "SB",
+      "dx": "sinus bradycardia",
+      "cinc_shaoxing": 3889,
+      "nosso_shaoxing": 3889,
+      "cinc_ningbo": 12670,
+      "nosso_ningbo": 12670,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "164934002",
+      "abrev": "TAb",
+      "dx": "t wave abnormal",
+      "cinc_shaoxing": 1876,
+      "nosso_shaoxing": 1876,
+      "cinc_ningbo": 5167,
+      "nosso_ningbo": 5167,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "426783006",
+      "abrev": "NSR",
+      "dx": "sinus rhythm",
+      "cinc_shaoxing": 1826,
+      "nosso_shaoxing": 1826,
+      "cinc_ningbo": 6299,
+      "nosso_ningbo": 6299,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "164889003",
+      "abrev": "AF",
+      "dx": "atrial fibrillation",
+      "cinc_shaoxing": 1780,
+      "nosso_shaoxing": 1780,
+      "cinc_ningbo": 0,
+      "nosso_ningbo": 0,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "427084000",
+      "abrev": "STach",
+      "dx": "sinus tachycardia",
+      "cinc_shaoxing": 1568,
+      "nosso_shaoxing": 1567,
+      "cinc_ningbo": 5687,
+      "nosso_ningbo": 5687,
+      "dif_shaoxing": -1,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "55827005",
+      "abrev": "LVHV",
+      "dx": "left ventricular high voltage",
+      "cinc_shaoxing": 1295,
+      "nosso_shaoxing": 1295,
+      "cinc_ningbo": 4106,
+      "nosso_ningbo": 4106,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "428750005",
+      "abrev": "NSSTTA",
+      "dx": "nonspecific st t abnormality",
+      "cinc_shaoxing": 1158,
+      "nosso_shaoxing": 1158,
+      "cinc_ningbo": 0,
+      "nosso_ningbo": 0,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "426761007",
+      "abrev": "SVT",
+      "dx": "supraventricular tachycardia",
+      "cinc_shaoxing": 587,
+      "nosso_shaoxing": 587,
+      "cinc_ningbo": 137,
+      "nosso_ningbo": 137,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "59118001",
+      "abrev": "RBBB",
+      "dx": "right bundle branch block",
+      "cinc_shaoxing": 454,
+      "nosso_shaoxing": 454,
+      "cinc_ningbo": 195,
+      "nosso_ningbo": 195,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "164890007",
+      "abrev": "AFL",
+      "dx": "atrial flutter",
+      "cinc_shaoxing": 445,
+      "nosso_shaoxing": 445,
+      "cinc_ningbo": 7615,
+      "nosso_ningbo": 7615,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "429622005",
+      "abrev": "STD",
+      "dx": "st depression",
+      "cinc_shaoxing": 402,
+      "nosso_shaoxing": 402,
+      "cinc_ningbo": 1266,
+      "nosso_ningbo": 1266,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "39732003",
+      "abrev": "LAD",
+      "dx": "left axis deviation",
+      "cinc_shaoxing": 382,
+      "nosso_shaoxing": 382,
+      "cinc_ningbo": 1163,
+      "nosso_ningbo": 1163,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "17338001",
+      "abrev": "VPB",
+      "dx": "ventricular premature beats",
+      "cinc_shaoxing": 294,
+      "nosso_shaoxing": 294,
+      "cinc_ningbo": 0,
+      "nosso_ningbo": 0,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "284470004",
+      "abrev": "PAC",
+      "dx": "premature atrial contraction",
+      "cinc_shaoxing": 258,
+      "nosso_shaoxing": 258,
+      "cinc_ningbo": 1054,
+      "nosso_ningbo": 1054,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "251146004",
+      "abrev": "LQRSV",
+      "dx": "low qrs voltages",
+      "cinc_shaoxing": 249,
+      "nosso_shaoxing": 249,
+      "cinc_ningbo": 794,
+      "nosso_ningbo": 794,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "270492004",
+      "abrev": "IAVB",
+      "dx": "1st degree av block",
+      "cinc_shaoxing": 247,
+      "nosso_shaoxing": 247,
+      "cinc_ningbo": 893,
+      "nosso_ningbo": 893,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "698252002",
+      "abrev": "NSIVCB",
+      "dx": "nonspecific intraventricular conduction disorder",
+      "cinc_shaoxing": 235,
+      "nosso_shaoxing": 235,
+      "cinc_ningbo": 536,
+      "nosso_ningbo": 536,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "164917005",
+      "abrev": "QAb",
+      "dx": "qwave abnormal",
+      "cinc_shaoxing": 235,
+      "nosso_shaoxing": 235,
+      "cinc_ningbo": 828,
+      "nosso_ningbo": 828,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "47665007",
+      "abrev": "RAD",
+      "dx": "right axis deviation",
+      "cinc_shaoxing": 215,
+      "nosso_shaoxing": 215,
+      "cinc_ningbo": 638,
+      "nosso_ningbo": 638,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "164909002",
+      "abrev": "LBBB",
+      "dx": "left bundle branch block",
+      "cinc_shaoxing": 205,
+      "nosso_shaoxing": 205,
+      "cinc_ningbo": 35,
+      "nosso_ningbo": 35,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "164931005",
+      "abrev": "STE",
+      "dx": "st elevation",
+      "cinc_shaoxing": 176,
+      "nosso_shaoxing": 176,
+      "cinc_ningbo": 0,
+      "nosso_ningbo": 0,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "233917008",
+      "abrev": "AVB",
+      "dx": "av block",
+      "cinc_shaoxing": 166,
+      "nosso_shaoxing": 166,
+      "cinc_ningbo": 78,
+      "nosso_ningbo": 78,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "251199005",
+      "abrev": "CCR",
+      "dx": "countercolockwise rotation",
+      "cinc_shaoxing": 162,
+      "nosso_shaoxing": 162,
+      "cinc_ningbo": 0,
+      "nosso_ningbo": 0,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "59931005",
+      "abrev": "TInv",
+      "dx": "t wave inversion",
+      "cinc_shaoxing": 157,
+      "nosso_shaoxing": 157,
+      "cinc_ningbo": 2720,
+      "nosso_ningbo": 2720,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "713422000",
+      "abrev": "ATach",
+      "dx": "atrial tachycardia",
+      "cinc_shaoxing": 121,
+      "nosso_shaoxing": 121,
+      "cinc_ningbo": 176,
+      "nosso_ningbo": 176,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "164912004",
+      "abrev": "PWC",
+      "dx": "p wave change",
+      "cinc_shaoxing": 95,
+      "nosso_shaoxing": 95,
+      "cinc_ningbo": 47,
+      "nosso_ningbo": 47,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "251198002",
+      "abrev": "CR",
+      "dx": "clockwise rotation",
+      "cinc_shaoxing": 76,
+      "nosso_shaoxing": 76,
+      "cinc_ningbo": 0,
+      "nosso_ningbo": 0,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "111975006",
+      "abrev": "LQT",
+      "dx": "prolonged qt interval",
+      "cinc_shaoxing": 57,
+      "nosso_shaoxing": 57,
+      "cinc_ningbo": 337,
+      "nosso_ningbo": 337,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "164865005",
+      "abrev": "MI",
+      "dx": "myocardial infarction",
+      "cinc_shaoxing": 40,
+      "nosso_shaoxing": 40,
+      "cinc_ningbo": 83,
+      "nosso_ningbo": 83,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "164937009",
+      "abrev": "UAb",
+      "dx": "u wave abnormal",
+      "cinc_shaoxing": 22,
+      "nosso_shaoxing": 22,
+      "cinc_ningbo": 114,
+      "nosso_ningbo": 114,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "428417006",
+      "abrev": "ERe",
+      "dx": "early repolarization",
+      "cinc_shaoxing": 22,
+      "nosso_shaoxing": 22,
+      "cinc_ningbo": 344,
+      "nosso_ningbo": 344,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "251166008",
+      "abrev": "AVNRT",
+      "dx": "atrioventricular  node reentrant tachycardia",
+      "cinc_shaoxing": 16,
+      "nosso_shaoxing": 16,
+      "cinc_ningbo": 0,
+      "nosso_ningbo": 0,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "426995002",
+      "abrev": "JE",
+      "dx": "junctional escape",
+      "cinc_shaoxing": 15,
+      "nosso_shaoxing": 15,
+      "cinc_ningbo": 60,
+      "nosso_ningbo": 60,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "164873001",
+      "abrev": "LVH",
+      "dx": "left ventricular hypertrophy",
+      "cinc_shaoxing": 15,
+      "nosso_shaoxing": 15,
+      "cinc_ningbo": 632,
+      "nosso_ningbo": 632,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "195060002",
+      "abrev": "VPEx",
+      "dx": "ventricular pre excitation",
+      "cinc_shaoxing": 12,
+      "nosso_shaoxing": 12,
+      "cinc_ningbo": 0,
+      "nosso_ningbo": 0,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "164947007",
+      "abrev": "LPR",
+      "dx": "prolonged pr interval",
+      "cinc_shaoxing": 12,
+      "nosso_shaoxing": 12,
+      "cinc_ningbo": 40,
+      "nosso_ningbo": 40,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "195042002",
+      "abrev": "IIAVB",
+      "dx": "2nd degree av block",
+      "cinc_shaoxing": 8,
+      "nosso_shaoxing": 8,
+      "cinc_ningbo": 58,
+      "nosso_ningbo": 58,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "251180001",
+      "abrev": "VTrig",
+      "dx": "ventricular trigeminy",
+      "cinc_shaoxing": 8,
+      "nosso_shaoxing": 8,
+      "cinc_ningbo": 0,
+      "nosso_ningbo": 0,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "67751000119106",
+      "abrev": "RAHV",
+      "dx": "right atrial  high voltage",
+      "cinc_shaoxing": 8,
+      "nosso_shaoxing": 8,
+      "cinc_ningbo": 28,
+      "nosso_ningbo": 28,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "233897008",
+      "abrev": "AVRT",
+      "dx": "atrioventricular reentrant tachycardia",
+      "cinc_shaoxing": 8,
+      "nosso_shaoxing": 8,
+      "cinc_ningbo": 18,
+      "nosso_ningbo": 18,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "75532003",
+      "abrev": "VEsB",
+      "dx": "ventricular escape beat",
+      "cinc_shaoxing": 7,
+      "nosso_shaoxing": 7,
+      "cinc_ningbo": 49,
+      "nosso_ningbo": 49,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "17366009",
+      "abrev": "SAAWR",
+      "dx": "sinus atrium to atrial wandering rhythm",
+      "cinc_shaoxing": 7,
+      "nosso_shaoxing": 7,
+      "cinc_ningbo": 0,
+      "nosso_ningbo": 0,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "54016002",
+      "abrev": "MoI",
+      "dx": "mobitz type i wenckebach atrioventricular block",
+      "cinc_shaoxing": 6,
+      "nosso_shaoxing": 6,
+      "cinc_ningbo": 25,
+      "nosso_ningbo": 25,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "89792004",
+      "abrev": "RVH",
+      "dx": "right ventricular hypertrophy",
+      "cinc_shaoxing": 4,
+      "nosso_shaoxing": 4,
+      "cinc_ningbo": 106,
+      "nosso_ningbo": 106,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "74390002",
+      "abrev": "WPW",
+      "dx": "wolff parkinson white pattern",
+      "cinc_shaoxing": 4,
+      "nosso_shaoxing": 4,
+      "cinc_ningbo": 68,
+      "nosso_ningbo": 68,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "164942001",
+      "abrev": "FQRS",
+      "dx": "fqrs wave",
+      "cinc_shaoxing": 3,
+      "nosso_shaoxing": 3,
+      "cinc_ningbo": 0,
+      "nosso_ningbo": 0,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "11157007",
+      "abrev": "VBig",
+      "dx": "ventricular bigeminy",
+      "cinc_shaoxing": 3,
+      "nosso_shaoxing": 3,
+      "cinc_ningbo": 0,
+      "nosso_ningbo": 0,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "446358003",
+      "abrev": "RAH",
+      "dx": "right atrial hypertrophy",
+      "cinc_shaoxing": 3,
+      "nosso_shaoxing": 3,
+      "cinc_ningbo": 33,
+      "nosso_ningbo": 33,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "251173003",
+      "abrev": "AB",
+      "dx": "atrial bigeminy",
+      "cinc_shaoxing": 3,
+      "nosso_shaoxing": 3,
+      "cinc_ningbo": 0,
+      "nosso_ningbo": 0,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "195101003",
+      "abrev": "WAP",
+      "dx": "wandering atrial pacemaker",
+      "cinc_shaoxing": 2,
+      "nosso_shaoxing": 2,
+      "cinc_ningbo": 0,
+      "nosso_ningbo": 0,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "164930006",
+      "abrev": "STIAb",
+      "dx": "st interval abnormal",
+      "cinc_shaoxing": 2,
+      "nosso_shaoxing": 2,
+      "cinc_ningbo": 799,
+      "nosso_ningbo": 799,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "13640000",
+      "abrev": "FB",
+      "dx": "fusion beats",
+      "cinc_shaoxing": 2,
+      "nosso_shaoxing": 2,
+      "cinc_ningbo": 114,
+      "nosso_ningbo": 114,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "251164006",
+      "abrev": "JPC",
+      "dx": "junctional premature complex",
+      "cinc_shaoxing": 1,
+      "nosso_shaoxing": 1,
+      "cinc_ningbo": 10,
+      "nosso_ningbo": 10,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "27885002",
+      "abrev": "CHB",
+      "dx": "complete heart block",
+      "cinc_shaoxing": 1,
+      "nosso_shaoxing": 1,
+      "cinc_ningbo": 75,
+      "nosso_ningbo": 75,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "713427006",
+      "abrev": "CRBBB",
+      "dx": "complete right bundle branch block",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 1096,
+      "nosso_ningbo": 1096,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "6374002",
+      "abrev": "BBB",
+      "dx": "bundle branch block",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 385,
+      "nosso_ningbo": 385,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "426627000",
+      "abrev": "Brady",
+      "dx": "bradycardia",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 7,
+      "nosso_ningbo": 7,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "365413008",
+      "abrev": "PRWP",
+      "dx": "poor R wave Progression",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 638,
+      "nosso_ningbo": 638,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "427172004",
+      "abrev": "PVC",
+      "dx": "premature ventricular contractions",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 1091,
+      "nosso_ningbo": 1091,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "733534002",
+      "abrev": "CLBBB",
+      "dx": "complete left bundle branch block",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 213,
+      "nosso_ningbo": 213,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "445118002",
+      "abrev": "LAnFB",
+      "dx": "left anterior fascicular block",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 380,
+      "nosso_ningbo": 380,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "713426002",
+      "abrev": "IRBBB",
+      "dx": "incomplete right bundle branch block",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 246,
+      "nosso_ningbo": 246,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "63593006",
+      "abrev": "SVPB",
+      "dx": "supraventricular premature beats",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 9,
+      "nosso_ningbo": 9,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "427393009",
+      "abrev": "SA",
+      "dx": "sinus arrhythmia",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 2550,
+      "nosso_ningbo": 2550,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "10370003",
+      "abrev": "PR",
+      "dx": "pacing rhythm",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 1182,
+      "nosso_ningbo": 1182,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "446813000",
+      "abrev": "LAH",
+      "dx": "left atrial hypertrophy",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 8,
+      "nosso_ningbo": 8,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "445211001",
+      "abrev": "LPFB",
+      "dx": "left posterior fascicular block",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 5,
+      "nosso_ningbo": 5,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "251120003",
+      "abrev": "ILBBB",
+      "dx": "incomplete left bundle branch block",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 6,
+      "nosso_ningbo": 6,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "61721007",
+      "abrev": "CVCL/CCVCL",
+      "dx": "clockwise or counterclockwise vectorcardiographic loop",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 653,
+      "nosso_ningbo": 653,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "251187003",
+      "abrev": "AED",
+      "dx": "atrial escape beat",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 17,
+      "nosso_ningbo": 17,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "106068003",
+      "abrev": "ARH",
+      "dx": "atrial rhythm",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 215,
+      "nosso_ningbo": 215,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "54329005",
+      "abrev": "AnMI",
+      "dx": "anterior myocardial infarction",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 57,
+      "nosso_ningbo": 57,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "57054005",
+      "abrev": "AMI",
+      "dx": "acute myocardial infarction",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 49,
+      "nosso_ningbo": 49,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "426664006",
+      "abrev": "AJR",
+      "dx": "accelerated junctional rhythm",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 12,
+      "nosso_ningbo": 12,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "29320008",
+      "abrev": "AVJR",
+      "dx": "atrioventricular junctional rhythm",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 139,
+      "nosso_ningbo": 139,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "50799005",
+      "abrev": "AVD",
+      "dx": "atrioventricular dissociation",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 59,
+      "nosso_ningbo": 59,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "251170000",
+      "abrev": "BPAC",
+      "dx": "blocked premature atrial contraction",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 62,
+      "nosso_ningbo": 62,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "418818005",
+      "abrev": "BRU",
+      "dx": "brugada",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 5,
+      "nosso_ningbo": 5,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "233892002",
+      "abrev": "AAR",
+      "dx": "accelerated atrial escape rhythm",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 16,
+      "nosso_ningbo": 16,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "61277005",
+      "abrev": "AIVR",
+      "dx": "accelerated idioventricular rhythm",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 14,
+      "nosso_ningbo": 14,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "67741000119109",
+      "abrev": "LAE",
+      "dx": "left atrial enlargement",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 1,
+      "nosso_ningbo": 1,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "426648003",
+      "abrev": "JTach",
+      "dx": "junctional tachycardia",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 24,
+      "nosso_ningbo": 24,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "426183003",
+      "abrev": "IIAVBII",
+      "dx": "mobitz type II atrioventricular block",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 7,
+      "nosso_ningbo": 7,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "425856008",
+      "abrev": "PVT",
+      "dx": "paroxysmal ventricular tachycardia",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 109,
+      "nosso_ningbo": 109,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "251205003",
+      "abrev": "PPW",
+      "dx": "prolonged P wave",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 106,
+      "nosso_ningbo": 106,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "65778007",
+      "abrev": "SAB",
+      "dx": "sinoatrial block",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 5,
+      "nosso_ningbo": 5,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "77867006",
+      "abrev": "SQT",
+      "dx": "decreased qt interval",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 2,
+      "nosso_ningbo": 2,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "49578007",
+      "abrev": "SPRI",
+      "dx": "shortened pr interval",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 23,
+      "nosso_ningbo": 23,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "5609005",
+      "abrev": "SARR",
+      "dx": "sinus arrest",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 33,
+      "nosso_ningbo": 33,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "55930002",
+      "abrev": "STC",
+      "dx": "s t changes",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 4232,
+      "nosso_ningbo": 4232,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "251223006",
+      "abrev": "TPW",
+      "dx": "tall p wave",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 215,
+      "nosso_ningbo": 215,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "111288001",
+      "abrev": "VFL",
+      "dx": "ventricular flutter",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 7,
+      "nosso_ningbo": 7,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "81898007",
+      "abrev": "VEsR",
+      "dx": "ventricular escape rhythm",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 96,
+      "nosso_ningbo": 96,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    },
+    {
+      "codigo": "164896001",
+      "abrev": "VF",
+      "dx": "ventricular fibrillation",
+      "cinc_shaoxing": 0,
+      "nosso_shaoxing": 0,
+      "cinc_ningbo": 59,
+      "nosso_ningbo": 59,
+      "dif_shaoxing": 0,
+      "dif_ningbo": 0
+    }
+  ],
+  "supplementary": [
+    {
+      "codigo_no_cabecalho": "55827005",
+      "abrev_cinc": "LVHV",
+      "descricao": "left ventricular high voltage",
+      "n_registros": 5401,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "55930002",
+      "abrev_cinc": "STC",
+      "descricao": "s t changes",
+      "n_registros": 4232,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "10370003",
+      "abrev_cinc": "PR",
+      "descricao": "pacing rhythm",
+      "n_registros": 1182,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "713427006",
+      "abrev_cinc": "CRBBB",
+      "descricao": "complete right bundle branch block",
+      "n_registros": 1096,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "427172004",
+      "abrev_cinc": "PVC",
+      "descricao": "premature ventricular contractions",
+      "n_registros": 1091,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "61721007",
+      "abrev_cinc": "CVCL/CCVCL",
+      "descricao": "clockwise or counterclockwise vectorcardiographic loop",
+      "n_registros": 653,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "365413008",
+      "abrev_cinc": "PRWP",
+      "descricao": "poor R wave Progression",
+      "n_registros": 638,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "6374002",
+      "abrev_cinc": "BBB",
+      "descricao": "bundle branch block",
+      "n_registros": 385,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "445118002",
+      "abrev_cinc": "LAnFB",
+      "descricao": "left anterior fascicular block",
+      "n_registros": 380,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "713426002",
+      "abrev_cinc": "IRBBB",
+      "descricao": "incomplete right bundle branch block",
+      "n_registros": 246,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "251223006",
+      "abrev_cinc": "TPW",
+      "descricao": "tall p wave",
+      "n_registros": 215,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "106068003",
+      "abrev_cinc": "ARH",
+      "descricao": "atrial rhythm",
+      "n_registros": 215,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "733534002",
+      "abrev_cinc": "CLBBB",
+      "descricao": "complete left bundle branch block",
+      "n_registros": 213,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "29320008",
+      "abrev_cinc": "AVJR",
+      "descricao": "atrioventricular junctional rhythm",
+      "n_registros": 139,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "425856008",
+      "abrev_cinc": "PVT",
+      "descricao": "paroxysmal ventricular tachycardia",
+      "n_registros": 109,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "251205003",
+      "abrev_cinc": "PPW",
+      "descricao": "prolonged P wave",
+      "n_registros": 106,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "81898007",
+      "abrev_cinc": "VEsR",
+      "descricao": "ventricular escape rhythm",
+      "n_registros": 96,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "251170000",
+      "abrev_cinc": "BPAC",
+      "descricao": "blocked premature atrial contraction",
+      "n_registros": 62,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "50799005",
+      "abrev_cinc": "AVD",
+      "descricao": "atrioventricular dissociation",
+      "n_registros": 59,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "164896001",
+      "abrev_cinc": "VF",
+      "descricao": "ventricular fibrillation",
+      "n_registros": 59,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "54329005",
+      "abrev_cinc": "AnMI",
+      "descricao": "anterior myocardial infarction",
+      "n_registros": 57,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "57054005",
+      "abrev_cinc": "AMI",
+      "descricao": "acute myocardial infarction",
+      "n_registros": 49,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "67751000119106",
+      "abrev_cinc": "RAHV",
+      "descricao": "right atrial  high voltage",
+      "n_registros": 36,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "5609005",
+      "abrev_cinc": "SARR",
+      "descricao": "sinus arrest",
+      "n_registros": 33,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "426648003",
+      "abrev_cinc": "JTach",
+      "descricao": "junctional tachycardia",
+      "n_registros": 24,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "49578007",
+      "abrev_cinc": "SPRI",
+      "descricao": "shortened pr interval",
+      "n_registros": 23,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "251187003",
+      "abrev_cinc": "AED",
+      "descricao": "atrial escape beat",
+      "n_registros": 17,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "251166008",
+      "abrev_cinc": "AVNRT",
+      "descricao": "atrioventricular  node reentrant tachycardia",
+      "n_registros": 16,
+      "acronimo_oficial_mesmo_nome": "AVNRT",
+      "codigo_no_dicionario_oficial": "233896004"
+    },
+    {
+      "codigo_no_cabecalho": "233892002",
+      "abrev_cinc": "AAR",
+      "descricao": "accelerated atrial escape rhythm",
+      "n_registros": 16,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "61277005",
+      "abrev_cinc": "AIVR",
+      "descricao": "accelerated idioventricular rhythm",
+      "n_registros": 14,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "426664006",
+      "abrev_cinc": "AJR",
+      "descricao": "accelerated junctional rhythm",
+      "n_registros": 12,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "63593006",
+      "abrev_cinc": "SVPB",
+      "descricao": "supraventricular premature beats",
+      "n_registros": 9,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "446813000",
+      "abrev_cinc": "LAH",
+      "descricao": "left atrial hypertrophy",
+      "n_registros": 8,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "17366009",
+      "abrev_cinc": "SAAWR",
+      "descricao": "sinus atrium to atrial wandering rhythm",
+      "n_registros": 7,
+      "acronimo_oficial_mesmo_nome": "SAAWR",
+      "codigo_no_dicionario_oficial": "195101003"
+    },
+    {
+      "codigo_no_cabecalho": "426627000",
+      "abrev_cinc": "Brady",
+      "descricao": "bradycardia",
+      "n_registros": 7,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "111288001",
+      "abrev_cinc": "VFL",
+      "descricao": "ventricular flutter",
+      "n_registros": 7,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "426183003",
+      "abrev_cinc": "IIAVBII",
+      "descricao": "mobitz type II atrioventricular block",
+      "n_registros": 7,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "251120003",
+      "abrev_cinc": "ILBBB",
+      "descricao": "incomplete left bundle branch block",
+      "n_registros": 6,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "65778007",
+      "abrev_cinc": "SAB",
+      "descricao": "sinoatrial block",
+      "n_registros": 5,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "445211001",
+      "abrev_cinc": "LPFB",
+      "descricao": "left posterior fascicular block",
+      "n_registros": 5,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "418818005",
+      "abrev_cinc": "BRU",
+      "descricao": "brugada",
+      "n_registros": 5,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "77867006",
+      "abrev_cinc": "SQT",
+      "descricao": "decreased qt interval",
+      "n_registros": 2,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    },
+    {
+      "codigo_no_cabecalho": "67741000119109",
+      "abrev_cinc": "LAE",
+      "descricao": "left atrial enlargement",
+      "n_registros": 1,
+      "acronimo_oficial_mesmo_nome": "",
+      "codigo_no_dicionario_oficial": ""
+    }
+  ],
+  "records_with_supplementary_codes": 13191,
+  "ventricular": [
+    {
+      "fonte": "chapman_ningbo",
+      "rotulo": "PVT",
+      "n": 109
+    },
+    {
+      "fonte": "chapman_shaoxing",
+      "rotulo": "PVT",
+      "n": 0
+    },
+    {
+      "fonte": "chapman_ningbo",
+      "rotulo": "VF",
+      "n": 59
+    },
+    {
+      "fonte": "chapman_shaoxing",
+      "rotulo": "VF",
+      "n": 0
+    },
+    {
+      "fonte": "chapman_ningbo",
+      "rotulo": "VFL",
+      "n": 7
+    },
+    {
+      "fonte": "chapman_shaoxing",
+      "rotulo": "VFL",
+      "n": 0
+    },
+    {
+      "fonte": "chapman_ningbo",
+      "rotulo": "AIVR",
+      "n": 14
+    },
+    {
+      "fonte": "chapman_shaoxing",
+      "rotulo": "AIVR",
+      "n": 0
+    },
+    {
+      "fonte": "chapman_ningbo",
+      "rotulo": "VEsR",
+      "n": 96
+    },
+    {
+      "fonte": "chapman_shaoxing",
+      "rotulo": "VEsR",
+      "n": 0
+    }
+  ],
+  "ptbxl_rhythm_statements": [
+    "AFIB",
+    "AFLT",
+    "BIGU",
+    "PACE",
+    "PSVT",
+    "SARRH",
+    "SBRAD",
+    "SR",
+    "STACH",
+    "SVARR",
+    "SVTAC",
+    "TRIGU"
+  ],
+  "patients": {
+    "chapman": {
+      "tem_id_paciente": false,
+      "campos_do_cabecalho": [
+        "Age,Dx,Hx,Rx,Sex,Sx",
+        ""
+      ]
+    },
+    "ptbxl": {
+      "tem_id_paciente": true,
+      "n_pacientes": 18869,
+      "registros_por_paciente_max": 10,
+      "pacientes_com_>1_registro": 2111,
+      "registros_de_pacientes_com_>1": 5041,
+      "pacientes_com_>1_grupo_de_ritmo": 479,
+      "pacientes_em_>1_strat_fold": 0
+    }
+  },
+  "cross_source_rhythm": [
+    {
+      "ritmo_shaoxing": "SVT",
+      "ritmo_ningbo": "PVT",
+      "pares": 20
+    },
+    {
+      "ritmo_shaoxing": "SR",
+      "ritmo_ningbo": "SR",
+      "pares": 17
+    },
+    {
+      "ritmo_shaoxing": "AFIB",
+      "ritmo_ningbo": "AF",
+      "pares": 12
+    },
+    {
+      "ritmo_shaoxing": "SB",
+      "ritmo_ningbo": "SB",
+      "pares": 10
+    },
+    {
+      "ritmo_shaoxing": "SVT",
+      "ritmo_ningbo": "SVT",
+      "pares": 5
+    },
+    {
+      "ritmo_shaoxing": "ST",
+      "ritmo_ningbo": "ST",
+      "pares": 4
+    },
+    {
+      "ritmo_shaoxing": "AF",
+      "ritmo_ningbo": "AF",
+      "pares": 1
+    },
+    {
+      "ritmo_shaoxing": "SVT",
+      "ritmo_ningbo": "PVT+SVT",
+      "pares": 1
+    },
+    {
+      "ritmo_shaoxing": "AVRT",
+      "ritmo_ningbo": "SVT",
+      "pares": 1
+    }
+  ],
+  "duplicates": {
+    "chapman:hash_all": {
+      "grupos_duplicados": 87,
+      "registros_envolvidos": 174,
+      "grupos_com_rotulos_diferentes": 12,
+      "pares_entre_fontes": 71,
+      "grupos_mesma_idade_e_sexo": 85,
+      "grupos_com_AFIB": 14,
+      "combinacoes_de_rotulo_divergentes": {
+        "AFIB vs FORA_DE_TREINO": 12
+      }
+    },
+    "chapman:hash_leadI": {
+      "grupos_duplicados": 87,
+      "registros_envolvidos": 174,
+      "grupos_com_rotulos_diferentes": 12
+    },
+    "ptbxl:hash_all": {
+      "grupos_duplicados": 0,
+      "registros_envolvidos": 0,
+      "grupos_com_rotulos_diferentes": 0
+    },
+    "ptbxl:hash_leadI": {
+      "grupos_duplicados": 0,
+      "registros_envolvidos": 0,
+      "grupos_com_rotulos_diferentes": 0
+    },
+    "entre_bases:hash_leadI": {
+      "grupos_duplicados": 0
+    }
+  },
+  "flat_leads_by_source": {
+    "ningbo": 1480,
+    "shaoxing": 15
+  },
+  "viability": {
+    "chapman_shaoxing_afib": 1779,
+    "chapman_shaoxing_sinus_normal": 1366,
+    "chapman_shaoxing_sinus_outro": 383,
+    "chapman_shaoxing_sinus_brady": 3578,
+    "chapman_shaoxing_sinus_tachy": 1342,
+    "chapman_shaoxing_sinus_arritmia": 0,
+    "chapman_ningbo_afib": 0,
+    "chapman_ningbo_sinus_normal": 4542,
+    "chapman_ningbo_sinus_outro": 1251,
+    "chapman_ningbo_sinus_brady": 10834,
+    "chapman_ningbo_sinus_tachy": 4823,
+    "chapman_ningbo_sinus_arritmia": 2308,
+    "chapman_afib_validos": 1779,
+    "chapman_sinusal_validos": 28119,
+    "chapman_afib_teste_15pct_aprox": 267,
+    "ptbxl_afib_folds_1_8": 1181,
+    "ptbxl_sinus_normal_folds_1_8": 4967,
+    "ptbxl_afib_fold_9": 148,
+    "ptbxl_sinus_normal_fold_9": 587,
+    "ptbxl_afib_fold_10": 148,
+    "ptbxl_sinus_normal_fold_10": 588,
+    "ptbxl_afib_total": 1477,
+    "ptbxl_sinus_normal_total": 6142,
+    "ptbxl_sinus_brady_total": 583,
+    "ptbxl_sinus_tachy_total": 643,
+    "ptbxl_flutter_total": 73,
+    "chapman_flutter_total": 8060
+  }
+}

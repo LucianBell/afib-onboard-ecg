@@ -1,0 +1,10 @@
+ritmo_shaoxing,ritmo_ningbo,pares
+SVT,PVT,20
+SR,SR,17
+AFIB,AF,12
+SB,SB,10
+SVT,SVT,5
+ST,ST,4
+AF,AF,1
+SVT,PVT+SVT,1
+AVRT,SVT,1
