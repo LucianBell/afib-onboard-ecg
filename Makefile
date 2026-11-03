@@ -45,7 +45,7 @@ demo:           ## painel local (sem internet) em http://localhost:8501
 	@test -f data/demo/demo_pack.npz || $(PYTHON) scripts/build_demo_pack.py || echo "sem dados: o painel usará ECG sintético"
 	$(PYTHON) -m streamlit run app/dashboard.py
 
-report:         ## figuras + README.md + MODEL_CARD.md gerados a partir de results/
+report:         ## figuras + README.md (pt-BR) + README.en.md + MODEL_CARD.md gerados a partir de results/
 	$(PYTHON) scripts/make_figures.py
 	$(PYTHON) scripts/make_report.py
 

@@ -1,1258 +1,1467 @@
 {
- "nota": "Origem de cada número de README.md e MODEL_CARD.md (gerados por scripts/make_report.py).",
+ "nota": "Origem de cada número de README.md, README.en.md e MODEL_CARD.md (gerados por scripts/make_report.py). Em README.md (pt-BR) os números aparecem com vírgula decimal.",
  "valores": {
   "a_baseline_rr_auprc": {
    "valor": "0.965",
    "fonte": "results/expA/test.json",
    "campo": "metricas.baseline_rr.auprc",
+   "numero": true,
    "bruto": 0.9653137200139837
   },
   "a_baseline_rr_auprc_ci": {
    "valor": "0.934–0.989",
    "fonte": "results/expA/test.json",
    "campo": "metricas.baseline_rr.ic95.auprc",
+   "numero": true,
    "bruto": "[0.9336414902773583, 0.9888324080935129]"
   },
   "a_baseline_rr_auroc": {
    "valor": "0.9947",
    "fonte": "results/expA/test.json",
    "campo": "metricas.baseline_rr.auroc",
+   "numero": true,
    "bruto": 0.9947372375043988
   },
   "a_baseline_rr_ppv": {
    "valor": "0.945",
    "fonte": "results/expA/test.json",
    "campo": "metricas.baseline_rr.ppv",
+   "numero": true,
    "bruto": 0.9452554744525548
   },
   "a_baseline_rr_ppv1": {
    "valor": "0.393",
    "fonte": "results/expA/test.json",
    "campo": "metricas.baseline_rr.ppv_prevalencia.0.01",
+   "numero": true,
    "bruto": 0.3930289590889451
   },
   "a_baseline_rr_sens": {
    "valor": "0.992",
    "fonte": "results/expA/test.json",
    "campo": "metricas.baseline_rr.sensibilidade",
+   "numero": true,
    "bruto": 0.9923371647509579
   },
   "a_baseline_rr_sens_ci": {
    "valor": "0.981–1.000",
    "fonte": "results/expA/test.json",
    "campo": "metricas.baseline_rr.ic95.sensibilidade",
+   "numero": true,
    "bruto": "[0.9808429118773946, 1.0]"
   },
   "a_baseline_rr_spec": {
    "valor": "0.985",
    "fonte": "results/expA/test.json",
    "campo": "metricas.baseline_rr.especificidade",
+   "numero": true,
    "bruto": 0.9845201238390093
   },
   "a_baseline_rr_spec_ci": {
    "valor": "0.976–0.992",
    "fonte": "results/expA/test.json",
    "campo": "metricas.baseline_rr.ic95.especificidade",
+   "numero": true,
    "bruto": "[0.9762641898864809, 0.9917440660474717]"
   },
   "a_cnn_auprc": {
    "valor": "0.997",
    "fonte": "results/expA/test.json",
    "campo": "metricas.cnn.auprc",
+   "numero": true,
    "bruto": 0.9965439538221063
   },
   "a_cnn_auprc_ci": {
    "valor": "0.993–0.999",
    "fonte": "results/expA/test.json",
    "campo": "metricas.cnn.ic95.auprc",
+   "numero": true,
    "bruto": "[0.9929438619196466, 0.9991766705389951]"
   },
   "a_cnn_auroc": {
    "valor": "0.9991",
    "fonte": "results/expA/test.json",
    "campo": "metricas.cnn.auroc",
+   "numero": true,
    "bruto": 0.999078720013918
   },
   "a_cnn_ppv": {
    "valor": "0.956",
    "fonte": "results/expA/test.json",
    "campo": "metricas.cnn.ppv",
+   "numero": true,
    "bruto": 0.955719557195572
   },
   "a_cnn_sens": {
    "valor": "0.992",
    "fonte": "results/expA/test.json",
    "campo": "metricas.cnn.sensibilidade",
+   "numero": true,
    "bruto": 0.9923371647509579
   },
   "a_cnn_sens_ci": {
    "valor": "0.981–1.000",
    "fonte": "results/expA/test.json",
    "campo": "metricas.cnn.ic95.sensibilidade",
+   "numero": true,
    "bruto": "[0.9808429118773946, 1.0]"
   },
   "a_cnn_spec": {
    "valor": "0.988",
    "fonte": "results/expA/test.json",
    "campo": "metricas.cnn.especificidade",
+   "numero": true,
    "bruto": 0.9876160990712074
   },
   "a_cnn_spec_ci": {
    "valor": "0.980–0.994",
    "fonte": "results/expA/test.json",
    "campo": "metricas.cnn.ic95.especificidade",
+   "numero": true,
    "bruto": "[0.9803921568627451, 0.9938080495356038]"
   },
   "a_lightgbm_auprc": {
    "valor": "1.000",
    "fonte": "results/expA/test.json",
    "campo": "metricas.lightgbm.auprc",
+   "numero": true,
    "bruto": 0.999620929129475
   },
   "a_lightgbm_auprc_ci": {
    "valor": "0.999–1.000",
    "fonte": "results/expA/test.json",
    "campo": "metricas.lightgbm.ic95.auprc",
+   "numero": true,
    "bruto": "[0.9987386604260927, 1.0]"
   },
   "a_lightgbm_auroc": {
    "valor": "0.9999",
    "fonte": "results/expA/test.json",
    "campo": "metricas.lightgbm.auroc",
+   "numero": true,
    "bruto": 0.9999011502160855
   },
   "a_lightgbm_ppv": {
    "valor": "0.953",
    "fonte": "results/expA/test.json",
    "campo": "metricas.lightgbm.ppv",
+   "numero": true,
    "bruto": 0.9525547445255474
   },
   "a_lightgbm_sens": {
    "valor": "1.000",
    "fonte": "results/expA/test.json",
    "campo": "metricas.lightgbm.sensibilidade",
+   "numero": true,
    "bruto": 1.0
   },
   "a_lightgbm_sens_ci": {
    "valor": "1.000–1.000",
    "fonte": "results/expA/test.json",
    "campo": "metricas.lightgbm.ic95.sensibilidade",
+   "numero": true,
    "bruto": "[1.0, 1.0]"
   },
   "a_lightgbm_spec": {
    "valor": "0.987",
    "fonte": "results/expA/test.json",
    "campo": "metricas.lightgbm.especificidade",
+   "numero": true,
    "bruto": 0.9865841073271414
   },
   "a_lightgbm_spec_ci": {
    "valor": "0.978–0.993",
    "fonte": "results/expA/test.json",
    "campo": "metricas.lightgbm.ic95.especificidade",
+   "numero": true,
    "bruto": "[0.978328173374613, 0.9927760577915377]"
   },
   "a_logreg_auprc": {
    "valor": "0.999",
    "fonte": "results/expA/test.json",
    "campo": "metricas.logreg.auprc",
+   "numero": true,
    "bruto": 0.9992985367629816
   },
   "a_logreg_auprc_ci": {
    "valor": "0.998–1.000",
    "fonte": "results/expA/test.json",
    "campo": "metricas.logreg.ic95.auprc",
+   "numero": true,
    "bruto": "[0.9979762584730626, 1.0]"
   },
   "a_logreg_auroc": {
    "valor": "0.9998",
    "fonte": "results/expA/test.json",
    "campo": "metricas.logreg.auroc",
+   "numero": true,
    "bruto": 0.9998181163975975
   },
   "a_logreg_ece": {
    "valor": "0.0030",
    "fonte": "results/expA/test.json",
    "campo": "metricas.logreg.ece",
+   "numero": true,
    "bruto": 0.0030239853509549134
   },
   "a_logreg_ppv": {
    "valor": "0.956",
    "fonte": "results/expA/test.json",
    "campo": "metricas.logreg.ppv",
+   "numero": true,
    "bruto": 0.9560439560439561
   },
   "a_logreg_ppv1": {
    "valor": "0.449",
    "fonte": "results/expA/test.json",
    "campo": "metricas.logreg.ppv_prevalencia.0.01",
+   "numero": true,
    "bruto": 0.44923504867871983
   },
   "a_logreg_sens": {
    "valor": "1.000",
    "fonte": "results/expA/test.json",
    "campo": "metricas.logreg.sensibilidade",
+   "numero": true,
    "bruto": 1.0
   },
   "a_logreg_sens_ci": {
    "valor": "1.000–1.000",
    "fonte": "results/expA/test.json",
    "campo": "metricas.logreg.ic95.sensibilidade",
+   "numero": true,
    "bruto": "[1.0, 1.0]"
   },
   "a_logreg_spec": {
    "valor": "0.988",
    "fonte": "results/expA/test.json",
    "campo": "metricas.logreg.especificidade",
+   "numero": true,
    "bruto": 0.9876160990712074
   },
   "a_logreg_spec_ci": {
    "valor": "0.980–0.994",
    "fonte": "results/expA/test.json",
    "campo": "metricas.logreg.ic95.especificidade",
+   "numero": true,
    "bruto": "[0.9803921568627451, 0.9938080495356038]"
   },
   "a_n": {
    "valor": "1,230",
    "fonte": "results/expA/test.json",
    "campo": "n_teste",
+   "numero": true,
    "bruto": 1230
   },
   "a_pos": {
    "valor": "261",
    "fonte": "results/expA/test.json",
    "campo": "n_pos",
+   "numero": true,
    "bruto": 261
   },
   "a_prev": {
    "valor": "21%",
    "fonte": "results/expA/test.json",
    "campo": "prevalencia_teste",
+   "numero": true,
    "bruto": 0.2121951219512195
   },
   "a_random_forest_auprc": {
    "valor": "0.999",
    "fonte": "results/expA/test.json",
    "campo": "metricas.random_forest.auprc",
+   "numero": true,
    "bruto": 0.9990562597852183
   },
   "a_random_forest_auprc_ci": {
    "valor": "0.998–1.000",
    "fonte": "results/expA/test.json",
    "campo": "metricas.random_forest.ic95.auprc",
+   "numero": true,
    "bruto": "[0.9975461427652514, 0.9999707525372175]"
   },
   "a_random_forest_auroc": {
    "valor": "0.9998",
    "fonte": "results/expA/test.json",
    "campo": "metricas.random_forest.auroc",
+   "numero": true,
    "bruto": 0.9997548525358925
   },
   "a_random_forest_ppv": {
    "valor": "0.946",
    "fonte": "results/expA/test.json",
    "campo": "metricas.random_forest.ppv",
+   "numero": true,
    "bruto": 0.9456521739130435
   },
   "a_random_forest_sens": {
    "valor": "1.000",
    "fonte": "results/expA/test.json",
    "campo": "metricas.random_forest.sensibilidade",
+   "numero": true,
    "bruto": 1.0
   },
   "a_random_forest_sens_ci": {
    "valor": "1.000–1.000",
    "fonte": "results/expA/test.json",
    "campo": "metricas.random_forest.ic95.sensibilidade",
+   "numero": true,
    "bruto": "[1.0, 1.0]"
   },
   "a_random_forest_spec": {
    "valor": "0.985",
    "fonte": "results/expA/test.json",
    "campo": "metricas.random_forest.especificidade",
+   "numero": true,
    "bruto": 0.9845201238390093
   },
   "a_random_forest_spec_ci": {
    "valor": "0.976–0.992",
    "fonte": "results/expA/test.json",
    "campo": "metricas.random_forest.ic95.especificidade",
+   "numero": true,
    "bruto": "[0.9762641898864809, 0.9917440660474717]"
   },
   "adc_bits": {
    "valor": "12",
    "fonte": "configs/default.yaml",
    "campo": "target_signal.adc_bits",
+   "numero": true,
    "bruto": 12
   },
   "age_band": {
    "valor": "30–54",
    "fonte": "results/expA/test_subgroups.csv",
    "campo": "faixa (valor)",
+   "numero": false,
    "bruto": "30–54"
   },
   "age_old": {
    "valor": "70+",
    "fonte": "results/expA/test_subgroups.csv",
    "campo": "faixa (valor)",
+   "numero": false,
    "bruto": "70+"
   },
   "b_cnn_auroc": {
    "valor": "0.9914",
    "fonte": "results/expB/all_models.csv",
    "campo": "cnn/PTB-XL todo/auroc",
+   "numero": true,
    "bruto": 0.9914414496667219
   },
   "b_lightgbm_auroc": {
    "valor": "0.9957",
    "fonte": "results/expB/all_models.csv",
    "campo": "lightgbm/PTB-XL todo/auroc",
+   "numero": true,
    "bruto": 0.9956760117916286
   },
   "b_logreg_auroc": {
    "valor": "0.9968",
    "fonte": "results/expB/all_models.csv",
    "campo": "logreg/PTB-XL todo/auroc",
+   "numero": true,
    "bruto": 0.9967650913738298
   },
   "b_random_forest_auroc": {
    "valor": "0.9958",
    "fonte": "results/expB/all_models.csv",
    "campo": "random_forest/PTB-XL todo/auroc",
+   "numero": true,
    "bruto": 0.9958287308120957
   },
   "band_hi": {
    "valor": "30",
    "fonte": "configs/default.yaml",
    "campo": "target_signal.band_hz[1]",
+   "numero": true,
    "bruto": 30.0
   },
   "band_lo": {
    "valor": "0.05",
    "fonte": "configs/default.yaml",
    "campo": "target_signal.band_hz[0]",
+   "numero": true,
    "bruto": 0.05
   },
   "bench_cpu": {
    "valor": "11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz",
    "fonte": "results/benchmark/benchmark_LucianDebian.json",
    "campo": "maquina.cpu",
+   "numero": false,
    "bruto": "11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz"
   },
   "bench_json_kb": {
    "valor": "34",
    "fonte": "results/benchmark/benchmark_LucianDebian.json",
    "campo": "artefatos_kb.afib_logreg_v1.json",
+   "numero": true,
    "bruto": 34.0
   },
   "bench_med": {
    "valor": "3.6",
    "fonte": "results/benchmark/benchmark_LucianDebian.json",
    "campo": "latencia.monitor_update.mediana_ms",
+   "numero": true,
    "bruto": 3.6436844998206652
   },
   "bench_model": {
    "valor": "0.05",
    "fonte": "results/benchmark/benchmark_LucianDebian.json",
    "campo": "latencia.modelo_json.mediana_ms",
+   "numero": true,
    "bruto": 0.05314799955158378
   },
   "bench_onnx_kb": {
    "valor": "0.8",
    "fonte": "results/benchmark/benchmark_LucianDebian.json",
    "campo": "artefatos_kb.afib_logreg_v1.onnx",
+   "numero": true,
    "bruto": 0.8
   },
   "bench_p95": {
    "valor": "4.2",
    "fonte": "results/benchmark/benchmark_LucianDebian.json",
    "campo": "latencia.monitor_update.p95_ms",
+   "numero": true,
    "bruto": 4.22223885052517
   },
   "bench_rss": {
    "valor": "104",
    "fonte": "results/benchmark/benchmark_LucianDebian.json",
    "campo": "memoria.rss_apos_import_e_modelo_mb",
+   "numero": true,
    "bruto": 104.4453125
   },
   "bnd_cmp": {
    "valor": "94",
    "fonte": "results/audit/audit_summary.json",
    "campo": "boundary.codigos_comparados",
+   "numero": true,
    "bruto": 94
   },
   "bnd_eq": {
    "valor": "93",
    "fonte": "results/audit/audit_summary.json",
    "campo": "boundary.codigos_com_contagem_identica_nas_duas_fontes",
+   "numero": true,
    "bruto": 93
   },
   "brady": {
    "valor": "60",
    "fonte": "configs/default.yaml",
    "campo": "hr_rule.brady_bpm",
+   "numero": true,
    "bruto": 60
   },
   "c2_ds_mix_spec": {
    "valor": "0.896",
    "fonte": "results/expC/tcc_design.csv",
    "campo": "LightGBM + descritores do sinal | misto (desenho do TCC): AFIB Shaoxing × normal PTB-XL | especificidade@0.5",
+   "numero": true,
    "bruto": 0.896
   },
   "c2_ds_sh_spec": {
    "valor": "0.786",
    "fonte": "results/expC/tcc_design.csv",
    "campo": "LightGBM + descritores do sinal | mesma fonte Shaoxing: AFIB × normal Shaoxing | especificidade@0.5",
+   "numero": true,
    "bruto": 0.7860696517412935
   },
   "c2_lr_mix": {
    "valor": "0.9999",
    "fonte": "results/expC/tcc_design.csv",
    "campo": "logreg + atributos de ritmo | misto (desenho do TCC): AFIB Shaoxing × normal PTB-XL | auroc",
+   "numero": true,
    "bruto": 0.9999114516815666
   },
   "c2_lr_ptb": {
    "valor": "0.9958",
    "fonte": "results/expC/tcc_design.csv",
    "campo": "logreg + atributos de ritmo | mesma fonte PTB-XL: AFIB × normal PTB-XL (folds 9-10) | auroc",
+   "numero": true,
    "bruto": 0.9957739331026527
   },
   "c2_lr_sh": {
    "valor": "1.0000",
    "fonte": "results/expC/tcc_design.csv",
    "campo": "logreg + atributos de ritmo | mesma fonte Shaoxing: AFIB × normal Shaoxing | auroc",
+   "numero": true,
    "bruto": 1.0
   },
   "c_amp": {
    "valor": "0.59",
    "fonte": "results/expC/source_classifier.csv",
    "campo": "Shaoxing vs PTB-XL | amplitude do QRS em mV (unidades corretas) — 1 variável, sem modelo",
+   "numero": true,
    "bruto": 0.5914543126479779
   },
   "c_desc": {
    "valor": "0.77",
    "fonte": "results/expC/source_classifier.csv",
    "campo": "Shaoxing vs PTB-XL | descritores do sinal (PSD 1–40 Hz + amplitude em mV)",
+   "numero": true,
    "bruto": 0.7652346135118214
   },
   "c_nb_rhy": {
    "valor": "0.50",
    "fonte": "results/expC/source_classifier.csv",
    "campo": "Shaoxing vs Ningbo | atributos de ritmo (30, os do modelo)",
+   "numero": true,
    "bruto": 0.5043223155486202
   },
   "c_rhy": {
    "valor": "0.86",
    "fonte": "results/expC/source_classifier.csv",
    "campo": "Shaoxing vs PTB-XL | atributos de ritmo (30, os do modelo)",
+   "numero": true,
    "bruto": 0.8557780646092095
   },
   "c_tcc": {
    "valor": "1.00",
    "fonte": "results/expC/source_classifier.csv",
    "campo": "Shaoxing vs PTB-XL | amplitude com a escala do TCC (÷10³ vs ÷10) — 1 variável, sem modelo",
+   "numero": true,
    "bruto": 1.0
   },
   "cal_ext_ece": {
    "valor": "0.013",
    "fonte": "results/expB/calibration_external.json",
    "campo": "ece",
+   "numero": true,
    "bruto": 0.01338873720899095
   },
   "cal_hi": {
    "valor": "0.9",
    "fonte": "results/expB/calibration_external.json",
    "campo": "confiabilidade: fim da faixa intermediária",
+   "numero": true,
    "bruto": 0.9
   },
   "cal_lo": {
    "valor": "0.5",
    "fonte": "results/expB/calibration_external.json",
    "campo": "confiabilidade: início da faixa intermediária",
+   "numero": true,
    "bruto": 0.5
   },
   "cal_obs_hi": {
    "valor": "24%",
    "fonte": "results/expB/calibration_external.json",
    "campo": "max(fracao_afib_observada) nas faixas 0,5–0,9",
+   "numero": true,
    "bruto": 0.24324324324324326
   },
   "cal_obs_lo": {
    "valor": "3%",
    "fonte": "results/expB/calibration_external.json",
    "campo": "min(fracao_afib_observada) nas faixas 0,5–0,9",
+   "numero": true,
    "bruto": 0.03225806451612903
   },
   "chosen": {
    "valor": "logreg",
    "fonte": "results/expA/selection.json",
    "campo": "escolhido",
+   "numero": false,
    "bruto": "logreg"
   },
   "d_a_aupr": {
    "valor": "+0.034",
    "fonte": "results/expD/summary.json",
    "campo": "A: teste Shaoxing.bootstrap.auprc.diferenca_media",
+   "numero": true,
    "bruto": 0.03421146315042545
   },
   "d_a_auro": {
    "valor": "+0.005",
    "fonte": "results/expD/summary.json",
    "campo": "A: teste Shaoxing.bootstrap.auroc.diferenca_media",
+   "numero": true,
    "bruto": 0.00514344289843382
   },
   "d_a_auro_ci": {
    "valor": "+0.002 to +0.009",
    "fonte": "results/expD/summary.json",
    "campo": "A: teste Shaoxing.bootstrap.auroc.ic95",
+   "numero": true,
    "bruto": "[0.0019887588025733205, 0.009031608206904514]"
   },
   "d_a_p": {
    "valor": "0.267",
    "fonte": "results/expD/summary.json",
    "campo": "A: teste Shaoxing.mcnemar.p_valor",
+   "numero": true,
    "bruto": 0.266845703125
   },
   "d_b_aupr": {
    "valor": "+0.178",
    "fonte": "results/expD/summary.json",
    "campo": "B: PTB-XL todo.bootstrap.auprc.diferenca_media",
+   "numero": true,
    "bruto": 0.17761466681174487
   },
   "d_b_auro": {
    "valor": "+0.011",
    "fonte": "results/expD/summary.json",
    "campo": "B: PTB-XL todo.bootstrap.auroc.diferenca_media",
+   "numero": true,
    "bruto": 0.010786316351507523
   },
   "d_b_auro_ci": {
    "valor": "+0.009 to +0.012",
    "fonte": "results/expD/summary.json",
    "campo": "B: PTB-XL todo.bootstrap.auroc.ic95",
+   "numero": true,
    "bruto": "[0.009228828600786021, 0.01237126613572949]"
   },
   "d_b_err_bl": {
    "valor": "621",
    "fonte": "results/expD/summary.json",
    "campo": "B: PTB-XL todo.erros.baseline_rr",
+   "numero": true,
    "bruto": 621
   },
   "d_b_err_ml": {
    "valor": "689",
    "fonte": "results/expD/summary.json",
    "campo": "B: PTB-XL todo.erros.logreg",
+   "numero": true,
    "bruto": 689
   },
   "d_b_p": {
    "valor": "0.003",
    "fonte": "results/expD/summary.json",
    "campo": "B: PTB-XL todo.mcnemar.p_valor",
+   "numero": true,
    "bruto": 0.0029720379601110613
   },
   "dl_gb": {
    "valor": "4.3",
    "fonte": "results/audit/data_manifest.json",
    "campo": "soma de *.bytes / 1e9",
+   "numero": true,
    "bruto": 4.33821376
   },
   "dup_afib_af": {
    "valor": "12",
    "fonte": "results/audit/audit_summary.json",
    "campo": "cross_source_rhythm[AFIB→AF].pares",
+   "numero": true,
    "bruto": 12
   },
   "e_nb_tachy": {
    "valor": "7.5%",
    "fonte": "results/expE/false_afib_by_rate.csv",
    "campo": "Ningbo (todo, só negativos; fonte nunca vista)/SINUS_TACHY/falso_afib_logreg_limiar",
+   "numero": true,
    "bruto": 0.07541345093715546
   },
   "e_ptb_brady": {
    "valor": "9.2%",
    "fonte": "results/expE/false_afib_by_rate.csv",
    "campo": "PTB-XL (todo)/SINUS_BRADY/falso_afib_logreg_limiar",
+   "numero": true,
    "bruto": 0.09171075837742504
   },
   "e_ptb_norm": {
    "valor": "3.4%",
    "fonte": "results/expE/false_afib_by_rate.csv",
    "campo": "PTB-XL (todo)/SINUS_NORMAL/falso_afib_logreg_limiar",
+   "numero": true,
    "bruto": 0.03352990732940185
   },
   "e_ptb_tachy": {
    "valor": "6.6%",
    "fonte": "results/expE/false_afib_by_rate.csv",
    "campo": "PTB-XL (todo)/SINUS_TACHY/falso_afib_logreg_limiar",
+   "numero": true,
    "bruto": 0.06591639871382636
   },
   "e_sh_brady": {
    "valor": "1.2%",
    "fonte": "results/expE/false_afib_by_rate.csv",
    "campo": "Shaoxing (teste A)/SINUS_BRADY/falso_afib_logreg_limiar",
+   "numero": true,
    "bruto": 0.011538461538461539
   },
   "e_sh_tachy": {
    "valor": "1.6%",
    "fonte": "results/expE/false_afib_by_rate.csv",
    "campo": "Shaoxing (teste A)/SINUS_TACHY/falso_afib_logreg_limiar",
+   "numero": true,
    "bruto": 0.015625
   },
   "ep1": {
    "valor": "1",
    "fonte": "configs/default.yaml",
    "campo": "voting.episode_windows[0] × 9,6 s / 60",
+   "numero": true,
    "bruto": 0.9599999999999999
   },
   "ep5": {
    "valor": "5",
    "fonte": "configs/default.yaml",
    "campo": "voting.episode_windows[1] × 9,6 s / 60",
+   "numero": true,
    "bruto": 4.959999999999999
   },
   "ext_auro_ci": {
    "valor": "0.995–0.998",
    "fonte": "results/expB/external_validation.csv",
    "campo": "B: Shaoxing→PTB-XL (todo)/auroc_ic95",
+   "numero": true,
    "bruto": "[0.9951652581893121, 0.9981812697365903]"
   },
   "ext_auroc": {
    "valor": "0.9968",
    "fonte": "results/expB/external_validation.csv",
    "campo": "B: Shaoxing→PTB-XL (todo)/auroc",
+   "numero": true,
    "bruto": 0.9967650913738298
   },
   "ext_espe_ci": {
    "valor": "0.954–0.960",
    "fonte": "results/expB/external_validation.csv",
    "campo": "B: Shaoxing→PTB-XL (todo)/especificidade_ic95",
+   "numero": true,
    "bruto": "[0.9541475089752472, 0.9604459280720539]"
   },
   "ext_fp_x": {
    "valor": "3.4",
    "fonte": "results/expB/external_validation.csv + results/expA/test.json",
    "campo": "(1-esp_B)/(1-esp_A), logreg",
+   "numero": true,
    "bruto": 3.4330320589531906
   },
   "ext_hv_spec": {
    "valor": "0.956",
    "fonte": "results/expB/external_validation.csv",
    "campo": "B: Shaoxing→PTB-XL (só validated_by_human)/especificidade",
+   "numero": true,
    "bruto": 0.9563741300288576
   },
   "ext_neg": {
    "valor": "15,877",
    "fonte": "results/expB/external_validation.csv",
    "campo": "B: Shaoxing→PTB-XL (todo)/n_neg",
+   "numero": true,
    "bruto": 15877
   },
   "ext_pos": {
    "valor": "1,428",
    "fonte": "results/expB/external_validation.csv",
    "campo": "B: Shaoxing→PTB-XL (todo)/n_pos",
+   "numero": true,
    "bruto": 1428
   },
   "ext_ppv": {
    "valor": "0.677",
    "fonte": "results/expB/external_validation.csv",
    "campo": "B: Shaoxing→PTB-XL (todo)/ppv",
+   "numero": true,
    "bruto": 0.6768788894207755
   },
   "ext_prev": {
    "valor": "8%",
    "fonte": "results/expB/external_validation.csv",
    "campo": "B: Shaoxing→PTB-XL (todo)/prevalencia",
+   "numero": true,
    "bruto": 0.08251950303380526
   },
   "ext_sens": {
    "valor": "0.990",
    "fonte": "results/expB/external_validation.csv",
    "campo": "B: Shaoxing→PTB-XL (todo)/sensibilidade",
+   "numero": true,
    "bruto": 0.9901960784313726
   },
   "ext_sens_ci": {
    "valor": "0.985–0.995",
    "fonte": "results/expB/external_validation.csv",
    "campo": "B: Shaoxing→PTB-XL (todo)/sensibilidade_ic95",
+   "numero": true,
    "bruto": "[0.9852941176470589, 0.9950980392156863]"
   },
   "ext_spec": {
    "valor": "0.957",
    "fonte": "results/expB/external_validation.csv",
    "campo": "B: Shaoxing→PTB-XL (todo)/especificidade",
+   "numero": true,
    "bruto": 0.9574856710965548
   },
   "f_adc_spec": {
    "valor": "0.990",
    "fonte": "results/expF/robustness.csv",
    "campo": "conversão A/D 12 bits/esp_sem_sqi",
+   "numero": true,
    "bruto": 0.9896800825593395
   },
   "f_clean_spec": {
    "valor": "0.988",
    "fonte": "results/expF/robustness.csv",
    "campo": "limpo/esp_sem_sqi",
+   "numero": true,
    "bruto": 0.9876160990712074
   },
   "f_ma0_nosqi": {
    "valor": "0.799",
    "fonte": "results/expF/robustness_sqi_calibrated.csv",
    "campo": "ruído muscular/0 dB/esp_sem_sqi",
+   "numero": true,
    "bruto": 0.7987616099071208
   },
   "f_mam6_cal": {
    "valor": "0.547",
    "fonte": "results/expF/robustness_sqi_calibrated.csv",
    "campo": "ruído muscular/-6 dB/esp_sqi_calibrado",
+   "numero": true,
    "bruto": 0.5465116279069767
   },
   "f_mam6_init": {
    "valor": "0.411",
    "fonte": "results/expF/robustness_sqi_calibrated.csv",
    "campo": "ruído muscular/-6 dB/esp_sqi_inicial",
+   "numero": true,
    "bruto": 0.41080196399345337
   },
   "f_mam6_nosqi": {
    "valor": "0.367",
    "fonte": "results/expF/robustness_sqi_calibrated.csv",
    "campo": "ruído muscular/-6 dB/esp_sem_sqi",
+   "numero": true,
    "bruto": 0.3673890608875129
   },
   "f_sens_min": {
    "valor": "0.996",
    "fonte": "results/expF/robustness_sqi_calibrated.csv",
    "campo": "min(sens_sem_sqi)",
+   "numero": true,
    "bruto": 0.9961685823754789
   },
   "fs": {
    "valor": "250",
    "fonte": "configs/default.yaml",
    "campo": "target_signal.fs",
+   "numero": true,
    "bruto": 250
   },
   "g_at": {
    "valor": "44%",
    "fonte": "results/expG/out_of_training.csv",
    "campo": "Shaoxing/AT/pct_AFIB",
+   "numero": true,
    "bruto": 0.44144144144144143
   },
   "g_ect_ptb": {
    "valor": "31%",
    "fonte": "results/expG/out_of_training.csv",
    "campo": "PTB-XL/ECTOPIA/pct_AFIB",
+   "numero": true,
    "bruto": 0.314508276533593
   },
   "g_ect_sh": {
    "valor": "24%",
    "fonte": "results/expG/out_of_training.csv",
    "campo": "Shaoxing/ECTOPIA/pct_AFIB",
+   "numero": true,
    "bruto": 0.2417910447761194
   },
   "g_fl_ptb": {
    "valor": "29%",
    "fonte": "results/expG/out_of_training.csv",
    "campo": "PTB-XL/AFLT/pct_AFIB",
+   "numero": true,
    "bruto": 0.2857142857142857
   },
   "g_fl_sh": {
    "valor": "55%",
    "fonte": "results/expG/out_of_training.csv",
    "campo": "Shaoxing/AF/pct_AFIB",
+   "numero": true,
    "bruto": 0.5452380952380952
   },
   "g_nb_af": {
    "valor": "84%",
    "fonte": "results/expG/out_of_training.csv",
    "campo": "Ningbo/AF (\"flutter\") — rótulo duvidoso, D14/pct_AFIB",
+   "numero": true,
    "bruto": 0.8424989610749412
   },
   "g_sa_nb": {
    "valor": "15%",
    "fonte": "results/expG/out_of_training.csv",
    "campo": "Ningbo/arritmia sinusal/pct_AFIB",
+   "numero": true,
    "bruto": 0.15362595419847327
   },
   "g_sa_ptb": {
    "valor": "21%",
    "fonte": "results/expG/out_of_training.csv",
    "campo": "PTB-XL/arritmia sinusal/pct_AFIB",
+   "numero": true,
    "bruto": 0.20847457627118643
   },
   "g_svt": {
    "valor": "6%",
    "fonte": "results/expG/out_of_training.csv",
    "campo": "Shaoxing/SVT/pct_AFIB",
+   "numero": true,
    "bruto": 0.05576923076923077
   },
   "h_corr_ptb": {
    "valor": "4.0",
    "fonte": "results/expH/monitoring_sensitivity.csv",
    "campo": "negativos correlacionados (registro repetido por ~5 min)/PTB-XL (todo, externo)/falsos_alertas_dia",
+   "numero": true,
    "bruto": 3.953333333333333
   },
   "h_corr_sh": {
    "valor": "0.6",
    "fonte": "results/expH/monitoring_sensitivity.csv",
    "campo": "negativos correlacionados (registro repetido por ~5 min)/Shaoxing (teste A)/falsos_alertas_dia",
+   "numero": true,
    "bruto": 0.57
   },
   "h_ect_hi": {
    "valor": "179",
    "fonte": "results/expH/monitoring_sensitivity.csv",
    "campo": "max(falsos_alertas_dia | ectopia)",
+   "numero": true,
    "bruto": 178.54666666666665
   },
   "h_ect_lo": {
    "valor": "53",
    "fonte": "results/expH/monitoring_sensitivity.csv",
    "campo": "min(falsos_alertas_dia | ectopia)",
+   "numero": true,
    "bruto": 52.95333333333333
   },
   "h_ptb_1": {
    "valor": "115",
    "fonte": "results/expH/monitoring.csv",
    "campo": "PTB-XL (todo, externo)/1 de 1 (sem votação)/falsos_alertas_dia",
+   "numero": true,
    "bruto": 115.21
   },
   "h_ptb_sens1": {
    "valor": "0.960",
    "fonte": "results/expH/monitoring.csv",
    "campo": "PTB-XL/escolhido/sens_episodio_6j",
+   "numero": true,
    "bruto": 0.96
   },
   "h_ptb_sens5": {
    "valor": "1.000",
    "fonte": "results/expH/monitoring.csv",
    "campo": "PTB-XL/escolhido/sens_episodio_31j",
+   "numero": true,
    "bruto": 1.0
   },
   "h_ptb_v": {
    "valor": "0.01",
    "fonte": "results/expH/monitoring.csv",
    "campo": "PTB-XL (todo, externo)/3 de 3 (escolhido)/falsos_alertas_dia",
+   "numero": true,
    "bruto": 0.013333333333333334
   },
   "h_sa_hi": {
    "valor": "57",
    "fonte": "results/expH/monitoring_sensitivity.csv",
    "campo": "max(falsos_alertas_dia | arritmia sinusal)",
+   "numero": true,
    "bruto": 56.96333333333333
   },
   "h_sa_lo": {
    "valor": "46",
    "fonte": "results/expH/monitoring_sensitivity.csv",
    "campo": "min(falsos_alertas_dia | arritmia sinusal)",
+   "numero": true,
    "bruto": 46.443333333333335
   },
   "h_sh_1": {
    "valor": "18",
    "fonte": "results/expH/monitoring.csv",
    "campo": "Shaoxing (teste A)/1 de 1 (sem votação)/falsos_alertas_dia",
+   "numero": true,
    "bruto": 17.713333333333335
   },
   "h_sh_v": {
    "valor": "0.00",
    "fonte": "results/expH/monitoring.csv",
    "campo": "Shaoxing (teste A)/3 de 3 (escolhido)/falsos_alertas_dia",
+   "numero": true,
    "bruto": 0.0
   },
   "h_tmed": {
    "valor": "29",
    "fonte": "results/expH/monitoring.csv",
    "campo": "PTB-XL/escolhido/tempo_alerta_mediana_s_31j",
+   "numero": true,
    "bruto": 28.799999999999997
   },
   "hr_brady_min": {
    "valor": "98.2%",
    "fonte": "results/expE/hr_rule_vs_labels.csv",
    "campo": "min(AVISO_FC_BAIXA/n) para SINUS_BRADY",
+   "numero": true,
    "bruto": 0.982363315696649
   },
   "hr_ptb_norm_low": {
    "valor": "18%",
    "fonte": "results/expE/hr_rule_vs_labels.csv",
    "campo": "PTB-XL SINUS_NORMAL AVISO_FC_BAIXA/n",
+   "numero": true,
    "bruto": 0.18197135636057288
   },
   "hr_tachy_min": {
    "valor": "98.2%",
    "fonte": "results/expE/hr_rule_vs_labels.csv",
    "campo": "min(AVISO_FC_ALTA/n) para SINUS_TACHY",
+   "numero": true,
    "bruto": 0.9823151125401929
   },
   "i_ptb_acc": {
    "valor": "89.7%",
    "fonte": "results/expI/summary.json",
    "campo": "PTB-XL externo (balanceado, 356 por classe como o TCC).acuracia",
+   "numero": true,
    "bruto": 0.897003745318352
   },
   "i_ptb_n": {
    "valor": "356",
    "fonte": "results/expI/summary.json",
    "campo": "PTB-XL externo (balanceado, 356 por classe como o TCC).n_por_classe",
+   "numero": true,
    "bruto": 356
   },
   "i_ptb_rec_afib": {
    "valor": "99.2%",
    "fonte": "results/expI/summary.json",
    "campo": "PTB-XL externo (balanceado, 356 por classe como o TCC).recall_por_classe.AFIB",
+   "numero": true,
    "bruto": 0.9916
   },
   "i_ptb_rec_norm": {
    "valor": "79.5%",
    "fonte": "results/expI/summary.json",
    "campo": "PTB-XL externo (balanceado, 356 por classe como o TCC).recall_por_classe.NORMAL",
+   "numero": true,
    "bruto": 0.7949
   },
   "i_sh_acc": {
    "valor": "98.8%",
    "fonte": "results/expI/summary.json",
    "campo": "Shaoxing teste A (balanceado, maior n possível).acuracia",
+   "numero": true,
    "bruto": 0.988391376451078
   },
   "i_sh_n": {
    "valor": "201",
    "fonte": "results/expI/summary.json",
    "campo": "Shaoxing teste A (balanceado, maior n possível).n_por_classe",
+   "numero": true,
    "bruto": 201
   },
   "inv_fold": {
    "valor": "10",
    "fonte": "configs/default.yaml",
    "campo": "experiment_b.inverse_test_fold",
+   "numero": true,
    "bruto": 10
   },
   "inv_ptb_auroc": {
    "valor": "0.9914",
    "fonte": "results/expB/external_validation.csv",
    "campo": "Inverso: PTB-XL→PTB-XL (fold 10)/auroc",
+   "numero": true,
    "bruto": 0.9913629522999412
   },
   "inv_ptb_neg": {
    "valor": "1,581",
    "fonte": "results/expB/external_validation.csv",
    "campo": "Inverso: PTB-XL→PTB-XL (fold 10)/n_neg",
+   "numero": true,
    "bruto": 1581
   },
   "inv_ptb_pos": {
    "valor": "145",
    "fonte": "results/expB/external_validation.csv",
    "campo": "Inverso: PTB-XL→PTB-XL (fold 10)/n_pos",
+   "numero": true,
    "bruto": 145
   },
   "inv_ptb_ppv": {
    "valor": "0.738",
    "fonte": "results/expB/external_validation.csv",
    "campo": "Inverso: PTB-XL→PTB-XL (fold 10)/ppv",
+   "numero": true,
    "bruto": 0.7379679144385026
   },
   "inv_ptb_sens": {
    "valor": "0.952",
    "fonte": "results/expB/external_validation.csv",
    "campo": "Inverso: PTB-XL→PTB-XL (fold 10)/sensibilidade",
+   "numero": true,
    "bruto": 0.9517241379310345
   },
   "inv_ptb_spec": {
    "valor": "0.969",
    "fonte": "results/expB/external_validation.csv",
    "campo": "Inverso: PTB-XL→PTB-XL (fold 10)/especificidade",
+   "numero": true,
    "bruto": 0.9690069576217584
   },
   "inv_sh_auroc": {
    "valor": "0.9995",
    "fonte": "results/expB/external_validation.csv",
    "campo": "Inverso: PTB-XL→Shaoxing (teste A)/auroc",
+   "numero": true,
    "bruto": 0.9994899351150018
   },
   "inv_sh_neg": {
    "valor": "969",
    "fonte": "results/expB/external_validation.csv",
    "campo": "Inverso: PTB-XL→Shaoxing (teste A)/n_neg",
+   "numero": true,
    "bruto": 969
   },
   "inv_sh_pos": {
    "valor": "261",
    "fonte": "results/expB/external_validation.csv",
    "campo": "Inverso: PTB-XL→Shaoxing (teste A)/n_pos",
+   "numero": true,
    "bruto": 261
   },
   "inv_sh_ppv": {
    "valor": "0.929",
    "fonte": "results/expB/external_validation.csv",
    "campo": "Inverso: PTB-XL→Shaoxing (teste A)/ppv",
+   "numero": true,
    "bruto": 0.9288256227758007
   },
   "inv_sh_sens": {
    "valor": "1.000",
    "fonte": "results/expB/external_validation.csv",
    "campo": "Inverso: PTB-XL→Shaoxing (teste A)/sensibilidade",
+   "numero": true,
    "bruto": 1.0
   },
   "inv_sh_spec": {
    "valor": "0.979",
    "fonte": "results/expB/external_validation.csv",
    "campo": "Inverso: PTB-XL→Shaoxing (teste A)/especificidade",
+   "numero": true,
    "bruto": 0.9793601651186791
   },
   "lit_h_conv": {
    "valor": "91%",
    "fonte": "results/reference/literature.json",
    "campo": "holter_dnn.afib_sensibilidade_convencional",
+   "numero": true,
    "bruto": 0.91
   },
   "lit_h_dnn": {
    "valor": "98%",
    "fonte": "results/reference/literature.json",
    "campo": "holter_dnn.afib_sensibilidade_dnn",
+   "numero": true,
    "bruto": 0.98
   },
   "lit_khine_months": {
    "valor": "6",
    "fonte": "results/reference/literature.json",
    "campo": "khine_2018.meses_em_orbita",
+   "numero": true,
    "bruto": 6
   },
   "lit_khine_prev": {
    "valor": "5%",
    "fonte": "results/reference/literature.json",
    "campo": "khine_2018.prevalencia_afib_astronautas_ativos",
+   "numero": true,
    "bruto": 0.05
   },
   "lit_sw_sens": {
    "valor": "86%",
    "fonte": "results/reference/literature.json",
    "campo": "smartwatch_meta_analise.algoritmo_sensibilidade",
+   "numero": true,
    "bruto": 0.86
   },
   "lit_sw_spec": {
    "valor": "94%",
    "fonte": "results/reference/literature.json",
    "campo": "smartwatch_meta_analise.algoritmo_especificidade",
+   "numero": true,
    "bruto": 0.94
   },
   "margin": {
    "valor": "0.010",
    "fonte": "configs/default.yaml",
    "campo": "experiment_a.selection_margin",
+   "numero": true,
    "bruto": 0.01
   },
   "min_spec": {
    "valor": "0.98",
    "fonte": "configs/default.yaml",
    "campo": "experiment_a.threshold_rule.min_specificity",
+   "numero": true,
    "bruto": 0.98
   },
   "n_feat": {
    "valor": "30",
    "fonte": "src/features.py",
    "campo": "len(FEATURE_NAMES)",
+   "numero": true,
    "bruto": 30
   },
   "nb_afib": {
    "valor": "0",
    "fonte": "results/audit/group_counts_by_source.csv",
    "campo": "AFIB/chapman_ningbo",
+   "numero": true,
    "bruto": 0
   },
   "nb_total": {
    "valor": "34,905",
    "fonte": "results/audit/group_counts_by_source.csv",
    "campo": "TOTAL/chapman_ningbo",
+   "numero": true,
    "bruto": 34905
   },
   "ptb_afib": {
    "valor": "1,477",
    "fonte": "results/audit/group_counts_by_source.csv",
    "campo": "AFIB/ptbxl",
+   "numero": true,
    "bruto": 1477
   },
   "ptb_total": {
    "valor": "21,799",
    "fonte": "results/audit/group_counts_by_source.csv",
    "campo": "TOTAL/ptbxl",
+   "numero": true,
    "bruto": 21799
   },
   "qrs_ppv_min": {
    "valor": "0.982",
    "fonte": "results/qrs_validation.json",
    "campo": "min(por_grupo.*.ppv_vs_xqrs)",
+   "numero": true,
    "bruto": 0.982484076433121
   },
   "qrs_sens_min": {
    "valor": "0.992",
    "fonte": "results/qrs_validation.json",
    "campo": "min(por_grupo.*.sensibilidade_vs_xqrs)",
+   "numero": true,
    "bruto": 0.9919614147909968
   },
   "rec_s": {
    "valor": "10",
    "fonte": "configs/default.yaml",
    "campo": "datasets.chapman.n_samples/fs",
+   "numero": true,
    "bruto": 10.0
   },
   "rej_calibrado_hi": {
    "valor": "8.2%",
    "fonte": "results/expF/sqi_clean_rejection.csv",
    "campo": "max(rejeicao | sqi=calibrado)",
+   "numero": true,
    "bruto": 0.08196721311475409
   },
   "rej_calibrado_lo": {
    "valor": "3.4%",
    "fonte": "results/expF/sqi_clean_rejection.csv",
    "campo": "min(rejeicao | sqi=calibrado)",
+   "numero": true,
    "bruto": 0.03409983174425126
   },
   "rej_inicial_hi": {
    "valor": "5.9%",
    "fonte": "results/expF/sqi_clean_rejection.csv",
    "campo": "max(rejeicao | sqi=inicial)",
+   "numero": true,
    "bruto": 0.05893338866984851
   },
   "rej_inicial_lo": {
    "valor": "1.8%",
    "fonte": "results/expF/sqi_clean_rejection.csv",
    "campo": "min(rejeicao | sqi=inicial)",
+   "numero": true,
    "bruto": 0.018171620863712844
   },
   "sh_afib": {
    "valor": "1,779",
    "fonte": "results/audit/group_counts_by_source.csv",
    "campo": "AFIB/chapman_shaoxing",
+   "numero": true,
    "bruto": 1779
   },
   "sh_total": {
    "valor": "10,247",
    "fonte": "results/audit/group_counts_by_source.csv",
    "campo": "TOTAL/chapman_shaoxing",
+   "numero": true,
    "bruto": 10247
   },
   "snr0": {
    "valor": "0",
    "fonte": "configs/default.yaml",
    "campo": "noise.snr_db (contém 0)",
+   "numero": true,
    "bruto": 0
   },
   "snrm6": {
    "valor": "−6",
    "fonte": "configs/default.yaml",
    "campo": "min(noise.snr_db)",
+   "numero": true,
    "bruto": -6
   },
   "sqi_agree": {
    "valor": "0.95",
    "fonte": "results/expF/sqi_calibrated.json",
    "campo": "limiares.min_qrs_agreement",
+   "numero": true,
    "bruto": 0.95
   },
   "sub3054_pos": {
    "valor": "19",
    "fonte": "results/expA/test_subgroups.csv",
    "campo": "faixa=30-54,logreg,n_pos",
+   "numero": true,
    "bruto": 19
   },
   "sub3054_sens": {
    "valor": "1.000",
    "fonte": "results/expA/test_subgroups.csv",
    "campo": "faixa=30-54,logreg,sensibilidade",
+   "numero": true,
    "bruto": 1.0
   },
   "sub3054_spec": {
    "valor": "0.994",
    "fonte": "results/expA/test_subgroups.csv",
    "campo": "faixa=30-54,logreg,especificidade",
+   "numero": true,
    "bruto": 0.9944444444444445
   },
   "sub3054_spec_ci": {
    "valor": "0.986–1.000",
    "fonte": "results/expA/test_subgroups.csv",
    "campo": "faixa=30-54,logreg,esp_ic95",
+   "numero": true,
    "bruto": "[0.9861111111111112, 1.0]"
   },
   "sub70_spec": {
    "valor": "0.978",
    "fonte": "results/expA/test_subgroups.csv",
    "campo": "faixa=70+,logreg,especificidade",
+   "numero": true,
    "bruto": 0.9777777777777777
   },
   "supp_recs": {
    "valor": "13,191",
    "fonte": "results/audit/audit_summary.json",
    "campo": "records_with_supplementary_codes",
+   "numero": true,
    "bruto": 13191
   },
   "tachy": {
    "valor": "100",
    "fonte": "configs/default.yaml",
    "campo": "hr_rule.tachy_bpm",
+   "numero": true,
    "bruto": 100
   },
   "tcc_acc": {
    "valor": "96.9%",
    "fonte": "results/reference/tcc_reported.json",
    "campo": "acuracia",
+   "numero": true,
    "bruto": 0.9691
   },
   "tcc_fa_day": {
    "valor": "139",
    "fonte": "results/reference/tcc_reported.json + configs/default.yaml",
    "campo": "(1-especificidade_macro)*windows_per_day",
+   "numero": true,
    "bruto": 139.49999999999963
   },
   "tcc_spec": {
    "valor": "98.5%",
    "fonte": "results/reference/tcc_reported.json",
    "campo": "especificidade_macro",
+   "numero": true,
    "bruto": 0.9845
   },
   "val_cnn": {
    "valor": "0.9966",
    "fonte": "results/expA/selection.json",
    "campo": "auprc_validacao.cnn",
+   "numero": true,
    "bruto": 0.9966410340629397
   },
   "val_lightgbm": {
    "valor": "0.9997",
    "fonte": "results/expA/selection.json",
    "campo": "auprc_validacao.lightgbm",
+   "numero": true,
    "bruto": 0.9997011470416602
   },
   "val_logreg": {
    "valor": "0.9997",
    "fonte": "results/expA/selection.json",
    "campo": "auprc_validacao.logreg",
+   "numero": true,
    "bruto": 0.9997197970910724
   },
   "val_random_forest": {
    "valor": "0.9980",
    "fonte": "results/expA/selection.json",
    "campo": "auprc_validacao.random_forest",
+   "numero": true,
    "bruto": 0.99799658942793
   },
   "vote_m": {
    "valor": "3",
    "fonte": "results/expH/summary.json",
    "campo": "escolhido.M",
+   "numero": true,
    "bruto": 3
   },
   "vote_n": {
    "valor": "3",
    "fonte": "results/expH/summary.json",
    "campo": "escolhido.N",
+   "numero": true,
    "bruto": 3
   },
   "win": {
    "valor": "2,400",
    "fonte": "configs/default.yaml",
    "campo": "target_signal.window_samples",
+   "numero": true,
    "bruto": 2400
   },
   "win_s": {
    "valor": "9.6",
    "fonte": "configs/default.yaml",
    "campo": "window_samples/fs",
+   "numero": true,
    "bruto": 9.6
   },
   "wpd": {
    "valor": "9,000",
    "fonte": "configs/default.yaml",
    "campo": "voting.windows_per_day",
+   "numero": true,
    "bruto": 9000
   }
  }

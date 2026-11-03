@@ -26,12 +26,12 @@ def _strip(text: str) -> str:
     text = re.sub(r"https?://\S+", " ", text)
     text = re.sub(r"\{\{\w+\}\}", " ", text)                   # marcadores
     text = re.sub(r"\bpt-BR\b|\b1D\b|\bL2\b|\bp95\b|SHA-256", " ", text)  # nomes que contêm dígitos
-    text = re.sub(r"95% (?:bootstrap )?CI", " ", text)         # nível de confiança (método, não resultado)
+    text = re.sub(r"95% (?:bootstrap )?CI|IC 95%", " ", text)  # nível de confiança (método, não resultado)
     text = re.sub(r"(?m)^\s*\d+\.\s", " ", text)                # numeração de lista
     return text
 
 
-@pytest.mark.parametrize("doc,tpl", list(make_report.DOCS.items()))
+@pytest.mark.parametrize("doc,tpl", [(d, t) for d, (t, _) in make_report.DOCS.items()])
 def test_template_has_no_hand_written_numbers(doc, tpl):
     t = _strip((ROOT / "docs" / "templates" / tpl).read_text(encoding="utf-8"))
     nums = set(re.findall(r"\d+(?:[.,]\d+)*", t))

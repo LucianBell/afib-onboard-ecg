@@ -252,7 +252,7 @@ Contra o XQRS do `wfdb`: sensibilidade ≥ 0,992 e PPV ≥ 0,982 em todos os gru
 
 ## 7. Integridade e protocolo (não quebrar)
 
-- **README.md e MODEL_CARD.md são GERADOS.** Edite `docs/templates/*.template.md` e rode `make report`.
+- **README.md (pt-BR), README.en.md e MODEL_CARD.md são GERADOS.** Edite `docs/templates/*.template.md` e rode `make report`.
   - Todo número entra por `{{marcador}}`, com a origem em `results/readme_numbers.json`.
   - `tests/test_report_numbers.py` reprova número escrito à mão e README editado manualmente.
   - Modo subconjunto: `AFIB_SUBSET` → "n/d".

@@ -23,7 +23,9 @@ from src.config import ROOT, load_config  # noqa: E402
 
 RES = ROOT / "results"
 TPL = ROOT / "docs" / "templates"
-DOCS = {"README.md": "README.template.md", "MODEL_CARD.md": "MODEL_CARD.template.md"}
+# documento -> (template, idioma). Em pt-BR, números usam vírgula decimal e ponto de milhar.
+DOCS = {"README.md": ("README.pt.template.md", "pt"), "README.en.md": ("README.en.template.md", "en"),
+        "MODEL_CARD.md": ("MODEL_CARD.template.md", "en")}
 
 
 class Values:
@@ -51,7 +53,8 @@ class Values:
         if key in self.v:
             raise KeyError(f"chave duplicada: {key}")
         txt = fmt(value) if callable(fmt) else fmt.format(value)
-        self.v[key] = {"valor": txt, "fonte": fonte, "campo": campo, "bruto": value if isinstance(value, (int, float, str)) else str(value)}
+        self.v[key] = {"valor": txt, "fonte": fonte, "campo": campo, "numero": fmt != "{}",
+                       "bruto": value if isinstance(value, (int, float, str)) else str(value)}
 
 
 def j(path):
@@ -346,11 +349,20 @@ def collect(allow_missing: bool = False) -> Values:
     return V
 
 
-def render(template: str, V: Values) -> str:
+_PT = str.maketrans({".": ",", ",": "."})
+
+
+def _fmt(item: dict, lang: str) -> str:
+    if lang != "pt" or not item.get("numero", True):
+        return item["valor"]
+    return item["valor"].translate(_PT).replace(" to ", " a ")
+
+
+def render(template: str, V: Values, lang: str = "en") -> str:
     missing = sorted(set(re.findall(r"\{\{(\w+)\}\}", template)) - set(V.v))
     if missing and not V.allow_missing:
         raise KeyError(f"marcadores sem valor: {missing}")
-    return re.sub(r"\{\{(\w+)\}\}", lambda m: V.v[m.group(1)]["valor"] if m.group(1) in V.v else "n/d", template)
+    return re.sub(r"\{\{(\w+)\}\}", lambda m: _fmt(V.v[m.group(1)], lang) if m.group(1) in V.v else "n/d", template)
 
 
 def build(allow_missing: bool | None = None) -> tuple[dict[str, str], Values]:
@@ -358,8 +370,8 @@ def build(allow_missing: bool | None = None) -> tuple[dict[str, str], Values]:
         allow_missing = bool(os.environ.get("AFIB_SUBSET"))
     V = collect(allow_missing)
     out = {}
-    for doc, tpl in DOCS.items():
-        out[doc] = render((TPL / tpl).read_text(encoding="utf-8"), V)
+    for doc, (tpl, lang) in DOCS.items():
+        out[doc] = render((TPL / tpl).read_text(encoding="utf-8"), V, lang)
     return out, V
 
 
@@ -368,13 +380,13 @@ def main():
     for doc, txt in out.items():
         (ROOT / doc).write_text(txt, encoding="utf-8")
     used = set()
-    for tpl in DOCS.values():
+    for tpl, _ in DOCS.values():
         used |= set(re.findall(r"\{\{(\w+)\}\}", (TPL / tpl).read_text(encoding="utf-8")))
     (RES / "readme_numbers.json").write_text(json.dumps(
-        {"nota": "Origem de cada número de README.md e MODEL_CARD.md (gerados por scripts/make_report.py).",
+        {"nota": "Origem de cada número de README.md, README.en.md e MODEL_CARD.md (gerados por scripts/make_report.py). Em README.md (pt-BR) os números aparecem com vírgula decimal.",
          "valores": {k: v for k, v in sorted(V.v.items()) if k in used}}, indent=1, ensure_ascii=False, default=str))
     unused = sorted(set(V.v) - used)
-    print(f"README.md e MODEL_CARD.md gerados; {len(used)} valores usados" + (f"; não usados: {unused}" if unused else ""))
+    print(f"{', '.join(DOCS)} gerados; {len(used)} valores usados" + (f"; não usados: {unused}" if unused else ""))
     if V.falhas:
         print("modo subconjunto: seções sem dados (marcadas n/d):", V.falhas)
 

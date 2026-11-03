@@ -258,3 +258,10 @@ do SQI). Todos os resultados estão em `results/exp{B..I}/`, gerados por `make e
   Não verificados: `make env` num ambiente novo (foi usado o ambiente já criado) e o download real num
   clone novo (só nesta sessão, na etapa 2). O `make reproduce` com os dados completos nunca rodou de ponta a
   ponta: os resultados completos foram gerados passo a passo pelos mesmos scripts.
+
+## Publicação (2026-11-03)
+
+- **D48. README principal em pt-BR** (pedido do usuário, desvio do briefing, que pedia README em inglês com
+  resumo em pt-BR). `README.md` é gerado de `docs/templates/README.pt.template.md`, com números no formato
+  brasileiro (vírgula decimal, ponto de milhar). A versão em inglês continua gerada em `README.en.md`. A
+  regra de integridade vale para os três documentos gerados (`tests/test_report_numbers.py`).
