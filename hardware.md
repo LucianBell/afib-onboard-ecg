@@ -3,7 +3,8 @@
 > **Estado:** proposta de arquitetura. Nenhum hardware foi integrado ou medido até agora.
 > Protótipo de pesquisa, não é dispositivo médico nem hardware de voo.
 >
-> Os números do modelo foram transcritos de `results/benchmark/` e do `HANDOFF.md` (commit `50cef09`).
+> Os números do modelo foram transcritos de `results/benchmark/` e do `HANDOFF.md` (commit `f28325d`; era `50cef09`
+> antes da reescrita do histórico, ver `docs/historico_reescrito.md`).
 > Se os resultados forem regenerados, a fonte de verdade é `results/`.
 
 ## Resumo
@@ -178,4 +179,4 @@ Estes valores são propostas do projeto, não exigências de uma norma:
 - [ESA: Astro Pi Mark II](https://www.esa.int/Education/AstroPI/New_Astro_Pi_computers_speeding_their_way_into_space)
 - [Raspberry Pi Foundation: hardware do Astro Pi Mark II](https://www.raspberrypi.org/blog/astro-pi-2021-news-rocket-launch-hardware/)
 - [AD8232: datasheet](https://www.analog.com/media/en/technical-documentation/data-sheets/ad8232.pdf)
-- Maggioni & Rebonatto, TCC, UPF, 2023 (`docs/`), para a descrição do MP-IoT.
+- Maggioni & Rebonatto, TCC, UPF, 2023, para a descrição do MP-IoT. O PDF não é redistribuído neste repositório; a citação completa está em `DATA.md`.
