@@ -19,7 +19,7 @@ Detector de **fibrilação atrial (AFIB) que roda a bordo**, em ECG de derivaç�
 janelas de 2.400 amostras ≈ 9,6 s), pensado para um Holter preso ao astronauta enviando sinal a um Raspberry
 Pi. É para o **NASA Space Apps Challenge 2026**: envio de 14/11 às 9h até 15/11 às 23h59, repositório pronto
 até 12/11, recursos oficiais dos desafios em 13/11. O ponto de partida é o TCC de Maggioni & Rebonatto (UPF,
-2023), em `docs/`.
+2023); o PDF fica só na cópia local (`docs/*.pdf` está no `.gitignore`) e não vai para o GitHub.
 
 Cada janela passa por três camadas:
 

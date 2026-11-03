@@ -64,7 +64,8 @@ Por cima das camadas:
 **a bordo durante o registro** e comparação justa com um baseline no mesmo conjunto de teste. **O que não
 alegamos:** detectar infarto, parada cardíaca ou arritmias ventriculares, nem ser "melhor que o Holter".
 
-**Ponto de partida:** o TCC de Maggioni & Rebonatto (UPF, 2023), em [`docs/`](docs/). Reaproveitamos as bases
+**Ponto de partida:** o TCC de Maggioni & Rebonatto (UPF, 2023). O PDF não é redistribuído aqui; a citação
+completa está em [`DATA.md`](DATA.md). Reaproveitamos as bases
 e o cenário de sinal limitado, trocamos a rede profunda por modelos simples e corrigimos os problemas de
 avaliação (ver [`docs/tcc_analysis.md`](docs/tcc_analysis.md)).
 
@@ -300,7 +301,7 @@ scripts/   etapas do pipeline (auditoria, atributos, exp. A, exp. B–I, export,
 app/       painel Streamlit (offline)
 models/    modelo final (JSON + ONNX) com metadados e hash dos dados
 results/   métricas (JSON/CSV) e figuras, todas geradas por código
-docs/      TCC, auditoria, análise do TCC, decisões, perguntas dos jurados, templates dos documentos
+docs/      auditoria, análise do TCC, decisões, perguntas dos jurados, templates dos documentos
 tests/     testes unitários, invariância a offset, ausência de vazamento, paridade da inferência, painel
 ```
 

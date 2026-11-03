@@ -2,7 +2,7 @@
 
 **Referência:** Maggioni, A. F.; Rebonatto, M. T. *Inteligência Artificial aplicada a análise de
 Eletrocardiograma*. TCC, Ciência da Computação, Universidade de Passo Fundo, 2023
-(`docs/PF2023AugustoFelipeMaggioni_cópia.pdf`).
+(o PDF não é redistribuído neste repositório; as páginas citadas referem-se à versão de 23 páginas).
 
 Os números atribuídos ao TCC neste documento são os que ele mesmo relata, com a página indicada. Os
 nossos resultados não são repetidos aqui: o texto aponta para os arquivos em `results/`, e os números

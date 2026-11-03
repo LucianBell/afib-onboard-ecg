@@ -11,3 +11,6 @@ __pycache__/
 # artefatos grandes temporários
 *.zip
 results/_tmp/
+
+# PDF do TCC de partida: obra de terceiros, não redistribuída (D49)
+docs/*.pdf

@@ -41,7 +41,7 @@ the MIT licence of the code (data are not redistributed).
 
 **Starting point of this project**
 
-- Maggioni, A. F., & Rebonatto, M. T. (2023). *Inteligência Artificial aplicada a análise de Eletrocardiograma*. Trabalho de Conclusão de Curso, Ciência da Computação, Universidade de Passo Fundo (UPF). File: `docs/PF2023AugustoFelipeMaggioni_cópia.pdf`.
+- Maggioni, A. F., & Rebonatto, M. T. (2023). *Inteligência Artificial aplicada a análise de Eletrocardiograma*. Trabalho de Conclusão de Curso, Ciência da Computação, Universidade de Passo Fundo (UPF). The PDF is not redistributed in this repository.
 
 ## Derived local files (never committed)
 
