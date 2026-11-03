@@ -190,3 +190,36 @@ do SQI). Todos os resultados estão em `results/exp{B..I}/`, gerados por `make e
   balanceado de Shaoxing tem 201 por classe, o máximo disponível no teste A. O do PTB-XL tem 356 por classe,
   o mesmo tamanho do TCC. Os números do TCC estão em `results/reference/tcc_reported.json`, transcritos das
   Tabelas 3 e 4.
+
+## Etapas 7 e 8 — inferência a bordo, stream, benchmark e painel (2026-11-03)
+
+- **D40. Artefato do modelo.** `models/afib_logreg_v1.json` (34 KB) traz os parâmetros em numpy puro:
+  imputação com indicadores, padronização, coeficientes, Platt, limiar, detector fora-do-padrão, SQI de
+  bordo, votação 3 de 3 e regra de FC. Inclui metadados: commit, regra de escolha e SHA-256 dos zips de dados.
+  A inferência (`src/inference.py`) usa só numpy/scipy, sem scikit-learn. ONNX: o skl2onnx não converte o
+  `SimpleImputer` com indicadores, então o grafo foi montado à mão (`models/afib_logreg_v1.onnx`, 0,8 KB).
+  A diferença máxima contra o scikit-learn é de 3,3e-6 em 8.118 janelas, e o teste de paridade do JSON passa
+  com tolerância de 1e-9.
+- **D41. Estados.** `predict(window)` devolve o estado da janela (`AFIB` isolado ainda não é alerta).
+  `Monitor.update` devolve os estados do sistema do briefing. Uma janela AFIB ainda não confirmada pela
+  votação aparece como `INCERTO` com o motivo `afib_em_confirmacao`.
+- **D42. Regra de FC com histórico pessoal.** Usa limiares absolutos (60/100 bpm) até haver 30 janelas
+  sinusais com sinal bom. Depois, FC baixa < min(60, 0,8 × mediana pessoal) e FC alta > max(100, 1,5 ×
+  mediana pessoal). O histórico inclui janelas com aviso de FC, senão um atleta com FC de repouso baixa nunca
+  sairia do aviso (bug achado em teste e corrigido). Esses fatores são escolhas de projeto, não validadas
+  clinicamente.
+- **D43. Comportamento conhecido da votação.** Uma janela `SINAL_RUIM` conta como não-voto, como no
+  experimento H. Durante AFIB, uma janela ruim no meio interrompe a condição 3 de 3, e o mesmo episódio pode
+  gerar mais de um alerta (visto no painel). Alternativa candidata: ignorar janelas ruins na votação. Exige
+  reavaliar o H antes de adotar.
+- **D44. Demonstração.** O replay usa 40 registros por cenário do teste A (Shaoxing, nunca vistos no treino),
+  em `data/demo/`, fora do Git, gerado por `make demo-data`. O cenário "sinal ruim" usa ruído real da NSTDB a
+  −6 dB e eletrodo solto. Parte dessas janelas passa pelo SQI, como no experimento F, e isso não foi
+  escondido. Sem as bases baixadas, o painel e o stream usam ECG sintético, com faixa própria. O Streamlit
+  roda local (`.streamlit/config.toml`: sem telemetria, localhost, tema claro com o azul de série como cor
+  primária, já que o vermelho é reservado ao alerta). Testes: `tests/test_dashboard.py` (AppTest). A
+  verificação sem rede foi feita com `unshare -rn` para testes, stream e benchmark, e a página foi conferida
+  em Firefox headless.
+- **D45. Benchmark.** `results/benchmark/benchmark_LucianDebian.json`, medido no i7-1165G7 desta máquina com
+  1 thread. **Não há medição em Raspberry Pi**: o script está pronto para rodar lá (identifica a placa pelo
+  campo `Model` do /proc/cpuinfo).

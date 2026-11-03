@@ -1,0 +1,16 @@
+# Painel 100% local: sem telemetria, sem abrir conexões externas.
+[browser]
+gatherUsageStats = false
+serverAddress = "localhost"
+
+[server]
+headless = true
+address = "localhost"
+port = 8501
+
+[theme]
+base = "light"
+primaryColor = "#2a78d6"   # azul de série: o vermelho fica reservado ao status crítico (ALERTA_AFIB)
+
+[client]
+toolbarMode = "minimal"

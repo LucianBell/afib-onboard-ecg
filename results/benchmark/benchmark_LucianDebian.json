@@ -1,0 +1,85 @@
+{
+  "aviso": "Medido na máquina abaixo, NÃO em Raspberry Pi. Rode este script no Pi para os números dele.",
+  "data": "2026-11-03T03:04:06",
+  "maquina": {
+    "host": "LucianDebian",
+    "cpu": "11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz",
+    "arquitetura": "x86_64",
+    "nucleos_logicos": 8,
+    "ram_total_gb": 7.5,
+    "so": "Linux-6.12.113+deb13-amd64-x86_64-with-glibc2.41",
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "threads_blas": 1
+  },
+  "n_janelas": 500,
+  "janela": "2.400 amostras a 250 Hz (9,6 s)",
+  "fonte_janelas": "replay",
+  "latencia": {
+    "preprocess": {
+      "mediana_ms": 0.7268579997798952,
+      "p95_ms": 0.7863061002353788,
+      "max_ms": 1.2906410001960467,
+      "media_ms": 0.7393938140012324
+    },
+    "qrs": {
+      "mediana_ms": 0.6260410004870209,
+      "p95_ms": 0.6902664994868245,
+      "max_ms": 1.3189199999033008,
+      "media_ms": 0.6071220579906367
+    },
+    "atributos": {
+      "mediana_ms": 1.1169655003868684,
+      "p95_ms": 1.419597100175451,
+      "max_ms": 2.3972369999682996,
+      "media_ms": 1.0761209420234081
+    },
+    "sqi": {
+      "mediana_ms": 1.0530825002206257,
+      "p95_ms": 1.1840232501981514,
+      "max_ms": 1.955844999429246,
+      "media_ms": 1.0235892200089438
+    },
+    "modelo_json": {
+      "mediana_ms": 0.05314799955158378,
+      "p95_ms": 0.06820380031058446,
+      "max_ms": 0.1256360001207213,
+      "media_ms": 0.05549888400673808
+    },
+    "predict_total": {
+      "mediana_ms": 3.5850265007866255,
+      "p95_ms": 4.102179400115345,
+      "max_ms": 6.119728999692597,
+      "media_ms": 3.4936392679956043
+    },
+    "monitor_update": {
+      "mediana_ms": 3.6436844998206652,
+      "p95_ms": 4.22223885052517,
+      "max_ms": 6.21380099983071,
+      "media_ms": 3.560836741989988
+    },
+    "modelo_onnx": {
+      "mediana_ms": 0.009908499578159535,
+      "p95_ms": 0.011071850713051388,
+      "max_ms": 0.1881889993455843,
+      "media_ms": 0.011033749983653252
+    }
+  },
+  "tempo_real": {
+    "janela_s": 9.6,
+    "fracao_do_tempo_real_mediana": 0.0003795504687313193
+  },
+  "memoria": {
+    "rss_inicial_mb": 16.1328125,
+    "rss_apos_import_e_modelo_mb": 104.4453125,
+    "rss_final_mb": 146.3515625,
+    "pico_alocado_por_predict_kb": 120.8408203125,
+    "tempo_import_s": 0.5550485479998315
+  },
+  "artefatos_kb": {
+    "afib_logreg_v1.json": 34.0,
+    "afib_logreg_v1.onnx": 0.8,
+    "afib_logreg_v1.sha256": 0.1
+  }
+}
