@@ -265,3 +265,9 @@ do SQI). Todos os resultados estão em `results/exp{B..I}/`, gerados por `make e
   resumo em pt-BR). `README.md` é gerado de `docs/templates/README.pt.template.md`, com números no formato
   brasileiro (vírgula decimal, ponto de milhar). A versão em inglês continua gerada em `README.en.md`. A
   regra de integridade vale para os três documentos gerados (`tests/test_report_numbers.py`).
+- **D49. PDF do TCC fora do repositório publicado.** A pedido do usuário, o repositório no GitHub é privado,
+  chama-se `afib-onboard-ecg` e não inclui o PDF do TCC: é obra de terceiros, sem licença de redistribuição
+  confirmada. O arquivo foi removido do índice (`docs/*.pdf` no `.gitignore`) e de todo o histórico
+  (`git filter-branch`). A citação completa fica em `DATA.md`. Como os hashes mudaram, a correspondência
+  antigo → novo está em `docs/historico_reescrito.md`. Backup do histórico original: `git bundle` local fora
+  do repositório.
