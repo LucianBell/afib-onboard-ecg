@@ -45,7 +45,8 @@ são marcadas como **pendente** até a etapa correspondente.
     onda T, desvio de eixo, bloqueio de ramo).
   - `SINUS_ARRITMIA` (novo): arritmia/irregularidade sinusal (`SA` na Chapman, `SARRH` no PTB-XL).
     É sinusal, mas tem RR irregular, um confundidor direto para AFIB. Fica em grupo próprio.
-- **D9. Pendente para a etapa 5** (agora restrito a Shaoxing, ver D13): definir se `SINUS_OUTRO` entra nos negativos do treino.
+- **D9. Resolvido em 2026-11-03:** `SINUS_OUTRO` entra nos negativos (usuário mandou seguir sem objeção à
+  recomendação abaixo). Texto original: definir se `SINUS_OUTRO` entra nos negativos do treino.
   Recomendação: incluir, porque os positivos de AFIB também carregam achados morfológicos. Treinar
   só com sinusal "limpo" ensinaria o modelo que morfologia anormal = AFIB. `SINUS_NORMAL` continua
   como subgrupo de relato. `SINUS_ARRITMIA` entra como negativo de estresse no teste.
@@ -84,3 +85,31 @@ são marcadas como **pendente** até a etapa correspondente.
 - **D19. Divisão sem paciente na Chapman.** Não há identificador de paciente, então a divisão de Shaoxing é
   por registro, após a deduplicação (D16). É uma limitação declarada: registros diferentes de um mesmo
   paciente podem cair em treino e teste. O PTB-XL usa `strat_fold`, que respeita paciente.
+
+## Etapas 3 e 4 — pré-processamento, atributos, SQI e baseline (2026-11-03)
+
+- **D20. Ordem do pré-processamento (desvio do briefing).** O briefing lista notch → passa-banda →
+  reamostragem. Aqui a reamostragem 500 → 250 Hz (`resample_poly`, com anti-aliasing) vem primeiro, e o recorte
+  de 2.400 amostras vem antes dos filtros. Assim o caminho de treino e o do aparelho, que já entrega janelas de
+  2.400 amostras a 250 Hz, executam exatamente a mesma função (`preprocess_window`). Os filtros seguem o
+  briefing: notch 50 Hz (Q = 30) e Butterworth 0,05–30 Hz de ordem 4 em SOS com `sosfiltfilt`.
+  Normalização: mediana zero e escala robusta (p99 − p1) = 1, por janela. Não há escalonamento global.
+- **D21. Recorte central** para atributos e avaliação. O registro tem 2.500 amostras a 250 Hz e a janela 2.400,
+  então o recorte aleatório desloca no máximo 0,4 s e não acrescenta diversidade aos atributos. Aleatório só no
+  treino da CNN.
+- **D22. LOESS e interpolação cúbica do TCC (ablação opcional): não feitos nesta etapa.** O passa-banda de
+  30 Hz já suaviza, e os atributos principais (RR) dependem só do QRS. Fica registrado como não testado.
+- **D23. Detector de QRS** (`src/qrs.py`): Pan-Tompkins simplificado, só numpy/scipy. Validação em dados reais
+  (`results/qrs_validation.json`, 150 registros por grupo e fonte): contra o XQRS do wfdb, sensibilidade ≥ 0,992
+  e PPV ≥ 0,982 em todos os grupos, inclusive AFIB. A comparação começa no 1º batimento do XQRS, porque antes
+  disso quase todas as discordâncias eram o período de aprendizado dele. A FC estimada bate com o rótulo em
+  98–99,5% das bradi e taquicardias.
+- **D24. SQI inicial** (`src/sqi.py`, limiares em `configs/default.yaml`): linha plana, saturação, número de
+  batimentos, FC plausível, concordância entre dois detectores (bSQI) e curtose. Reprova 3–5% das janelas
+  clínicas, sem diferença relevante entre AFIB e sinusal (`results/qrs_validation.json`). Os limiares serão
+  calibrados no experimento F com ruído controlado. Até lá, ficam como valores iniciais.
+- **D25. Baseline RR**: escore = nRMSSD (RMSSD / RR médio), sem treino. O limiar de decisão é escolhido na
+  validação pela mesma regra dos modelos (especificidade ≥ 0,98), para a comparação ser justa.
+- **D26. Janelas reprovadas pelo SQI ficam fora do treino e da avaliação principal**, porque no sistema elas
+  viram `SINAL_RUIM` antes do modelo. A taxa de reprovação por classe é relatada, e as métricas sem o filtro
+  de SQI são relatadas como análise secundária.

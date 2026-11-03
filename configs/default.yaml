@@ -111,3 +111,54 @@ audit:
   flat_std_mv: 0.005           # derivação com desvio-padrão < 5 µV é considerada plana
   amplitude_highpass_hz: 0.5   # filtro só para medir amplitude do QRS na auditoria
   n_jobs: 6
+
+# ---------------------------------------------------------------- etapa 3
+preprocess:
+  fs_in_dataset: 500
+  fs: 250                      # alvo (MP-IoT)
+  window: 2400
+  notch_hz: 50.0
+  notch_q: 30.0
+  band_hz: [0.05, 30.0]
+  band_order: 4
+  crop: center                 # center | random (random só no treino da CNN)
+
+device:                        # simulate_device(): modelo simples do AD8232 + A/D
+  adc_bits: 12
+  vref_v: 3.3
+  analog_gain: 100.0           # ganho de instrumentação do AD8232 (suposição documentada)
+  offset_frac: 0.5             # sinal centrado no meio da escala -> só valores positivos
+
+# ---------------------------------------------------------------- etapa 4
+qrs:
+  band_hz: [5.0, 18.0]
+  integration_ms: 120
+  refractory_ms: 250           # FC máxima detectável ~240 bpm
+  search_back: true
+
+sqi:
+  min_beats: 4
+  max_beats: 40                # 9,6 s a 250 bpm
+  hr_range_bpm: [30, 220]
+  max_flat_frac: 0.10          # fração da janela em trechos planos
+  max_clip_frac: 0.02          # fração de amostras no máximo/mínimo da janela (saturação)
+  min_qrs_agreement: 0.80      # concordância entre os dois detectores de QRS (bSQI)
+  min_kurtosis: 3.0            # ECG limpo tem curtose alta; ruído gaussiano ~3
+
+hr_rule:
+  brady_bpm: 60                 # definição clínica de bradicardia sinusal; ajustável por pessoa
+  tachy_bpm: 100                # definição clínica de taquicardia sinusal
+
+# ---------------------------------------------------------------- etapa 5
+experiment_a:
+  source: shaoxing
+  positive: [AFIB]
+  negative: [SINUS_NORMAL, SINUS_OUTRO, SINUS_BRADY, SINUS_TACHY]
+  split: [0.70, 0.15, 0.15]
+  cv_folds: 5
+  # ordem de simplicidade definida a priori (briefing seção 7)
+  candidates: [logreg, random_forest, lightgbm, cnn]
+  selection_metric: auprc_validation
+  selection_margin: 0.010      # AUPRC absoluta; registrado antes de abrir o teste
+  threshold_rule: {min_specificity: 0.98}
+  bootstrap: 2000

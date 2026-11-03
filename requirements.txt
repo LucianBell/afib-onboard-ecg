@@ -16,3 +16,4 @@ streamlit
 onnx
 skl2onnx
 onnxruntime
+torch

@@ -15,7 +15,11 @@ data:           ## baixa (com retomada), extrai e indexa as bases; cache da deri
 audit:          ## gera docs/data_audit.md e results/audit/
 	$(PYTHON) scripts/audit.py
 
-features train evaluate report demo:
+features:       ## janelas pré-processadas, atributos, SQI e validação do detector de QRS
+	$(PYTHON) scripts/build_features.py
+	$(PYTHON) scripts/validate_qrs.py
+
+train evaluate report demo:
 	@echo "alvo '$@' ainda não implementado (ver ordem de trabalho em CLAUDE.md, seção 13)"; exit 1
 
 test:

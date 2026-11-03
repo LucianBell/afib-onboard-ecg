@@ -1,0 +1,144 @@
+{
+  "tolerancia_ms": 75,
+  "referencia": "wfdb.processing.xqrs_detect a 500 Hz",
+  "nota": "comparação a partir do 1º batimento do XQRS (período de aprendizado dele excluído)",
+  "por_grupo": {
+    "ningbo:SINUS_NORMAL": {
+      "n_registros_comparados": 142,
+      "sensibilidade_vs_xqrs": 1.0,
+      "ppv_vs_xqrs": 0.9993777224642191,
+      "sqi_reprovado": 0.042932628797886396,
+      "n": 4542,
+      "fc_mediana": 74.25742574257426,
+      "frac_fc_60_100": 0.960202438463308
+    },
+    "ningbo:SINUS_OUTRO": {
+      "n_registros_comparados": 147,
+      "sensibilidade_vs_xqrs": 1.0,
+      "ppv_vs_xqrs": 0.9988165680473373,
+      "sqi_reprovado": 0.026378896882494004,
+      "n": 1251,
+      "fc_mediana": 74.3495565437437
+    },
+    "ningbo:SINUS_BRADY": {
+      "n_registros_comparados": 146,
+      "sensibilidade_vs_xqrs": 1.0,
+      "ppv_vs_xqrs": 0.9975124378109452,
+      "sqi_reprovado": 0.030090455971940187,
+      "n": 10834,
+      "fc_mediana": 55.865921787709496,
+      "frac_fc_lt_60": 0.9946707270650933
+    },
+    "ningbo:SINUS_TACHY": {
+      "n_registros_comparados": 133,
+      "sensibilidade_vs_xqrs": 0.9932030586236194,
+      "ppv_vs_xqrs": 0.9910979228486647,
+      "sqi_reprovado": 0.0588845117147004,
+      "n": 4823,
+      "fc_mediana": 110.7011070110701,
+      "frac_fc_gt_100": 0.9925093632958801
+    },
+    "ningbo:SINUS_ARRITMIA": {
+      "n_registros_comparados": 139,
+      "sensibilidade_vs_xqrs": 0.9985945186226283,
+      "ppv_vs_xqrs": 0.9964936886395512,
+      "sqi_reprovado": 0.09185441941074524,
+      "n": 2308,
+      "fc_mediana": 68.3371298405467
+    },
+    "shaoxing:AFIB": {
+      "n_registros_comparados": 135,
+      "sensibilidade_vs_xqrs": 0.9919614147909968,
+      "ppv_vs_xqrs": 0.982484076433121,
+      "sqi_reprovado": 0.047217537942664416,
+      "n": 1779,
+      "fc_mediana": 93.16770186335404
+    },
+    "shaoxing:SINUS_NORMAL": {
+      "n_registros_comparados": 147,
+      "sensibilidade_vs_xqrs": 1.0,
+      "ppv_vs_xqrs": 1.0,
+      "sqi_reprovado": 0.0424597364568082,
+      "n": 1366,
+      "fc_mediana": 73.89162561576354,
+      "frac_fc_60_100": 0.9831804281345565
+    },
+    "shaoxing:SINUS_OUTRO": {
+      "n_registros_comparados": 139,
+      "sensibilidade_vs_xqrs": 0.9987349778621126,
+      "ppv_vs_xqrs": 0.9968434343434344,
+      "sqi_reprovado": 0.028720626631853787,
+      "n": 383,
+      "fc_mediana": 75.37688442211055
+    },
+    "shaoxing:SINUS_BRADY": {
+      "n_registros_comparados": 145,
+      "sensibilidade_vs_xqrs": 1.0,
+      "ppv_vs_xqrs": 0.9983291562238931,
+      "sqi_reprovado": 0.03242034656232532,
+      "n": 3578,
+      "fc_mediana": 55.865921787709496,
+      "frac_fc_lt_60": 0.9953783939919122
+    },
+    "shaoxing:SINUS_TACHY": {
+      "n_registros_comparados": 142,
+      "sensibilidade_vs_xqrs": 0.9937290969899666,
+      "ppv_vs_xqrs": 0.9949769778149854,
+      "sqi_reprovado": 0.043219076005961254,
+      "n": 1342,
+      "fc_mediana": 108.69565217391303,
+      "frac_fc_gt_100": 0.9890965732087228
+    },
+    "ptbxl:AFIB": {
+      "n_registros_comparados": 138,
+      "sensibilidade_vs_xqrs": 0.9920127795527156,
+      "ppv_vs_xqrs": 0.9872813990461049,
+      "sqi_reprovado": 0.03317535545023697,
+      "n": 1477,
+      "fc_mediana": 88.23529411764706
+    },
+    "ptbxl:SINUS_NORMAL": {
+      "n_registros_comparados": 150,
+      "sensibilidade_vs_xqrs": 0.9993670886075949,
+      "ppv_vs_xqrs": 1.0,
+      "sqi_reprovado": 0.03370237707587105,
+      "n": 6142,
+      "fc_mediana": 69.12442396313364,
+      "frac_fc_60_100": 0.8155012636899748
+    },
+    "ptbxl:SINUS_OUTRO": {
+      "n_registros_comparados": 145,
+      "sensibilidade_vs_xqrs": 0.9993485342019544,
+      "ppv_vs_xqrs": 0.9993485342019544,
+      "sqi_reprovado": 0.018171620863712844,
+      "n": 8915,
+      "fc_mediana": 70.58823529411765
+    },
+    "ptbxl:SINUS_BRADY": {
+      "n_registros_comparados": 148,
+      "sensibilidade_vs_xqrs": 0.9990689013035382,
+      "ppv_vs_xqrs": 0.9990689013035382,
+      "sqi_reprovado": 0.0274442538593482,
+      "n": 583,
+      "fc_mediana": 48.701298701298704,
+      "frac_fc_lt_60": 0.982363315696649
+    },
+    "ptbxl:SINUS_TACHY": {
+      "n_registros_comparados": 145,
+      "sensibilidade_vs_xqrs": 0.995346869712352,
+      "ppv_vs_xqrs": 0.995346869712352,
+      "sqi_reprovado": 0.03265940902021773,
+      "n": 643,
+      "fc_mediana": 108.69565217391303,
+      "frac_fc_gt_100": 0.9823151125401929
+    },
+    "ptbxl:SINUS_ARRITMIA": {
+      "n_registros_comparados": 144,
+      "sensibilidade_vs_xqrs": 0.998661311914324,
+      "ppv_vs_xqrs": 0.999330207635633,
+      "sqi_reprovado": 0.04376012965964344,
+      "n": 617,
+      "fc_mediana": 70.01176393699758
+    }
+  }
+}
