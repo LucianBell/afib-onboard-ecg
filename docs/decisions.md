@@ -135,3 +135,15 @@ são marcadas como **pendente** até a etapa correspondente.
   construção os confundidores mais difíceis (ectopia frequente, arritmia sinusal, flutter, bloqueios),
   que vão para os experimentos E e G. O teste A mede AFIB contra sinusal "limpo" de mesma fonte. Não é o
   desempenho em uso real.
+- **D31. Incidente na abertura do teste (registro de transparência).** A primeira execução de
+  `exp_a.py test` (02:31:39, commit `782757e`) calculou todas as métricas e quebrou ao gravar o JSON (chave
+  em tupla num campo auxiliar). A trava já tinha sido gravada e as métricas impressas não foram guardadas.
+  Corrigi só a serialização, sem tocar em modelos, limiares, divisão ou escolha, e reexecutei com
+  `--force` às 02:32:42. Os dois registros estão em `TEST_OPENED.json`, com o mesmo hash de
+  `selection.json`. O cálculo é determinístico (artefatos salvos, bootstrap com semente fixa), então a
+  segunda execução reproduz a primeira. Nenhuma decisão foi tomada entre as duas.
+- **D32. Leitura do resultado do teste A.** Os quatro modelos de ML ficaram empatados dentro dos ICs
+  (AUPRC 0,997–1,000), em teto de desempenho. A escolha da logística, pela regra pré-registrada, se
+  mantém. Contra o baseline RR, o ganho aparece no ranking (AUPRC 0,999 vs. 0,965). No ponto de operação,
+  o McNemar não mostra diferença significativa (9 vs. 4 discordâncias, p = 0,27). O experimento D faz a
+  comparação formal com bootstrap pareado.

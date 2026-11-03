@@ -19,7 +19,13 @@ features:       ## janelas pré-processadas, atributos, SQI e validação do det
 	$(PYTHON) scripts/build_features.py
 	$(PYTHON) scripts/validate_qrs.py
 
-train evaluate report demo:
+train:          ## experimento A, fase dev: CV no treino, escolha na validação (não abre o teste)
+	$(PYTHON) scripts/exp_a.py dev
+
+evaluate:       ## experimento A, fase test: exige escolha commitada; abre o teste uma vez
+	$(PYTHON) scripts/exp_a.py test
+
+report demo:
 	@echo "alvo '$@' ainda não implementado (ver ordem de trabalho em CLAUDE.md, seção 13)"; exit 1
 
 test:

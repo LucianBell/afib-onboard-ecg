@@ -1,0 +1,6 @@
+[teste] baseline_rr: AUPRC 0.9653 sens 0.992 esp 0.985
+[teste] logreg: AUPRC 0.9993 sens 1.000 esp 0.988
+[teste] random_forest: AUPRC 0.9991 sens 1.000 esp 0.985
+[teste] lightgbm: AUPRC 0.9996 sens 1.000 esp 0.987
+[teste] cnn: AUPRC 0.9965 sens 0.992 esp 0.988
+teste avaliado e trancado: /home/lucianbell/Documents/Code/Mine/ProjetoNasa2026/results/expA/TEST_OPENED.json

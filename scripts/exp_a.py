@@ -208,9 +208,12 @@ def test(force: bool = False):
     f = get_split(load_data())
     te_all = f[f["split"] == "test"]
     te = te_all[te_all["sqi_ok"]]
-    lock.write_text(json.dumps({"aberto_em": dt.datetime.now().isoformat(timespec="seconds"), "commit": git_head(),
-                                "selection_sha": subprocess.run(["git", "hash-object", str(sel_p)], capture_output=True,
-                                                                text=True).stdout.strip(), "force": force}, indent=2))
+    entry = {"aberto_em": dt.datetime.now().isoformat(timespec="seconds"), "commit": git_head(),
+             "selection_sha": subprocess.run(["git", "hash-object", str(sel_p)], capture_output=True,
+                                             text=True).stdout.strip(), "force": force}
+    hist = json.loads(lock.read_text()) if lock.exists() else []
+    hist = hist if isinstance(hist, list) else [hist]
+    lock.write_text(json.dumps(hist + [entry], indent=2))
     names = ["baseline_rr"] + A["candidates"]
     out, preds = {}, {}
     for name in names:
@@ -231,8 +234,8 @@ def test(force: bool = False):
     art = load_artifact(ch)
     p_all = art["calibrator"].transform(scores(ch, art, te_all))
     extra["escolhido_sem_filtro_sqi"] = ev.point_metrics(te_all["y"], p_all, art["threshold"])
-    extra["sqi_reprovado_teste_por_grupo"] = te_all.groupby("group")["sqi_ok"].apply(
-        lambda s: {"n": int(len(s)), "reprovados": int((~s).sum())}).to_dict()
+    extra["sqi_reprovado_teste_por_grupo"] = {g: {"n": int(len(s)), "reprovados": int((~s).sum())}
+                                              for g, s in te_all.groupby("group")["sqi_ok"]}
     # falso AFIB por grupo de negativo
     te2 = te.assign(p_ch=preds[ch], p_bl=preds["baseline_rr"])
     thr_bl = joblib.load(MOD / "baseline_rr.joblib")["threshold"]

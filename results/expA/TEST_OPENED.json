@@ -1,0 +1,14 @@
+[
+  {
+    "aberto_em": "2026-11-03T02:31:39",
+    "commit": "782757e1811b47060101dc712e9dc01198b85b69",
+    "selection_sha": "cbc0f266524ec8d7fa49d428108534dafeb1489a",
+    "force": false
+  },
+  {
+    "aberto_em": "2026-11-03T02:32:42",
+    "commit": "782757e1811b47060101dc712e9dc01198b85b69",
+    "selection_sha": "cbc0f266524ec8d7fa49d428108534dafeb1489a",
+    "force": true
+  }
+]
