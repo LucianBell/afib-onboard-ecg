@@ -194,3 +194,13 @@ voting:
 
 experiment_i:
   tcc_test_per_class: 356          # tamanho por classe do teste do TCC (Tabela 4)
+
+# calibração do SQI (experimento F, fase 2) — fixada antes de rodar, depois de ver que o SQI inicial
+# quase não filtrava ruído muscular/movimento de eletrodo no teste (D35). Feita só na validação.
+sqi_calibration:
+  grid:
+    min_kurtosis: [3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 10.0]
+    min_qrs_agreement: [0.80, 0.85, 0.90, 0.95, 1.0]
+  snr_db: [12, 6, 0, -6]
+  max_clean_rejection: 0.05        # na validação limpa, para cada classe
+  # critério: maior especificidade média nas janelas aprovadas sob ruído (todas as condições ruidosas)

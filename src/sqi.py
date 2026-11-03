@@ -55,8 +55,8 @@ def compute(raw: np.ndarray, x: np.ndarray, fs: float = 250.0, r: np.ndarray | N
     }
 
 
-def passes(q: dict) -> tuple[bool, list[str]]:
-    """Regra do SQI. Retorna (aprovado, motivos de reprovação)."""
+def passes(q: dict, S: dict = S) -> tuple[bool, list[str]]:
+    """Regra do SQI. Retorna (aprovado, motivos de reprovação). `S` permite testar outros limiares."""
     why = []
     if q["sqi_flat_frac"] > S["max_flat_frac"]:
         why.append("linha_plana")
